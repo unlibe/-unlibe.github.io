@@ -1,779 +1,983 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>吱~</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="吱~"><meta name="msapplication-TileImage" content="/images/theme/simple-favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="吱~"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="吱"><meta property="og:url" content="https://hzjoyous.github.io/"><meta property="og:site_name" content="吱"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hzjoyous.github.io/images/theme/avatar2.jpg"><meta property="article:author" content="nil"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/theme/avatar2.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://hzjoyous.github.io"},"headline":"吱~","image":["https://hzjoyous.github.io/img/og_image.png"],"author":{"@type":"Person","name":"hzjoyous"},"description":null}</script><link rel="icon" href="/images/theme/simple-favicon.svg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.3.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/theme/logo.png" alt="吱~" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P23-%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0/#comment-container"><span class="display-none-class">b573a95efce6e88ab0718d77a5100562</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b573a95efce6e88ab0718d77a5100562">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 分钟  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P23-%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0/">PHP[入门]P23-下载上传</a></h1><div class="content"><blockquote>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>吱~</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="吱~"><meta name="msapplication-TileImage" content="/images/theme/simple-favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="吱~"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="吱"><meta property="og:url" content="https://hzjoyous.github.io/"><meta property="og:site_name" content="吱"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hzjoyous.github.io/images/theme/avatar2.jpg"><meta property="article:author" content="nil"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/theme/avatar2.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://hzjoyous.github.io"},"headline":"吱~","image":["https://hzjoyous.github.io/img/og_image.png"],"author":{"@type":"Person","name":"hzjoyous"},"description":null}</script><link rel="icon" href="/images/theme/simple-favicon.svg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.3.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/theme/logo.png" alt="吱~" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P10-%E5%87%BD%E6%95%B0/#comment-container"><span class="display-none-class">0dbcbec7b6794b39dabb1565049dafce</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="0dbcbec7b6794b39dabb1565049dafce">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>7 分钟  <i class="fas fa-pencil-alt"> </i>1.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P10-%E5%87%BD%E6%95%B0/">PHP[入门]P10-函数</a></h1><div class="content"><blockquote>
 <p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
 </blockquote>
-<p>1.</p>
-<p>fileatime: 在linux下边是正常的.win7以后因为影响性能所以关闭了这个配置</p>
-<p>copy() 不能复制目录（递归拷贝文件）</p>
-<p>rename() 不仅可以修改文件或者目录名 也可以移动</p>
-<p>mkdir() 默认只能创建一个目录 层级目录</p>
-<p>mkdir(&#39;1701/2/16&#39;, 0777, true);</p>
-<p>文件的属性：</p>
-<p>ftruncate(&#39;资源&#39;,size)：截断文件中的指定长度 返回是截断以后的</p>
-<p>scandir() 浏览当前目录</p>
-<p>filetype() 返回的是文件的类型 不是文件后缀</p>
-<hr>
-<p>权限</p>
-<p>0 111 111 111</p>
-<p>0 7 7 7</p>
-<p>- rwx rwx rwx</p>
-<p>所有者 所属组 其他</p>
-<p>chmod 改变文件的权限 chmod 777 文件名字 chmod -R 777 目录</p>
-<p>chgrp 改变文件的所属组</p>
-<p>chown: 改变文件所有者</p>
-<p>文件的上传下载</p>
-<p>使用场景：</p>
-<p>上传：头像，朋友圈，微博 证件 …..</p>
-<p>下载：安装包，图片 …</p>
-<p>准备工作：</p>
-<p>七伤拳：</p>
-<p>1.准备form表单</p>
-<p>2.判断提交的值</p>
-<p>3.判断文件是否错误</p>
-<p>4.判断是否超出大小 form php 自定义</p>
-<p>5.判断是否是允许上传的文件类型 （mime）</p>
-<p>6.保存图片</p>
-<p>//7.保存数据库图片路径</p>
-<p>##配置文件：</p>
-<p>upload_tmp_dir =&quot;E:/wamp64/tmp&quot; 上传的文件缓存在的目录</p>
-<p>upload_max_filesize = 2M 允许上传文件的大小限制</p>
-<p>file_uploads = On 允许上传</p>
-<p>max_file_uploads = 20 允许同时上传的文件个数</p>
-<p>memory_limit = 128M 允许脚本运行最大的内存</p>
-<p>注意事项：</p>
-<p>1.表单必须以post方式提交 不能忘记enctype</p>
-<p>2.表单中传隐藏值：name=MAX_FILE_SIZE</p>
-<p>3.多文件上传: name是数组</p>
-<p>4.临时缓存的目录权限</p>
-<p>5.php.ini是否开启允许上传配置</p>
-<p>6.’##‘配置文件中的一些配置项</p>
-<p>下载：</p>
-<p>1.告知文件类型</p>
-<p>2.告知附件</p>
-<p>3.文件的大小</p>
-<p>4.发送数据</p>
-<p>header(&#39;content-type:image/jpeg&#39;);</p>
-<p>header(&#39;content-disposition:attachment;filename=&quot;aa.jpg&quot;&#39;);</p>
-<p>header(&#39;content-length:&#39;. filesize(&#39;aa.jpg&#39;));</p>
-<p>readfile(&#39;2.jpg&#39;);</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P22-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/#comment-container"><span class="display-none-class">f6eab8afefa718bc50946e7c5184ec49</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f6eab8afefa718bc50946e7c5184ec49">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>6 分钟  <i class="fas fa-pencil-alt"> </i>1.0 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P22-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">PHP[入门]P22-文件操作</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>缩放:</p>
-<p>1.打开或者准备一张图片</p>
-<p>2.自己计算尺寸，(直接给一个倍数，形参);</p>
-<p>3.变成一张新的图片</p>
-<p>4.保存</p>
-<p>5.销毁</p>
-<p>-----------------</p>
-<p>day22 文件函数</p>
-<p>路径相关的函数</p>
-<p>pathinfo(&#39;文件的路径+名字&#39;) 文件的具体信息</p>
-<p>dirname(); 路径的名</p>
-<p>basename 获取的是文件的名字</p>
-<p>realpath() 返回绝对路径 从磁盘根部开始</p>
-<p>DIRECTORY_SEPARATOR: 返回的是目录分隔符（系统）</p>
-<p>【注】： windows / \都能识别 获取到时\</p>
-<p>linux 系统是/ 正斜线</p>
-<p>文件内容的相关函数</p>
-<p>整体：</p>
-<p>file_get_contents(&#39;文件的名&#39;):<br>获取文件中的全部内容//不仅可以传一个文件名，还可以是一个url</p>
-<p>file_put_contents(&#39;文件&#39;,&#39;内容&#39;);<br>可以将内容写入到文件中，成功返回字节数，失败返回false</p>
-<p>【注】：将原来的文件内容覆盖</p>
-<p>【了解】readfile 将文件的内容输出到缓冲区，真正返回的值是字节数</p>
-<p>内容：</p>
-<p>**fopen(&#39;文件&#39;, &#39;打开的方式&#39;) 打开一个文件,</p>
-<p>打开方式：</p>
-<p>r: 只读的方式打开 文件不存在的时候会报警告错误</p>
-<p>r+：以读写的方式打开, 从头覆盖内容进行写入</p>
-<p>w: 以写入的方式打开 如果文件存在会将文件内容清零，打开的文件不存在则创建</p>
-<p>w+：可读可写： 文件不存在创建，存在内容清零</p>
-<p>a: 追加写入， 不能读文件不存在创建，指针指向文件末尾</p>
-<p>a+：读写方式打开 写的方式追加 文件不存在创建</p>
-<p>x: 创建文件以写入的方式打开，如果文件存在报警告错误</p>
-<p>x+: 创建文件并与读写的方式打开</p>
-<p>c: 以只写的方式打开，会从头覆盖内容写入，文件不存在则创建</p>
-<p>c+: 以读写方式打开，同上</p>
-<p>**fread(&#39;打开的资源&#39;, &#39;读取的字节数&#39;);返回的是限制读取的字节</p>
-<p>**fwrite(&#39;操作的资源&#39;, &#39;写入的字符&#39;)</p>
-<p>*rewind() ：将文件指针返回到文件流的开头位置</p>
-<p>fseek(): 设置指针的位置：</p>
-<p>参数：资源，移动的字节数，</p>
-<p>常量 SEEK_SET/开头SEEK_CUR/当前 SEEK_END/结尾</p>
-<p>ftell() 获取当前文件中指针的位置</p>
-<p>feof ()[end of file]判断指针在不在结尾</p>
-<p>//最后一个字节数或者出错时候返回true 其余返回false</p>
-<p>fgetc() 读取出来一个字节， 指针位置保留</p>
-<p>fgets() 读取一行 指针的位置保留</p>
-<p>*fgetss() 读取一行 去掉内容中的html标签</p>
-<p>fclose() 关闭这个文件</p>
-<p>文件锁：</p>
-<p>flock()</p>
-<p>常量参数：</p>
-<p>LOCK_SH：共享锁</p>
-<p>LOCK_EX: 独占锁</p>
-<p>LOCK_UN: 解锁</p>
-<p>文件判断相关 （状态）</p>
-<p>file_exists();判断文件是否存在 存在 true 不存在false</p>
-<p>is_file() :参数名是否是一个文件</p>
-<p>is_dir(): 参数是否是一个目录</p>
-<p>is_readable(): 判断文件是否可读</p>
-<p>is_writeable():判断文件是否可写</p>
-<p>is_executable(); 是否是一个可执行的文件 //window .exe</p>
-<p>filesize() :文件字节数</p>
-<p>filectime() : 创建时间</p>
-<p>filemtime(): 修改时间</p>
-<p>文件相关的函数</p>
-<p>touch(): 创建一个文件</p>
-<p>unlink(): 删除一个文件</p>
-<p>copy(): 1.要拷贝的文件 2.拷贝后新文件的名字（要拷贝的路径+mingzi）</p>
-<p>rename(): 重命名：文件 目录</p>
-<p>目录的操作</p>
-<p>mkdir(): 新建目录</p>
-<p>rmdir() : 删除目录 (删除空目录)</p>
-<p>rename()修改目录名</p>
-<p>copy() 拷贝目录</p>
-<p>opendir() :打开目录</p>
-<p>readdir()读取目录</p>
-<p>closedir()关闭目录</p>
-<p>文件的属性</p>
-<p>----------</p>
-<p>作业： 拷贝：大文件 ：一边读，一边写</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P21-%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/#comment-container"><span class="display-none-class">10b71242739fdb40de8c6281c2bfb794</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="10b71242739fdb40de8c6281c2bfb794">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>2 分钟  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P21-%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/">PHP[入门]P21-验证码生成</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>---------------------</p>
-<p>验证码思路：</p>
-<p>1.创建画布指定宽和高(写成一函数，传宽跟高);</p>
-<p>2.随机产生的字符串</p>
-<p>3.画布随机填充浅色的背景</p>
-<p>4.画布上增加上干扰元素（随机产生点，线，弧线的位置，随机的是产生元素的位置）</p>
-<p>5.把验证码字符串写上</p>
-<p>6.设置header头</p>
-<p>7.发送</p>
-<p>8.销毁资源</p>
-<p>水印：</p>
-<p>1.准备图片,(两张图片 一张背景，一张水印)</p>
-<p>2.确定位置(计算位置)</p>
-<p>3.合并处理</p>
-<p>4.保存（生成新的图片呢，还是原来，保存位置，文件）</p>
-<p>5.释放资源</p>
-<p>缩放:</p>
-<p>1.打开或者准备一张图片</p>
-<p>2.自己计算尺寸，(直接给一个倍数，形参);</p>
-<p>3.变成一张新的图片</p>
-<p>4.保存</p>
-<p>5.销毁</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P20-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/#comment-container"><span class="display-none-class">af72b39959699775da7e76404dda8168</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="af72b39959699775da7e76404dda8168">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>5 分钟  <i class="fas fa-pencil-alt"> </i>0.8 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P20-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">PHP[入门]P20-图像处理</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>图像处理</p>
-<p>准备工作：</p>
-<p>MIME：互联网邮件扩展类型</p>
-<p>服务器会告诉浏览器当前返回的文件类型，当浏览器获取到content-type文件类型<br>就会自动按照类型打开文件</p>
-<p>header(&#39;location:&#39;);</p>
-<p>header(&#39;content-type:text/css&#39;);</p>
-<p>常见的mime类型：</p>
-<p>HTML JavaScript css</p>
-<p>image/png image/jpeg image/gif</p>
-<p>图像后缀：</p>
-<p>png jpg jpeg gif bmp wbmp</p>
-<p>打开支持的相对应的扩展库php.ini</p>
-<p>修改配置文件：</p>
-<p>扩展库所在的目录：extension_dir =&quot;E:/wamp64/bin/php/php7.0.0/ext/&quot;</p>
-<p>1.如果是wampsever : 在小绿那-&gt;php-&gt;php extension<br>前边有对勾的就是支持的，</p>
-<p>直接选择 之后会自动重启</p>
-<p>2.修改配置文件：eg:打开gd2扩展库</p>
-<p>extension=php_gd2.dll 将分号去掉 ，加上分好就是注释掉</p>
-<p>如果还是没有支持相对应的扩展：</p>
-<p>去扩展库文件目录，找对应.dll文件<br>如果没有去官网下载或者拷贝别的地方的.dll</p>
-<p>---</p>
-<p>GD库处理图像：</p>
-<p>经常的使用的场景:</p>
-<p>验证码 水印 缩放 数据图 .….</p>
-<p>六脉神剑：</p>
-<p>1.创建画布</p>
-<p>imagecreatetruecolor()</p>
-<p>2.准备颜色</p>
-<p>imagecolorallocate()</p>
-<p>3.图像的处理</p>
-<p>imagefill</p>
-<p>4.设置header 头</p>
-<p>header(&#39;content-type:image/png&#39;);</p>
-<p>5.保存/发送图像</p>
-<p>imagepng()</p>
-<p>6.关闭/释放资源</p>
-<p>imagedestroy($img);</p>
-<p>-----------</p>
-<p>函数：</p>
-<p>imagecreate：创建画布 推荐使用</p>
-<p>imagecreatetruecolor(width, height); 返回值 资源</p>
-<p>--使用图片</p>
-<p>imagecreatefromjpeg(&#39;meinv.jpg&#39;);</p>
-<p>imagecreatefrompng();</p>
-<p>imagecreatefromgif();</p>
-<p>准备颜色</p>
-<p>imagecolorallocate()</p>
-<p>填充背景颜色</p>
-<p>imagefill()</p>
-<p>imagefilledarc($img, 100, 100, 100, 100, 0, 360, $color3,<br>IMG_ARC_PIE);//填充的是圆</p>
-<p>imagefilledarc($img, 300, 200, 80, 100, 50, 180,<br>$color3,IMG_ARC_CHORD); 弧度变成直线链接 (出来的是个三角形)</p>
-<p>保存图像</p>
-<p>imagepng($img, [path/filename]);</p>
-<p>imagegif()</p>
-<p>imagejpeg()</p>
-<p>图像处理：</p>
-<p>imagesetpixel($img, 100, 100, $color3); 画一个单一像素点</p>
-<p>imageline($img, 0, 0, 500, 400, $color1); 画一条线</p>
-<p>// imagerectangle($img, 100, 100, 200, 300, $color1);//画一个矩形<br>两点可以确定一个矩形</p>
-<p>imagefilledrectangle($img, 100, 100, 200, 300, $color1);</p>
-<p>// imagepolygon($img, [300, 100, 320, 150, 200, 200, 100, 200 ], 4,<br>$color3); 多边形</p>
-<p>imagefilledpolygon($img, [300, 100, 320, 150, 200, 200, 100, 200 ],<br>4, $color3);</p>
-<p>--</p>
-<p>字符：</p>
-<p>imagechar($img, 5, 400, 50, &#39;A&#39;, $color3);水平的画一个字符</p>
-<p>imagechar($img, 5, 400, 50, &#39;A&#39;, $color3);</p>
-<p>imagestring($img, 5, 400, 100, &#39;ABCD&#39;, $color3);//水平的画一行字符<br>(不能是中文)</p>
-<p>imagefttext($img, 50,10, 100, 100, $color1, &#39;STXINGKA.ttf&#39;,<br>&#39;明天就是情人节&#39;);//<br>资源，字体的大小，倾斜的角度，开始的位置，color,ttf, string，</p>
-<p>-----获取指定图片的宽 高</p>
-<p>getimagesize(&#39;图片名&#39;); 返回值是数组 下标0 的是宽，1的是高</p>
-<p>list($width, $height) = getimagesize(&#39;filename&#39;);</p>
-<p>imagecopymerge($img, $imgto, 100, 100, 0, 0, 100, 100,<br>30);//拷贝图像中的一部分，设置透明程度</p>
-<p>参数：作为画布的原始图，拷贝的图，起始位置， 拷贝图的起始位置，<br>拷贝图像的宽,高，0-100透明程度</p>
-<p>imagecopy($img, $imgto, 100, 100, 0, 0, 100, 100);</p>
-<p>---------------------</p>
-<p>验证码思路：</p>
-<p>1.创建画布指定宽和高(写成一函数，传宽跟高);</p>
-<p>2.随机产生的字符串</p>
-<p>3.画布随机填充浅色的背景</p>
-<p>4.画布上增加上干扰元素（随机产生点，线，弧线的位置，随机的是产生元素的位置）</p>
-<p>5.把验证码字符串写上</p>
-<p>6.设置header头</p>
-<p>7.发送</p>
-<p>8.销毁资源</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P19-%E4%BC%9A%E8%AF%9D%E6%8E%A7%E5%88%B6/#comment-container"><span class="display-none-class">af31e72ce31661e725d72d6f4d6fae07</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="af31e72ce31661e725d72d6f4d6fae07">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>5 分钟  <i class="fas fa-pencil-alt"> </i>0.8 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P19-%E4%BC%9A%E8%AF%9D%E6%8E%A7%E5%88%B6/">PHP[入门]P19-会话控制</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>会话控制</p>
-<p>http协议：</p>
-<p>特点：无状态 ，无连接的协议（脸盲）</p>
-<p>状态码：200 请求成功</p>
-<p>404 未知的页面</p>
-<p>302，307 :重定向</p>
-<p>400：语法错误</p>
-<p>500：服务器错误</p>
-<p>报文头部：请求行 空行 头部信息</p>
-<p>头部信息：分为很多种，里面重要的是cookie信息</p>
-<p>使用场景：</p>
-<p>访问网站的不同页面的时候 ，为了避免用户身份的重复验证</p>
-<p>就是用cookie session</p>
-<p>cookie:</p>
-<p>是保存在浏览器中的指定文件内的cookie值<br>是保存在本地的，这个值是用setcookie设置的，下次访问的时候，浏览器会自动将cookie值提交给当前所属的站点服务器，setcookie设置的作用域是’/‘，name整个站点都可以使用这个值.</p>
-<p>-----------------</p>
-<p>如果是第一次访问，没有请求跟返回的cookie值</p>
-<p>在后台登录以后，设置cookie 以后 访问直接把cookie<br>或者session值返回给浏览器</p>
-<p>当第二次请求,login.php.时候，浏览器已经将刚才的值存储起来，当第二次请求的时候，会把数据提交给服务器，执行第二次请求以后，服务器不会返回值给浏览器</p>
-<p>第三次.….都是一样，只要浏览器中有这个cookie值并且没有过期<br>服务器就不会再返回值给浏览器，什么时候回有值返回给浏览器，</p>
-<p>1.修改了cookie值</p>
-<p>2.cookie过期</p>
+<p>day10-函数</p>
+<p>变量的引用unset其中一个值</p>
+<p>常量说常量值是标量类型</p>
+<p>在php7.0以后我们的常量值可以是数组</p>
+<p>1.为什么要自定义函数</p>
+<p>可以提高代码的重用性</p>
+<p>提高开发效率</p>
+<p>减少了代码的冗余量</p>
+<p>定义函数就是封装功能</p>
+<p>2.分类：</p>
+<p>系统函数</p>
+<p>自定义函数</p>
+<p>3.自定义函数</p>
+<p>定义：</p>
+<p>语法格式：</p>
+<p>function 函数名([参数列表])</p>
+<p>{</p>
+<p>函数体;</p>
+<p>[return 返回值];</p>
+<p>}</p>
+<p>调用</p>
+<p>函数名([参数列表]);</p>
+<p>函数名命名规范：</p>
+<p>1.必须以function 开始</p>
+<p>2.如同变量一样 ，以数字字母下划线组成 不以数字开始</p>
+<p>3.函数不区分大小写 但是要求大家区分大小写</p>
+<p>4.函数命名不能使用系统已经定义过的关键字或者系统函数名称</p>
+<p>5.命名一般遵从的是小驼峰命名法或者下划线 （根据具体的项目安排）</p>
+<p>[注意]：</p>
+<p>函数可以重复调用，甚至在函数前边后边（函数是条狗，哪里需要哪里吼）</p>
+<p>函数不可以重复定义 即函数不能被重载</p>
+<p>如果函数定义了，不调用不执行</p>
+<p>参数：【根据实际的需求增加，可以有可以没有】</p>
+<p>我们在定义函数时候的小括号里面的参数叫形参</p>
+<p>在调用函数的时候小括号里面的实参</p>
+<p>如果我们的形参里参数有带默认值的参数，放在参数列表的后边</p>
+<p>参数值是可变的，提高了代码的重用性</p>
+<p>如果没有形参，调用函数的时候传实参那么不会报错（这种事情瞎子才干）</p>
+<p>return:【根据实际需求，可以有可以没有】</p>
+<p>调用函数的时候给返回值;</p>
+<p>return 返回值;(如果有多个返回值:可以放在数组里或者.拼接);</p>
+<p>return 返回值; 当前return结束以后，后边的语句就不再执行</p>
+<p>4.变量的作用域</p>
+<p>变量可使用的地方</p>
+<p>外部变量:就是函数外部的变量</p>
+<p>内部变量:就是函数内部的变量</p>
+<p>在函数内部不可以使用函数外部的变量</p>
+<p>解决方法：</p>
+<p>1.使用关键字global<br>外部变量名（不推荐使用，因为可以在函数内部改变外部变量值）</p>
+<p>2 推荐使用的方式</p>
+<p>超全局变量：</p>
+<p>5.静态变量：</p>
+<p>static 关键词<br>在函数加载的时候定义一次，即使函数执行以后也不会释放，依然存在</p>
+<p>6.内部函数：</p>
+<p>函数里面还有一个自定义函数</p>
+<p>【注】:</p>
+<p>只能定义一次解决方式有三种</p>
+<p>1.static</p>
+<p>2.function_exists</p>
+<p>3.is_callable</p>
+<p>调用内部函数的时候，只能在函数定义之后调用，不能前边调用</p>
+<p>当调用了外变的函数以后，才可以在外部使用内部函数</p>
+<p>7.变量函数：</p>
+<p>function demo()</p>
+<p>{</p>
+<p>echo &#39;踏歌长行，梦想永在&#39;;</p>
+<p>}</p>
+<p>// demo();</p>
+<p>$str = &#39;demo&#39;;</p>
+<p>$str(); //== demo();</p>
+<p>8.匿名函数</p>
+<p>$str = function ()</p>
+<p>{</p>
+<p>echo &#39;youmengxiang&#39;;</p>
+<p>};</p>
+<p>把一个没有名字的函数就是匿名函数 直接赋给一个变量使用</p>
+<p>调用方式 变量名();</p>
+<p>匿名函数想要使用外部变量的时候 使用use关键词 use(变量名)<br>如果有多个用逗号隔开</p>
+<p>想要在匿名函数内部改变use过来的变量值 在use时候传变量的引用eg:<br>use(&amp;$name)</p>
+<p>$str();</p>
+<p>9.回调函数:</p>
+<p>10.递归函数：</p>
+<p>11.引用传参：</p>
+<p>12.可变参数类型</p>
+<p>func_num_args()</p>
+<p>func_get_args()</p>
+<p>func_get_arg($i)</p>
+<p>...</p>
+<p>13.include require include_once require_once</p>
 <p>---------------</p>
-<p>设置cookie：</p>
-<p>setcookie(&#39;名&#39;,&#39;值&#39;,&#39;生存时间&#39;,域);</p>
-<p>域：&#39;/&#39;:当前站点都有效; 不传值：当前目录</p>
-<p>读取：</p>
-<p>$_COOKIE[&#39;名&#39;];</p>
-<p>销毁：</p>
-<p>1.设置生存时间为之前时间(浏览器自动判断不会提交)</p>
-<p>setcookie(&#39;名&#39;,&#39;值&#39;,time()-60,域);</p>
-<p>2.unset($_COOKIE[&#39;name&#39;]);</p>
-<p>特点：</p>
-<p>使用COOKIE不安全，因为可以在浏览器中查看到</p>
-<p>尽量不要使用cookie设置保存敏感信息</p>
-<p>session:</p>
-<p>session:值存在服务器中，将一个加密的串返回给浏览器，也放在浏览器的cookie中</p>
-<p>开启：session_start();</p>
-<p>[注]:在开启session前边不要有输出,把session_start()放在文件开始最前边</p>
-<p>设置session：</p>
-<p>$_SESSION[&#39;名&#39;];</p>
-<p>销毁：</p>
-<p>1.unset($_SESSION[&#39;名&#39;]);</p>
-<p>2.session_destroy() 函数</p>
-<p>3.setcookie(&#39;PHPSESSID&#39;,&#39;&#39;,&#39;过期时间&#39;);</p>
-<p>//因为值存在浏览器的cookie文件中，把时间设置为过期的，浏览器不会提交</p>
-<p>函数：</p>
-<p>session_name(); 获取到的是在浏览器中存的cookie的key</p>
-<p>session_id(); 获取到的是在浏览器中存的cookie的value</p>
-<p>面试题：</p>
-<p>浏览器中禁用cookie以后，还能使用session么？</p>
-<p>答：不能使用，因为session的真正的值保存在服务器中，但是也有value存在浏览器的cooki中，是依赖关系。但是解决方式有：</p>
-<p>1.手动拼接URL</p>
-<p>2.session.use_trans_sid = 1 可以在url中自动拼接</p>
-<p>session.use_only_cookies = 0 是否依赖于浏览器中的cookie</p>
-<p>自动登录：</p>
-<p>使用setcookie()</p>
-<p>-----------------</p>
-<p>serialize:序列化</p>
-<p>unserialize:反序列化</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P18-php%E5%B0%81%E8%A3%85mysql%E5%87%BD%E6%95%B0/#comment-container"><span class="display-none-class">1e62567e2f3c19973332a9384b15bc57</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1e62567e2f3c19973332a9384b15bc57">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>2 分钟  <i class="fas fa-pencil-alt"> </i>0.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P18-php%E5%B0%81%E8%A3%85mysql%E5%87%BD%E6%95%B0/">PHP[入门]P18-php封装mysql函数</a></h1><div class="content"><blockquote>
+<p>超全局变量</p>
+<p>$GLOBALS</p>
+<p>$_REQUEST</p>
+<p>$_GET $_POST</p>
+<p>$_FILES</p>
+<p>$_COOKIE $_SESSION</p>
+<p>---------------</p>
+<p>错误：</p>
+<p>Notice 提示</p>
+<p>Warning 警告</p>
+<p>Error 错误</p>
+<p>----------------</p>
+<p>常用数学函数：</p>
+<p>abs() 绝对值</p>
+<p>max () 最大值</p>
+<p>min() 最小值</p>
+<p>mt_getrandmax() 最大随机数</p>
+<p>pi() 圆周率</p>
+<p>pow() x的y次方</p>
+<p>round() 浮点数四舍五入</p>
+<p>deg2rad() 角度转弧度</p>
+<p>rad2deg() 弧度转角度</p>
+<p>---------</p>
+<p>变量的值传递跟引用传递的区别</p>
+<p>//值传递</p>
+<p>$num = 10;</p>
+<p>$num2 = $num;</p>
+<p>//传引用</p>
+<p>$num = 10;</p>
+<p>$num2 = &amp;$num;</p>
+<p>unset($num);</p>
+<p>echo $num2;</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P09-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/#comment-container"><span class="display-none-class">53f7e43d6b463052054da06d6d560903</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="53f7e43d6b463052054da06d6d560903">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>7 分钟  <i class="fas fa-pencil-alt"> </i>1.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P09-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">PHP[入门]P09-流程控制</a></h1><div class="content"><blockquote>
 <p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
 </blockquote>
-<p>&lt;?php</p>
-<p>function dbConnect($host, $user, $pwd, $dbname, $charset)</p>
-<p>{</p>
-<p>$link = mysqli_connect($host, $user, $pwd);</p>
-<p>if (!$link) {</p>
-<p>return false;</p>
+<p>day09-流程控制</p>
+<p>settype()</p>
+<p>可变变量</p>
+<p>变量的引用</p>
+<p>1.流程控制中的三种结构</p>
+<p>顺序结构 分支结构 循环结构</p>
+<p>2. 分支结构</p>
+<ol>
+<li>单向分支</li>
+</ol>
+<p>语法结构：</p>
+<p>if (表达式) {</p>
+<p>语句体;</p>
 <p>}</p>
-<p>$db = mysqli_select_db($link, $dbname);</p>
-<p>if (!$db) {</p>
-<p>return false;</p>
-<p>}</p>
-<p>mysqli_set_charset($link, $charset);</p>
-<p>return $link;</p>
-<p>}</p>
-<p>function dbInsert($link, $table, $data)</p>
-<p>{</p>
-<p>//字段</p>
-<p>$fields = array_keys($data);//取所有key</p>
-<p>$fields = join(&#39;,&#39;, $fields);</p>
-<p>$values = array_values($data);</p>
-<p>$values = vTostr($values);</p>
-<p>$values = join(&#39;,&#39;, $values);</p>
-<p>$sql =&quot;insert into $table($fields) values($values)&quot;;</p>
-<p>$result = mysqli_query($link, $sql);</p>
-<p>if ($result &amp;&amp; mysqli_affected_rows($link)) {</p>
-<p>return mysqli_insert_id($link);</p>
+<p>执行流程:</p>
+<p>首先判断表达式<br>如果表达式为真，那么执行大括号里面的语句ti;如果为假，跳过大括号里的继续往下执行;</p>
+<ol start="2">
+<li>双向分支</li>
+</ol>
+<p>语法结构：</p>
+<p>if (表达式) {</p>
+<p>真区间;</p>
 <p>} else {</p>
-<p>return false;</p>
+<p>假区间;</p>
 <p>}</p>
-<p>}</p>
-<p>function dbDelete($link, $table, $where)</p>
-<p>{</p>
-<p>if (empty($where)) {</p>
-<p>return false;</p>
-<p>}</p>
-<p>//作业 ，补充是数组的情况 and</p>
-<p>$sql =&quot;delete from $table where $where&quot;;</p>
-<p>$result = mysqli_query($link, $sql);</p>
-<p>if ($result &amp;&amp; mysqli_affected_rows($link)) {</p>
-<p>return mysqli_affected_rows($link);</p>
+<p>执行流程:</p>
+<p>首先判断表达式是否为真，为真走真区间，如果表达式为假，走假区间</p>
+<p>永远不会同时执行真区间的语句体和假区间的语句体</p>
+<ol start="3">
+<li>多向分支(巢状分支)</li>
+</ol>
+<p>语法结构:</p>
+<p>if (表达式1) {</p>
+<p>语句体1;</p>
+<p>} else if (表达式2) {</p>
+<p>语句体2;</p>
+<p>} else if (表达式3) {</p>
+<p>语句体3;</p>
 <p>} else {</p>
-<p>return false;</p>
+<p>语句体4;</p>
 <p>}</p>
+<p>执行流程:</p>
+<p>首先判断表达式1<br>如果表达式1为真执行语句体1然后结束整个结构.若为假判断表达式2...如果所有的表达式都为假的时候，执行else</p>
+<p>当所有的情况都做了判断，那么最后else 可以省略</p>
+<p>一般用于区间判断</p>
+<ol start="4">
+<li>嵌套分支</li>
+</ol>
+<p>5)switch...case (break,default)</p>
+<p>用于确定值判断</p>
+<p>语法结构：</p>
+<p>switch (变量) {</p>
+<p>case 值1：</p>
+<p>语句体1;</p>
+<p>break;</p>
+<p>case 值2：</p>
+<p>语句体2;</p>
+<p>break;</p>
+<p>case 值3：</p>
+<p>语句体3;</p>
+<p>break;</p>
+<p>default:</p>
+<p>语句体4;</p>
 <p>}</p>
-<p>function dbUpdate($link, $table, $data,$where)</p>
-<p>{</p>
-<p>if (empty($where)) {</p>
-<p>return false;</p>
+<p>执行流程:</p>
+<p>拿到这个变量值以后<br>进行case值的对比,如果匹配成功走对应case区间;然后比如break跳出switch结构<br>如果 case所有的对比都不匹配，走default</p>
+<p>[注]：</p>
+<p>基本上每个case 都有一个break<br>如果没有break,一直往下执行直到碰到break结束整个结构</p>
+<p>case后边值可以是标量（最好不放浮点）,常量来做比较</p>
+<p>当所有的情况都罗列出来那么default可以不加</p>
+<p>多个case可以执行同样的语句</p>
+<p>3.循环结构</p>
+<p>for</p>
+<p>语法结构：</p>
+<p>for (变量初始化; 循环条件; 计数条件) {</p>
+<p>循环体;</p>
 <p>}</p>
-<p>$data = vTostr($data);</p>
-<p>$data = vUpdate($data);</p>
-<p>$data = join(&#39;,&#39;, $data);</p>
-<p>$sql = &quot;update $table set $data where $where&quot;;</p>
-<p>$result = mysqli_query($link, $sql);</p>
-<p>if($result &amp;&amp; mysqli_affected_rows($link)) {</p>
-<p>return mysqli_affected_rows($link);</p>
+<p>执行流程：</p>
+<p>进入for首先且执行一次变量初始化，然后判断循环条件是否满足，为真执行循环体;再执行计数条件--&gt;继续判断循环条件，为真继续执行循环体，再执行计数条件，知道循环条件为假，那么结束整个循环</p>
+<p>【注】:双层for循环</p>
+<p>第一层控制行，第二层控制列</p>
+<p>特点：灵活多变的</p>
+<p>1.第一个表达式跟第三个表达式可以提出来，但是第一个要放上分号占位表示第二就是循环条件</p>
+<p>2.循环提交可以省略 但是会出现死循环 这时候要用break</p>
+<p>while</p>
+<p>语法结构：</p>
+<p>while (循环条件) {</p>
+<p>循环体;</p>
+<p>}</p>
+<p>执行流程：</p>
+<p>首先判断循环条件，如果为真执行循环体，为假no执行</p>
+<p>[zhuyi]while非常容易写出死循环那么两种情况 第一加上计数条件<br>第二种break;</p>
+<p>do..while</p>
+<p>语法结构：</p>
+<p>do {</p>
+<p>循环体;</p>
+<p>} while (循环条件);</p>
+<p>执行流程：</p>
+<p>首先进入的时候先执行一次do大括号里的循环体、然后再去while判断循环条件,如果为真执行do里的循环体，直到while条件为家终止循环</p>
+<p>while 跟do..while区别</p>
+<p>while:先判断再执行</p>
+<p>do..while：先执行再判断 （至少执行一次）</p>
+<p>goto：</p>
+<p>直接跳到指定的标号处</p>
+<p>echo &#39;村长你的牙好亮啊&lt;br /&gt;&#39;;</p>
+<p>goto test;</p>
+<p>echo &#39;村长你的牙好亮啊&lt;br /&gt;&#39;;</p>
+<p>echo &#39;村长你的牙好亮啊&lt;br /&gt;&#39;;</p>
+<p>echo &#39;村长你的牙好亮啊&lt;br /&gt;&#39;;</p>
+<p>test:</p>
+<p>echo &#39;村长你的牙好亮啊&lt;br /&gt;&#39;;</p>
+<p>echo &#39;村长你的牙好亮啊&lt;br /&gt;&#39;;</p>
+<p>(break continue)</p>
+<p>break 用于结束循环,不管break后边有多少语句，碰到break立即结束循环</p>
+<p>continue: 用于结束本次循环<br>不管后边有多少语句，都不执行，后进入下一次循环</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P08-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%8C%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/#comment-container"><span class="display-none-class">9df79b3cbd33cc0c40f873a785a72f66</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="9df79b3cbd33cc0c40f873a785a72f66">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>11 分钟  <i class="fas fa-pencil-alt"> </i>1.6 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P08-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%8C%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/">PHP[入门]P08-类型转换，运算符，表达式</a></h1><div class="content"><blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day08类型转换，运算符，表达式</p>
+<p>资源：resource</p>
+<p>$con = fopen(&#39;ceshi.txt&#39;, &#39;r&#39;);</p>
+<p>【注】第一个参数(arg) 不要用中文</p>
+<p>$con = false;</p>
+<p>if ($con) {</p>
+<p>echo &#39;真区间&#39;;</p>
 <p>} else {</p>
-<p>return false;</p>
+<p>echo &#39;假区间&#39;;</p>
 <p>}</p>
-<p>}</p>
-<p>function dbSelect($link, $table, $fields = &#39;*&#39;, $where = null,<br>$order = null, $limit = null)</p>
-<p>{</p>
-<p>// fields where order by limit 0,5</p>
-<p>if (is_array($fields)) {</p>
-<p>$fields = join(&#39;,&#39;, $fields);</p>
-<p>}</p>
-<p>if ($where) {</p>
-<p>$where = &quot; where &quot; . $where;</p>
-<p>}</p>
-<p>if ($order) {</p>
-<p>$where .= &quot; order by &quot; . $order;</p>
-<p>}</p>
-<p>if ($limit) {</p>
-<p>$where .= &quot; limit &quot; . $limit;</p>
-<p>}</p>
-<p>$sql =&quot;select $fields from $table $where&quot;;</p>
-<p>$result = mysqli_query($link, $sql);</p>
-<p>if ($result &amp;&amp; mysqli_affected_rows($link)) {</p>
-<p>return mysqli_fetch_all($result, MYSQLI_ASSOC);</p>
-<p>} else {</p>
-<p>return false;</p>
-<p>}</p>
-<p>}</p>
-<p>function vTostr($values)</p>
-<p>{</p>
-<p>foreach($values as $k =&gt; $v) {</p>
-<p>if (is_string($v)) {</p>
-<p>$v = &quot;&#39;&quot; . $v . &quot;&#39;&quot;;</p>
-<p>$values[$k] = $v;</p>
-<p>}</p>
-<p>}</p>
-<p>return $values;</p>
-<p>}</p>
-<p>function vUpdate($data)</p>
-<p>{</p>
-<p>foreach ($data as $k =&gt; $v) {</p>
-<p>$data[$k] = $k . &#39;=&#39; . $v;</p>
-<p>}</p>
-<p>return $data;</p>
-<p>}</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P17-php%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/#comment-container"><span class="display-none-class">43b008e1ba939f4c6d6503989fdd65fa</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="43b008e1ba939f4c6d6503989fdd65fa">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 分钟  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P17-php%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/">PHP[入门]P17-php查询数据库</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>天龙八步：</p>
-<p>1：链接数据库</p>
-<p>2：判断数据是否链接成功</p>
-<p>3：选择数据库</p>
-<p>4：设置字符集</p>
-<p>5：准备sql语句</p>
-<p>6：执行sql语句</p>
-<p>7: 解析结果集</p>
-<p>8：关闭数据库 释放资源</p>
-<p>&lt;?php</p>
-<p>/*</p>
-<p>1.连接数据库</p>
-<p>参数：</p>
-<p>1).主机名：localhost //ip地址</p>
-<p>2).用户名</p>
-<p>3).密码</p>
-<p>返回值：</p>
-<p>成功：object;</p>
-<p>失败：false;</p>
-<p>*/</p>
-<p>$link = mysqli_connect(&#39;localhost&#39;, &#39;root&#39;, &#39;123456&#39;);</p>
-<p>//var_dump($link);</p>
-<p>/*</p>
-<p>2.判断链接是否成功</p>
-<p>*/</p>
-<p>// if($link == false)</p>
-<p>if (!$link){</p>
-<p>exit(&#39;数据库链接失败&#39;);</p>
-<p>}</p>
-<p>/*</p>
-<p>3.选择数据库</p>
-<p>参数：</p>
-<p>1).$link</p>
-<p>2).databasename</p>
-<p>返回值：</p>
-<p>true false</p>
-<p>*/</p>
-<p>$db = mysqli_select_db($link, &#39;qf_1701&#39;);</p>
-<p>// var_dump($db);</p>
-<p>if (!$db) {</p>
-<p>echo &#39;错误号:&#39; . mysqli_errno($link);</p>
-<p>echo &#39;错误信息:&#39; . mysqli_error($link);</p>
-<p>exit(&#39;数据库选择失败&#39;);</p>
-<p>}</p>
-<p>/*</p>
-<p>4.设置字符集</p>
-<p>//HTML utf-8 php utf8 mysql utf8</p>
-<p>参数：</p>
-<p>1).$link</p>
-<p>2).字符集 utf8</p>
-<p>*/</p>
-<p>mysqli_set_charset($link, &#39;utf8&#39;);</p>
-<p>/*</p>
-<p>5.准备sql语句</p>
-<p>//单独提出来sql语句:拼接sql 如果出错 可以直接输出sql语句 方便排错</p>
-<p>*/</p>
-<p>$sql = &#39;select * from qf_user&#39;;</p>
-<p>/*</p>
-<p>6执行sql语句</p>
-<p>参数：</p>
-<p>1).$link</p>
-<p>2).sql语句</p>
-<p>返回值：</p>
-<p>成功：object</p>
-<p>失败：false</p>
-<p>*/</p>
-<p>$result = mysqli_query($link, $sql);</p>
-<p>/* var_dump($result);</p>
-<p>var_dump(mysqli_affected_rows($link));</p>
-<p>die; */</p>
-<p>/*</p>
-<p>7.解析结果集</p>
-<p>mysqli_fetch_*</p>
-<p>mysqli_fetch_assoc() //返回一条关联数组的数据</p>
-<p>mysqli_fetch_array() //返回一条关联数组的数据</p>
-<p>mysqli_fetch_row() // 返回一条索引数组的数据</p>
-<p>mysqli_affected_rows() 返回执行受影响的行数<br>说明：增删改返回受影响行数，查询返回数据的和</p>
-<p>mysqli_num_rows()//自己测试</p>
-<p>mysqli_insert_id //更新数据时候 成功返回插入数据的id</p>
-<p>*/</p>
-<p>date_default_timezone_set(&#39;PRC&#39;);</p>
-<p>if ($result &amp;&amp; mysqli_affected_rows($link)) {</p>
-<p>echo &#39;&lt;table width=800 border=1 align=center&gt;&#39;;</p>
-<p>echo &#39;&lt;caption&gt;用户信息&lt;/caption&gt;&#39;;</p>
-<p>echo<br>&#39;&lt;tr&gt;&lt;td&gt;id&lt;/td&gt;&lt;td&gt;用户名&lt;/td&gt;&lt;td&gt;邮箱&lt;/td&gt;&lt;td&gt;注册ip&lt;/td&gt;&lt;td&gt;注册时间&lt;/td&gt;&lt;/tr&gt;&#39;;</p>
-<p>while ($data = mysqli_fetch_assoc($result)) {</p>
-<p>echo &#39;&lt;tr&gt;&#39;;</p>
-<p>echo&#39;&lt;td&gt;&#39; . $data[&#39;id&#39;] . &#39;&lt;/td&gt;&#39;;</p>
-<p>echo&#39;&lt;td&gt;&#39; . $data[&#39;username&#39;] . &#39;&lt;/td&gt;&#39;;</p>
-<p>echo&#39;&lt;td&gt;&#39; . $data[&#39;email&#39;] . &#39;&lt;/td&gt;&#39;;</p>
-<p>echo&#39;&lt;td&gt;&#39; . long2ip($data[&#39;ip&#39;]) . &#39;&lt;/td&gt;&#39;;</p>
-<p>echo&#39;&lt;td&gt;&#39; . date(&#39;Y-m-d H:i:s&#39;, $data[&#39;create_time&#39;]) .<br>&#39;&lt;/td&gt;&#39;;</p>
-<p>echo &#39;&lt;/tr&gt;&#39;;</p>
-<p>}</p>
-<p>echo &#39;&lt;/table&gt;&#39;;</p>
-<p>}</p>
-<p>/*</p>
-<p>8.关闭数据库</p>
-<p>*/</p>
-<p>mysqli_close($link);</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P16-php%E4%B8%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%93%8D%E4%BD%9C/#comment-container"><span class="display-none-class">426de59359f5e0eb8931b0938c8529f5</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="426de59359f5e0eb8931b0938c8529f5">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>5 分钟  <i class="fas fa-pencil-alt"> </i>0.8 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P16-php%E4%B8%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%93%8D%E4%BD%9C/">PHP[入门]P16-php中数据库的操作</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day16</p>
-<p>1.mysql函数</p>
-<p>使用方式：</p>
-<p>select 函数(字段名) as 字段别名 from tablename ;</p>
-<p>注：尽量不用</p>
-<p>as 给字段起别名</p>
-<p>2.分组：</p>
-<p>select count(age) as count ,age from tablename group by 字段名;</p>
-<p>select count(age) as count ,age from tablename group by 字段名 having<br>条件;</p>
-<p>分组以后数据再次过滤 条件使用having</p>
-<p>3.链接：</p>
-<p>内连接：</p>
-<p>隐式链接：select 表1.字段 [as 别名], 表n.字段 from 表1 [别名], 表n<br>where 条件;</p>
-<p>显示链接:select 表1.字段 [as 别名], 表n.字段 from 表1 [别名] join<br>表n on 条件;</p>
-<p>表1 inner join 表2 on 条件</p>
-<p>表1 join 表2 on 条件</p>
-<p>inner一般使用习惯是可以省略掉的</p>
-<p>外链接：</p>
-<p>左连接：select 表1.字段 [as 别名], 表n.字段 from 表1 [别名] left<br>join 表n on 条件;</p>
-<p>说明：以左边表数据为准进行匹配查询 如果右边对应表没有对应数据 null</p>
-<p>右链接：select 表1.字段 [as 别名], 表n.字段 from 表1 [别名] right<br>join 表n on 条件;</p>
-<p>select guser.username,goods.name ....….</p>
-<p>说明：以什么方式关联就以什么表为主</p>
-<p>4.子查询</p>
-<p>以一个结果集作为另一个查询的一部分或者是条件</p>
-<p>select * from user where gid in (select gid from goods);</p>
-<p>5.全外链接(记录联合)</p>
-<p>将讲个关联查询结果合并到一起，没有对应的数据时候 用null</p>
-<p>select * from guser lu left join goods lg on lu.gid=lg.gid union select<br>* from guser ru right join goods rg on ru.gid = rg.gid;</p>
-<p>union 是将 union all 后的结果进行一次distinct，去除重复记录后的结果</p>
-<p>6.修改更新：</p>
-<p>update money set balance=balance-500 where userid = 15;</p>
-<p>update 要操作的字段名 set 字段名=字段名(实际的意义指字段里的对应值)-190<br>where 条件</p>
-<p>两个表同时修改</p>
-<p>update user u, goods g set u.gid=0, g.price=1799 where u.id=8 and<br>u.gid=g.gid;</p>
-<p>说明： 先将user表里 gid 值 把user表中id为8的用户gid改成0<br>然后运用关联gid值 就是拿到的user gid 再把goods修改</p>
-<p>7.清空表记录</p>
-<p>1.delete 删除 说明： 索引也就通常说的id 是自增的使用delete删除数据<br>id保留 再添加数据时候从删除前的id+1</p>
-<p>2.truncate table user; 说明：与delete的区别就是<br>清空数据时候连索引值一起清空。</p>
-<p>8.权限控制(了解)：</p>
-<p>show grants;显示用户</p>
-<p>创建用户：</p>
-<p>create user ‘username’@’host’ identified by ‘password’;</p>
-<p>赋予操作权限：</p>
-<p>grant 权限 [privileges] on 库.表 to 用户@主机 [identified by<br>‘密码’];</p>
-<p>刷新：</p>
-<p>flush privileges;</p>
-<p>剥夺权限：</p>
-<p>revoke select on test.* from ‘aaa’@’%’;</p>
-<p>说明：</p>
-<p>* 代表操作索引的表</p>
-<p>% 代表模糊匹配</p>
-<p>all 所有操作（insert delete select update）</p>
-<p>9.事务</p>
-<p>默认的配置autocommit值是1 自动提交</p>
-<p>将set autocommit=0;以后意思是手动提交; commit</p>
-<p>开启事务：</p>
-<p>begin; //如果begin不好使时候可以使用set autocommit=0;</p>
-<p>提交事务：</p>
-<p>commit;</p>
-<p>回滚：</p>
-<p>rollback;</p>
-<p>10.导入导出</p>
-<p>导出：mysqldump -uroot -p 数据库 &gt; xxx.sql</p>
-<p>// 一定是退出mysql</p>
-<p>导入：mysql -uroot -p 数据库 &lt; xxx.sql</p>
-<p>//注意： 一定新建一个数据库</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P15-%E6%95%B0%E6%8D%AE%E5%BA%93%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%20%E5%AD%97%E7%AC%A6%E9%9B%86%20%20%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/#comment-container"><span class="display-none-class">8808517c92b3413f7a9b4d2e3ebc7d7f</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="8808517c92b3413f7a9b4d2e3ebc7d7f">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>7 分钟  <i class="fas fa-pencil-alt"> </i>1.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P15-%E6%95%B0%E6%8D%AE%E5%BA%93%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%20%E5%AD%97%E7%AC%A6%E9%9B%86%20%20%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">PHP[入门]P15-数据库 数据类型 字符集  存储引擎</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day15 数据库 数据类型 字符集 存储引擎</p>
-<p>1.数据类型</p>
-<p>int 默认没有设置int字节 11位</p>
-<p>char varchar 数据类型的区别：</p>
-<p>timestamp: regtime timestamp default current_timestamp;</p>
-<p>在增加数据的时候<br>没有给指定的时间类型字段值的时候，默认填充的值是当前时间的时间戳</p>
-<p>enum:枚举类型 用于互斥的 单选项</p>
-<p>新建字段时候</p>
-<p>sex enum(&#39;w&#39;,&#39;m&#39;);</p>
-<p>// sex enum(1,2,.….);</p>
-<p>存储值时候：</p>
-<p>insert into user values(&#39;w&#39;);</p>
-<p>insert into user values(&#39;1&#39;);</p>
-<p>set:集合类型</p>
-<p>设置字段类型：love set(&#39;eat&#39;,&#39;play&#39;,&#39;sport&#39;,&#39;wan&#39;);</p>
-<p>// ; 1 2, 4, 8;</p>
-<p>insert into user values(&#39;eat,play&#39;);</p>
-<p>insert into user values(&#39;6&#39;);</p>
-<p>unsigned:无符号 规定 没有负数 int(10) unsigned eg：编号，年龄......</p>
-<p>auto_increment：自增 常用于：id</p>
-<p>修改起始值：alter table user auto_increment=起始值</p>
-<p>default &#39;值&#39;： 默认值 再给某个字段增加值的时候就是插入数据时没有给值<br>默认使用设置的默认值</p>
-<p>not null :创建时在字段语句后接上：not null</p>
-<p>2.字符集</p>
-<p>utf8 GBK GB2312</p>
-<p>3.存储引擎</p>
-<p>show engines;可以查看到当前服务器支持的所有引擎。</p>
-<p>myisam 和 innodb的区别</p>
-<p>myisam 不支持事物 表锁 支持全文索引 查询的速度快</p>
-<p>innodb 支持事物 行锁 支持外键 数据操作速度快 默认读取不加锁<br>处理大数据优先选择innodb</p>
-<p>4.索引</p>
-<p>普通索引：</p>
-<p>格式：alter table 表 add index(字段);</p>
-<p>唯一索引： 当前列值唯一</p>
-<p>格式：alter table 表 add unique(字段);</p>
-<p>主键索引:不允许有空值 也别重复 是特殊的唯一索引 【注】基本上每个表都有id<br>会给主键索引 自动递增</p>
-<p>格式：alter table 表 add primary key(字段);</p>
-<p>全文索引：</p>
-<p>格式：alter table 表 add fulltext(字段);</p>
-<p>删除索引：</p>
-<p>格式：alter table 表 drop index字段;</p>
-<p>删除主键索引：</p>
-<p>格式: alter table money drop primary key;</p>
-<p>5.DML(增，删，改)</p>
-<p>增：</p>
-<p>1.insert into tablename values(值1,值2,.…);</p>
-<p>[注]:按照字段的顺序跟值一一对应 添加； 如果有默认值 不想给定值<br>可以用null</p>
-<p>2.insert [into] 表 values(值1,值2,值n);<br>可以将into省略（知道就好，尽量不用）</p>
-<p>3.insert into tablename(字段1,字段2,.….) values(值1,值2,.….);</p>
-<p>[注]：按照自己赋的字段 字段跟值一一对应;</p>
-<p>4.insert into star(name, money, province, age, sex)</p>
-<p>values(&#39;黄晓明&#39;, 2000000, &#39;山东&#39;, 39, 0),</p>
-<p>( &#39;angelababy&#39;, 3000000, &#39;上海&#39;, 27, 1),</p>
-<p>( &#39;陈赫&#39;, 150000, &#39;福建&#39;, 31, 0);</p>
-<p>[注]：<br>字段名和值要一一对应，每条数据用小括号括起来，每条数据用逗号分隔开<br>最后的使用分号结束;</p>
-<p>插入数据时候可以不传值的情况</p>
-<p>1.自增的字段 （默认+1）</p>
-<p>2.有默认值的字段 default</p>
-<p>3.可以为空的字段</p>
-<p>删除：</p>
-<p>delete from tablename where 条件;</p>
-<p>[注]:要写where条件 不然后果自负</p>
-<p>修改：</p>
-<p>update tablename set 字段1=值1, 字段2=值2 .. where 条件;</p>
-<p>[注]：要写where条件 不然就是修改全表数据了;</p>
-<p>6.DQL(查)</p>
-<p>1.select * from tablename;</p>
-<p>[注]：是执行效率最低的一种方式,会每天数据全部读一遍;</p>
-<p>2.指定字段查询：</p>
-<p>select 字段名,字段名 from star;</p>
-<p>3.查询出不重复的记录</p>
-<p>select distinct age, sex from star;</p>
-<p>[注]:两个字段查询的是组合起来不重复的记录。</p>
-<p>一个字段 当前字段不重复的记录</p>
-<p>4.有条件的查询</p>
-<p>select 字段名,.… from star where age = 43;</p>
-<p>select * from star where age = 43;</p>
-<p>5.条件查询</p>
-<p>select * from star where age&gt;32 and sex=0;</p>
-<p>select * from star where age&gt;32 or sex=0;</p>
-<p>select * from star where age between A and B; //区间 在A和B之间 包含A B</p>
-<p>select * from star where age in(32,43);//在in值中的数据</p>
-<p>like : &#39;%&#39;代表模糊查询 [注]：效率很低 也是查询所有进行匹配</p>
-<p>排序：</p>
-<p>order by 字段名 desc/asc desc:倒序 asc :默认的正序</p>
-<p>多字段排序：</p>
-<p>order by 字段名1 desc, 字段名2 desc [注]：多字段排序呢<br>先按照前边的字段进行排序，如果前边的都相等排序失败，就按照第二个字段进行排序</p>
-<p>limit 限制查询结果集</p>
-<p>limit 2; 取符合条件的数据的前两条</p>
-<p>limit 0,3; 取符合条件的数据从0（第一条）开始取，取了三条数据以后结束</p>
-<p>7.where条件</p>
-<p>8.结果集排序</p>
-<p>9.限制结果集</p>
-<p>10.分组</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P14-mysql%E5%9F%BA%E7%A1%80/#comment-container"><span class="display-none-class">eff6a7a000784b24e36f8daf619d759c</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="eff6a7a000784b24e36f8daf619d759c">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>6 分钟  <i class="fas fa-pencil-alt"> </i>0.9 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P14-mysql%E5%9F%BA%E7%A1%80/">PHP[入门]P14-mysql基础</a></h1><div class="content"><blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day14-mysql基础</p>
-<p>1.数据库系统的组成部分</p>
-<p>数据库系统 数据库 表 字段 数据</p>
-<p>2.数据库分类</p>
-<p>关系型数据库 非关系型数据库</p>
-<p>3.SQL含义</p>
-<p>Structured Query Language结构化查询语言</p>
-<p>数据库的默认端口号是：3306</p>
-<p>4.SQL的分类</p>
-<p>DDL：数据定义语言 对数据库的库，表，字段的创建 修改 删除的操作</p>
-<p>DML：数据的操作语言 主要对数据 进行增加 删除 修改</p>
-<p>DQL：数据的查询语言 主要对数据进行查询</p>
-<p>DCL：数据的控制语言</p>
-<p>DTL：数据的事物</p>
-<p>5.配置mysql相关环境变量</p>
-<p>1.把mysql bin目录路径复制</p>
-<p>2.打开计算机属性-》系统属性-》高级系统设置-》高级-》环境变量-》系统变量-》path<br>修改path值 不能删除以前的在值后边加上分号 把第一步路径粘贴上</p>
-<p>3.关闭dos窗口 重新打开 mysql</p>
-<p>启动dos:</p>
-<p>1 开始菜单 -》搜索程序打开cmd 回车</p>
-<p>2 win+R -&gt; cmd</p>
-<p>不修改环境变量想执行mysql</p>
-<p>切换到mysql bin 目录下</p>
-<p>d:</p>
-<p>cd 切换目录</p>
-<p>6.链接数据库</p>
-<p>mysql -hlocalhost -uroot -ppassword</p>
-<p>主机名 用户名 密码</p>
-<p>**</p>
-<p>如果访问的是本机的数据库 可以省略-h</p>
-<p>链接mysql 时候 密码回车敲</p>
-<p>退出mysql命令：</p>
-<p>quit; exit;</p>
-<p>help; \h 帮助命令 \c 清除历史 清除错误都可以使用</p>
-<p>\G 更友好的显示</p>
-<p>注意： 语句结束切记不要忘记分号</p>
-<p>7.基本命令</p>
-<p>show databases; 显示 当前所有的数据库</p>
-<p>create database databasename; 创建数据库</p>
-<p>drop database databasename; 删除数据库</p>
-<p>use databasename; 选中数据库 使用数据库</p>
-<p>show create database databasename; 显示库结构</p>
-<p>8.表语句</p>
-<p>show tables; 显示当前选中的库中的所有表</p>
-<p>create table tablename(字段名 类型, 字段名 类型,字段名类型); 创建一个表</p>
-<p>desc tablename; 查看选中的表的结构</p>
-<p>drop table tablename; 删除选中的表</p>
-<p>alter table tablename modify 字段名 varchar(40); 修改表字段类型</p>
-<p>alter table 表名 add 字段名 字段类型; 增加字段</p>
-<p>alter table 表名 add 字段名 字段类型 after 字段名;<br>增加字段设置字段的位置</p>
-<p>alter table 表名 add 字段名 字段类型 first; 增加的字段放在字段的最前边</p>
-<p>alter table tablename drop 字段名; 删除表中字段</p>
-<p>alter table tablename change 字段原名 新字段名 数据类型;修改表中的字段名</p>
-<p>alter table tablename rename newtablename; 修改表名</p>
-<p>*字段增加和修改语句(add/change/modify)中，最后都可以加一个可选项<br>first|after。</p>
-<p>----------</p>
-<p>修改表字段</p>
-<p>alter table tablename [modify/add/change/drop]</p>
-<p>创建表语句的时候每次都要指定存储引擎 和字符集</p>
-<p>engine = innodb</p>
-<p>default charset=utf8</p>
-<p>解决每次都要设置表引擎和字符集修改mysql配置文件my.ini</p>
-<p>my.ini 打开方式 直接在小绿W打开<br>也可以在wamp64/bin/mysql/mysql5.7.9/my.ini</p>
-<p>修改</p>
-<p>default-storage-engine=InnoDB</p>
-<p>添加</p>
-<p>character_set_server=utf8</p>
-<p>--------</p>
-<p>注：一定先use 使用库以后才能操作选中的这个库里面的数据</p>
-<p>-----------</p>
-<p>json_encode 将字符串转换成json字符串<br>一般用于最多的时候就是将数组转成json</p>
-<p>json_decode 将json串转成 object，第二个参数传true 才返回的是数组</p>
-<p>-----------</p>
+<p>gettype() ：获取数据的类型</p>
+<p>empty()：判断的是这个变量是否为空 为空返回真true 不为空返回的是false</p>
+<p>empty和isset的区别（）</p>
+<p>empty() 判断这个变量是否为空 为空返回真 不为空返回的是false</p>
+<p>isset() 判断这个变量是否定义 如果定义返回真 如果没有定义返回假</p>
+<p>使用：一般在判断数组或者一个变量里面是否有值的时候用empty</p>
+<p>2.判断类型（）</p>
+<p>is_array() is_bool() is_float() is_integer()</p>
+<p>is_null() is_numeric() is_object() is_resource()</p>
+<p>is_scalar()检测是否是标量 is_string()</p>
+<p>返回值：是要判断的类型 就返回真 不是就返回假</p>
+<p>3.类型转换：（）</p>
+<p>强制类型转换</p>
+<p>1.转换函数</p>
+<p>intval() strval() floatval() boolval()</p>
+<p>只在使用的时候改变了变量的类型 并没有改变变量本事的类型</p>
+<p>2.在变量前边加上(int)(string)(float)(bool)转换方式</p>
+<p>只在使用的时候改变了变量的类型 并没有改变变量本事的类型</p>
+<p>3.settype()</p>
+<p>arg:</p>
+<p>var 要转换的变量。</p>
+<p>type 的可能值为：</p>
+<p>boolean integer float string</p>
+<p>设置变量的类型，会改变变量本身的类型</p>
+<p>[注]</p>
+<p>settype($num, &#39;null&#39;) 等价于 unset($num);</p>
+<p>[注]</p>
+<p>1.当字符串转为整型 或者浮点型时候 开头如果不是数字那么直接转为0</p>
+<p>2.空转为整型是整型的0</p>
+<p>3.空转为浮点型是浮点型的0</p>
+<p>4.空转为字符串是空字符串</p>
+<p>5.浮点型的1234.0 转为字符串是1234</p>
+<p>6.浮点型的1234.45 转为字符串是1234.45</p>
+<p>7.浮点型转为整型的时候小数点后边的全部干掉</p>
+<p>自动类型转换：</p>
+<p>用 . 拼接时候会转换成字符串</p>
+<p>在运算的时候会自动转换</p>
+<p>1.做加减乘除运算的时候 字符串会自动转为整型或浮点型</p>
+<p>2.bool值参与运算的时候 自动将true转为1 false转为0</p>
+<p>3.如果用点拼接字符串 然后在拼接bool值 布尔值true转为1 false转为0</p>
+<p>4.如果if小括号里面有运算表达式 最后都转为bool值</p>
+<p>[注]:转为bool值为假的情况</p>
+<p>1.整型的0是假 其余都是真</p>
+<p>2.浮点型的0.0是假 其余都是真</p>
+<p>3.空字符串是为假 就算一个空格他也是真</p>
+<p>4.字符串里有一个0 是假 其余为真</p>
+<p>5.null(空)是假</p>
+<p>6.未声明成功的资源也是假</p>
+<p>7.空数组也是为假</p>
+<p>4.常量 （）</p>
+<p>常量定义</p>
+<p>在程序的运行的运行过程中 其值不会被改变的</p>
+<p>不可以unset</p>
+<p>定义：</p>
+<p>define(&#39;常量名&#39;, &#39;常量值&#39;);</p>
+<p>规范：</p>
+<p>1.常量名用单引号(双引号也行，但是从效率考虑用单引号)</p>
+<p>2.一般都常量名都使用大写(规定必须用大写)</p>
+<p>3.常量名也区分大小写</p>
+<p>4.常量名定义时候也是数字 字母下划线不能以数字开始 尽量不用数字</p>
+<p>5.常量的值只能用标量</p>
+<p>6.常量的作用域是全局</p>
+<p>7.常量调用时候不能写在字符串中，想使用可以用 . 拼接</p>
+<p>8.不可以重复定义</p>
+<p>常量判断:</p>
+<p>defined(常量名)</p>
+<p>是否定义了常量 定义了返回true否则返回false</p>
+<p>系统常量（）</p>
+<p>__LINE__ 当前所在行数</p>
+<p>__FILE__ 在前所在文件全路径</p>
+<p>__DIR__ 所在目录</p>
+<p>PHP_OS php运行的系统</p>
+<p>PHP_VERSION php的版本</p>
+<p>(了解先背下来）</p>
+<p>__FUNCTION__：当前函数名</p>
+<p>M_PI ：圆周率</p>
+<p>__CLASS__ ：当前类名</p>
+<p>__METHOD__：当前成员方法名</p>
+<p>__NAMESPACE__：当前命名空间</p>
+<p>5.可变变量</p>
+<p>$hello = &#39;lilei&#39;;</p>
+<p>$lilei = &#39;hanmeimei&#39;;</p>
+<p>echo $hello . &#39;&lt;br /&gt;&#39;;//lilei</p>
+<p>echo $lilei . &#39;&lt;br /&gt;&#39;;//hanmeimei</p>
+<p>echo $$hello; // hanmeimei</p>
+<p>// $$hello = $lilei;</p>
+<p>6.变量的引用</p>
+<p>//当我们没有使用&amp;引用变量时两个变量有各自的存储空间</p>
+<p>当使用了&amp; 以后 两个变量指向使用的是同一个存储空间</p>
+<p>修改一个的值 另一个也会修改</p>
+<p>$num = 20;</p>
+<p>$num1 = &amp;$num;</p>
+<p>$num1 = 30;</p>
+<p>echo $num . &#39;&lt;br /&gt;&#39;;</p>
+<p>echo $num1 . &#39;&lt;br /&gt;&#39;;</p>
+<p>7.运算符和表达式</p>
+<p>运算符:</p>
+<p>表达式:由变量 常量 运算符组成</p>
+<p>【注】表达式都有值</p>
+<p>算数运算符： + - * / %</p>
+<p>赋值运算符： = += -= *= /= %= .=</p>
+<p>+=</p>
+<p>.=</p>
+<p>自增自减：</p>
+<p>自增:++$num $num++ 都会让$num + 1</p>
+<p>自减：--$num $num-- 都会让$num -1</p>
+<p>区别：</p>
+<p>$num = 3;</p>
+<p>$num1 = ++$num;</p>
+<p>++$num 先加再用 先把1加给$num //4 $num1=4</p>
+<p>--$num 先减再用</p>
+<p>$num1 = $num++</p>
+<p>$num++ 先用再加 先把$num本身的值赋给$num1 之后自身+1</p>
+<p>$num-- 先用再减</p>
+<p>关系运算符：&gt; &lt; &gt;= &lt;= == != === !==</p>
+<p>== 模糊等于 只比较值 不比较数据类型</p>
+<p>!= 模糊不等于</p>
+<p>=== 全等于 就是值和类型都相同表达式才为真</p>
+<p>!== 不全等 有一个不管是值还是类型有一个一样 就为真</p>
+<p>逻辑运算符 &amp;&amp; and || or ! xor</p>
+<p>&amp;&amp; and</p>
+<p>逻辑与：并且</p>
+<p>当两个表达式同时为真 才执行真区间</p>
+<p>|| or</p>
+<p>逻辑或：或者</p>
+<p>当两个表达式只要有一个表达式为真 就执行真区间</p>
+<p>xor 逻辑异或</p>
+<p>相异时候为真 相同的时候为假</p>
+<p>短路原则：</p>
+<p>&amp;&amp; and</p>
+<p>当第一个表达式为假的时候 直接走假区间 不会判断第二个表达式是真还是假</p>
+<p>|| or</p>
+<p>当第一个表达式为真的时候，直接走真区间 不会判断第二个表达式为真还是假</p>
+<p>!:取反 true取反是false</p>
+<p>按位运算(了解)</p>
+<p>&amp; | ^ ~ &lt;&lt; &gt;&gt;</p>
+<p>8.优先级</p>
+<p>先乘除后加减 如果不行直接加上小括号</p>
+<p>9.三元运算符</p>
+<p>? :</p>
+<p>表达式 ? 真区间 : 假区间;</p>
+<p>其他运算符 @ =&gt; -&gt;</p>
+<p>``:执行系统的命令</p>
+<p>@:抑制错误输出(单行)</p>
+<p>=&gt;:数组中键值对的关联符</p>
+<p>-&gt;:对象成员的访问方式</p>
+<p>掌握系统函数</p>
+<p>floor():返回不大于 value 的最接近的整数，舍去小数部分取整。</p>
+<p>ceil(): 返回不小于 value 的下一个整数，value 如果有小数部分则进一位。</p>
+<p>round():四舍五入</p>
+<p>----------------</p>
+<p>PHP官网（中文）：<a target="_blank" rel="noopener" href="http://www.php.net/">http://www.php.net</a></p>
+<p>PHP学院：<a target="_blank" rel="noopener" href="http://www.phpxy.com/">http://www.phpxy.com</a></p>
+<p>PSR规范</p>
+<p>--------------</p>
+<p>错误：</p>
+<p>parse 或者syntax 解析</p>
+<p>notice 通知</p>
+<p>warning 警告</p>
+<p>fatal 致命</p>
+<p>--------------</p>
 <p>作业：</p>
-<p>测试：字段增加和修改语句(add/change/modify)中，最后都可以加一个可选项<br>first|after。</p>
-<p>罚写：全员 数组函数 字符串函数 两遍</p>
-</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><!--!--><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/12/">上一页</a></div><div class="pagination-next"><a href="/page/14/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/12/">12</a></li><li><a class="pagination-link is-current" href="/page/13/">13</a></li><li><a class="pagination-link" href="/page/14/">14</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/theme/avatar2.jpg" alt="nil"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">nil</p><p class="is-size-6 is-block">nil is null , null is nil</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>天朝</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">138</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/hzjoyous" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/hzjoyous"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/hzjmessage@outlook.com"><i class="fa fa-envelope"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+<p>敲代码</p>
+<p>本周基础知识全掌握</p>
+<p>京东页面</p>
+<p>论坛页面</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P07-PHP%E5%88%9D%E8%AE%A4%E8%AF%86/#comment-container"><span class="display-none-class">1ba23af277914b28b58b3e1a0c8afe3e</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1ba23af277914b28b58b3e1a0c8afe3e">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>8 分钟  <i class="fas fa-pencil-alt"> </i>1.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P07-PHP%E5%88%9D%E8%AE%A4%E8%AF%86/">PHP[入门]P07-PHP初认识</a></h1><div class="content"><blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day07PHP初认识</p>
+<p>PHP：Hypertext Preprocessor 超文本预处理器</p>
+<p>1.PHP运行原理</p>
+<p>运行在服务器端的脚本语言 可以内嵌在html中</p>
+<p>必须要有的，服务器（apache） 数据库（mysql） php引擎</p>
+<p>集成开发环境:</p>
+<p>PHPstudy WAMPServer XAMPP</p>
+<p>运行</p>
+<p>2.wampServer使用介绍</p>
+<p>修改www/index.php</p>
+<p>$projectContents .= &#39;<a target="_blank" rel="noopener" href="http://localhost//&#39;.\$file.\$UrlPort.\&#39;/\&quot;\&#39;">http://localhost/\&#39;.\$file.\$UrlPort.\&#39;/\&quot;\&#39;</a>;</p>
+<p>$projectContents .=<br>&#39;<a target="_blank" rel="noopener" href="http://localhost//&#39;.\$UrlPort.\&#39;/\&#39;.\$file.\&#39;/\&quot;\&#39;">http://localhost/\&#39;.\$UrlPort.\&#39;/\&#39;.\$file.\&#39;/\&quot;\&#39;</a>;</p>
+<p>www是放我们写的php文件 必须都放在www</p>
+<p>运行:禁止双击</p>
+<p>修改完配置文件不管是php.ini还是我们的httpd.conf都要重启服务</p>
+<p>重新安装bbs</p>
+<p>第一步:去install.lock 删除掉</p>
+<p>第二步：数据库名字不要跟上次一样</p>
+<p>phpinfo(); php扩展和配置信息等</p>
+<p>3.访问</p>
+<p>localhost 本机主机名</p>
+<p>127.0.0.1 本机ip</p>
+<p>局域网访问：Require all granted</p>
+<p>第一步：关闭防火墙</p>
+<p>第二部：修改apache wamp64\bin\apache\apache2.4.17\conf\httpd.conf</p>
+<p>看自己的ip地址:</p>
+<p>1.飞秋上有</p>
+<ol start="2">
+<li>开始那出入cmd-&gt;ipconfig-&gt;ipv4就是你的ip地址</li>
+</ol>
+<p>PHP是模块化的引擎</p>
+<p>4：php文件格式与语法格式</p>
+<p>标准风格 &lt;?php 中间是php代码 ?&gt; 但是去过这个文件是纯php代码的时候<br>&lt;?php</p>
+<p>段标记风格 &lt;? ?&gt; 修改php.ini 将short_open_tag=on 重启服务(一般不使用<br>知道记住就行)</p>
+<p>简写风格:&lt;?= 1;?&gt; == &lt;?php echo 1;?&gt;</p>
+<p>$_SERVER[&#39;REMOTE_ADDR&#39;]; 获取当前访问用户的ip地址</p>
+<p>$_SERVER[&#39;HTTP_REFERER&#39;];上一级页面的地址（父级）上一级页面的来源地址</p>
+<p>注释：</p>
+<p>/* 中间是注释这是块注释 */</p>
+<p>// 单行注释</p>
+<p>#单行注释</p>
+<p>每条语句结束加上&#39;;&#39;</p>
+<p>5：变量</p>
+<p>在程序的运行中可以存储值的 在程序的运行中其值改变的</p>
+<p>声明变量:</p>
+<p>必须以’$‘开始</p>
+<p>变量名是自定义的</p>
+<p>规则：</p>
+<p>以数字，字母，下划线组成</p>
+<p>不能以数字开始</p>
+<p>变量名严格区分大小写</p>
+<p>说明:</p>
+<p>变量名要见名识意思 （首选英文，就用全拼）</p>
+<p>驼峰命名法 $Name $userName</p>
+<p>下划线命名法 $user_name</p>
+<p>四种操作:</p>
+<p>定义:$num = 5;</p>
+<p>改变值：直接赋值 $num = 10;</p>
+<p>干掉变量:unset(变量名);</p>
+<p>判断这个变量是否存在</p>
+<p>isset(变量名);</p>
+<p>6：打印 输出</p>
+<p>echo :不是函数 是语法结构 输出变量值 输出多个变量用逗号隔开</p>
+<p>print():打印一个变量 一般不使用 print $num;</p>
+<p>print_r()：可以打印一个变量或者一个数组 同样也不经常使用但是要知道</p>
+<p>var_dump():打印一个变量或者一个数组时候经常使用<br>因为会打印出详细信息包括数据的类型和值 经常使用的</p>
+<p>7：数据类型</p>
+<p>标量：</p>
+<p>整型：int integer 负数也是 就是整数</p>
+<p>浮点: float/double 就是小数 科学计数法</p>
+<p>【注】千万尽量不要用浮点型数作比较</p>
+<p>布尔：bool boolean</p>
+<p>false假---0 true 真--1</p>
+<p>一般用于判断的时候</p>
+<p>eg:$num = false;</p>
+<p>if ($num) {</p>
+<p>echo 111;</p>
+<p>}</p>
+<p>字符串: str string</p>
+<p>用单引号跟双引号引起来的都是字符串</p>
+<p>单引号和双引号的区别：</p>
+<p>1.双引号解析变量，单引号不解析变量</p>
+<p>2.单引号效率比双引号高 （建议能用单引号，就不用双引号）</p>
+<p>3.双引号中放变量的时候 要有分隔符（推荐完美用{}）</p>
+<p>4.双引号中不能有双引号，单引号中不能有单引号 如果需要的话请转义</p>
+<p>5.单双引号可以相互嵌套 原样输出</p>
+<p>6.单引号不转义字符 支持\\ \&#39;</p>
+<p>7.双引号支持转义字符 eg：\n \r</p>
+<p>8.双引号中使用单引号引起来变量会被解析</p>
+<p>拼接字符串：</p>
+<p>用口水&#39;.&#39; 拼接</p>
+<p>eg:</p>
+<p>$str=&quot;wwww&#39;$str1&#39;&quot;;</p>
+<p>定界符:&quot;heredoc&quot;</p>
+<p>$str = &lt;&lt;&lt;&quot;ABCD&quot;</p>
+<p>bug是不易被发&quot;现&quot;你们经常出现的是错误dwjhrke</p>
+<p>ABCD;</p>
+<p>[注]:相当于双引号的字符串 但是这里面支持使用双引号</p>
+<p>&#39;nowdoc&#39;</p>
+<p>$str = &lt;&lt;&lt;&#39;ABCD&#39;</p>
+<p>bug是不易被发&#39;现&#39;你们经常出现的是错误</p>
+<p>dwjhrke</p>
+<p>ABCD;</p>
+<p>[注]:开始必须有&lt;&lt;&lt;&#39;ASS&#39; 结尾必须顶格</p>
+<p>混合(复合)：</p>
+<p>数组 array 一组数据的集合</p>
+<p>对象 object一组有关系的数据个体</p>
+<p>特殊：</p>
+<p>空 null ：空就是null null就是空</p>
+<p>产生null的三种方式</p>
+<p>1.直接给变量赋值为null</p>
+<p>2.直接定义一个空变量 eg:$num;</p>
+<p>3.unset();直接干掉</p>
+<p>资源:resource</p>
+<p>gettype()</p>
+<p>empty()</p>
+<p>empty和isset的区别</p>
+<p>程序的执行流程:默认从上到下执行</p>
+<p>扩展：</p>
+<p>面试题1：echo 和print ,print_r的区别</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2017-01-01  <a class="commentCountImg" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P01~06html/#comment-container"><span class="display-none-class">1da94ec3f34f386d274bddb0437667eb</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1da94ec3f34f386d274bddb0437667eb">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>24 分钟  <i class="fas fa-pencil-alt"> </i>3.7 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/01/01/code/php/php-%E5%85%A5%E9%97%A8/P01~06html/">PHP[入门]P01~06html</a></h1><div class="content"><blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<h1 id="B-S和C-S的简单认识"><a href="#B-S和C-S的简单认识" class="headerlink" title="B/S和C/S的简单认识"></a>B/S和C/S的简单认识</h1><p>client-server : 客户端服务器模式</p>
+<p>开发成本比较高、不易于维护、在客户端部署一套软件，服务器端也要部署</p>
+<p>browser-server : 浏览器服务器模式</p>
+<h1 id="网页的工作原理"><a href="#网页的工作原理" class="headerlink" title="网页的工作原理"></a>网页的工作原理</h1><p>通过域名或者 ip 然后访问服务器 服务器解析请求返回的是一个html文件</p>
+<p>浏览器将 html 文件解析成一个图文并茂的网页</p>
+<p>html 文件的组成部分: html css js(javascript)</p>
+<p>HTML 是 Hypertext Markup Language</p>
+<p>组织-&gt;文件夹和搜索选项-&gt;查看-&gt;隐藏已知文件的扩展名（去掉不选中）</p>
+<h1 id="认识标签"><a href="#认识标签" class="headerlink" title="认识标签"></a>认识标签</h1><p>格式：</p>
+<p><code>&lt;标签名 属性名1=&quot;属性值1&quot; 属性名2=&quot;属性值2&quot;&gt;要显示的内容&lt;/标签名&gt;</code></p>
+<p>标签注意事项：</p>
+<p>以<code>&lt;\&gt;</code>开始，中间放的是标签名</p>
+<p>属性跟属性之间 用空格隔开</p>
+<p>属性值 可以用双引号 单引号 或者不引 我建议使用双引号</p>
+<p><code>marquee(direction,scrollamount,width,height,loop)</code></p>
+<p>标签的分类：</p>
+<p>双边标签 <code>&lt;marquee&gt;&lt;/marquee&gt;</code></p>
+<p>单边标签 <code>&lt;br /&gt;</code>:换行</p>
+<h1 id="全局架构标签"><a href="#全局架构标签" class="headerlink" title="全局架构标签"></a>全局架构标签</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>是网页的标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>要显示在网页的所有内容<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">注释： <span class="comment">&lt;!-- 这是注释 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>设置字符集 ：告诉浏览器以utf-8编码格式显示</p>
+<p>出现乱码：</p>
+<ul>
+<li>文件的编码的格式（编辑器中选择utf-8无bom） </li>
+<li>在head头部 增加 <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> </li>
+<li>浏览器中：修改编码 </li>
+</ul>
+<h3 id="body常用属性"><a href="#body常用属性" class="headerlink" title="body常用属性"></a>body常用属性</h3><table>
+<thead>
+<tr>
+<th>tag</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bgcolor</td>
+<td>背景颜色</td>
+</tr>
+<tr>
+<td>background</td>
+<td>网页的背景图片</td>
+</tr>
+<tr>
+<td>text</td>
+<td>字体颜色（控制body体中所有的文字颜色）</td>
+</tr>
+<tr>
+<td>left-margin</td>
+<td>左边距</td>
+</tr>
+<tr>
+<td>top-margin</td>
+<td>上边距</td>
+</tr>
+<tr>
+<td>link</td>
+<td>正常状态显示的颜色</td>
+</tr>
+<tr>
+<td>vlink</td>
+<td>访问过后的状态</td>
+</tr>
+<tr>
+<td>alink</td>
+<td>鼠标点击时候的状态</td>
+</tr>
+</tbody></table>
+<h3 id="字体修饰标记-如下都是双边标记"><a href="#字体修饰标记-如下都是双边标记" class="headerlink" title="字体修饰标记(如下都是双边标记)"></a>字体修饰标记(如下都是双边标记)</h3><p><code>&lt;font&gt;&lt;/font&gt;</code></p>
+<p>size:字体大小 属性值是：1-7</p>
+<p>face：字体 (楷体，微软雅黑….)</p>
+<p>color:字体颜色</p>
+<p>颜色： <code>#000000</code> 前两位是红色 中间是绿色 结尾两位是蓝色</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span>：字体加粗(strong)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>：斜体显示字体(em,cite)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span><span class="tag">&lt;/<span class="name">u</span>&gt;</span>: 是下划线</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">s</span>&gt;</span><span class="tag">&lt;/<span class="name">s</span>&gt;</span>: 删除线</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">sub</span>&gt;</span><span class="tag">&lt;/<span class="name">sub</span>&gt;</span>：下标</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">sup</span>&gt;</span><span class="tag">&lt;/<span class="name">sup</span>&gt;</span>：上标</span><br></pre></td></tr></table></figure>
+<h3 id="排版标记"><a href="#排版标记" class="headerlink" title="排版标记"></a>排版标记</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>段落标记<span class="tag">&lt;/<span class="name">p</span>&gt;</span> 会自称一行（段）</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>行标签<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span>:换行</span><br><span class="line"><span class="tag">&lt;<span class="name">nobr</span> /&gt;</span>：不换行</span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span>水平线：(align: 对其方式 属性值：center left right color：颜色 width：宽 size：粗细尺寸)</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>（从h1到h6）通常网页中只会有一个h1</span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span><span class="tag">&lt;<span class="name">h6</span>&gt;</span>(align)</span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span>原样输出<span class="tag">&lt;/<span class="name">pre</span>&gt;</span>（在学php时候 经常使用输出数据的时候进行格式化）</span><br></pre></td></tr></table></figure>
+<h3 id="实体符号"><a href="#实体符号" class="headerlink" title="实体符号"></a>实体符号</h3><p>诸如 “&lt;” 之类的符号在HTML中拥有特殊的含义，所以在文本中使用它们。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">&amp;nbsp;</span> 空格</span><br><span class="line"></span><br><span class="line"><span class="symbol">&amp;lt;</span> （&lt;）</span><br><span class="line"></span><br><span class="line"><span class="symbol">&amp;gt;</span> (&gt;)</span><br><span class="line"></span><br><span class="line"><span class="symbol">&amp;amp;</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">&amp;copy;</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">&amp;trade;</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">&amp;reg;</span> <span class="symbol">&amp;times;</span> <span class="symbol">&amp;divide;</span></span><br></pre></td></tr></table></figure>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>type:</p>
+<p>disc：默认的黑心圆样式</p>
+<p>circle：空心圆</p>
+<p>square: 实心方块</p>
+<p>10.有序列表</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>type: 1 A a I</p>
+<p>start: 要显示列表的起始位置</p>
+<h3 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>我是简介名<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>幸福的孩子<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>杜海涛<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>刘翔<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>class id style name 他们四个都是属性名 配合我们的css 跟 js</p>
+<p><strong>基本上每个标签都有这四个属性</strong></p>
+<p>动态网页：</p>
+<p>数据内容展示出来是有变化的，比如：银行 账户余额（每个人都不一样）</p>
+<p>静态网页：</p>
+<p>做内容展示，所有人访问都是一样叫静态网页</p>
+<p>day02 HTML再认识</p>
+<p>nobr:</p>
+<p>双标签 <code>&lt;nobr&gt;</code>中间的内容不允许换行，这就是nobr<code>&lt;/nobr&gt;</code></p>
+<p>1.URL</p>
+<p>Uniform Resource Locator 统一资源定位符</p>
+<p>组成部分： 协议 地址 端口号 文件 参数</p>
+<p>协议：http:// https:// file:// ftp:// smtp:// 邮件传输协议 news://</p>
+<p>地址：<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 域名 ip (cmd -&gt; ping 域名)</p>
+<p>端口号：(:80) web http://默认的端口号是80 范围：0-65535<br>通常已经被使用：0-1024</p>
+<p>https 443 ftp: 21 smtp:// 25</p>
+<p>文件：要请求的文件 默认一般是：index.html</p>
+<p>参数：以？开始 后边跟的就是参数 形式：键1=值1&amp;键2=值2</p>
+<p>如果有多个参数的时候 中间用&amp;隔开</p>
+<p><a target="_blank" rel="noopener" href="http://www.baidu.com/index.html?word=qianfeng&amp;sex=1">http://www.baidu.com:80/index.html?word=qianfeng&amp;sex=1</a></p>
+<p>2.超链接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">href:要跳转的地址</span><br><span class="line"></span><br><span class="line">title: 就是鼠标放上去时候显示的内容（变成小手的时候）</span><br><span class="line"></span><br><span class="line">target：_self 在本窗口打开 _blank 在新窗口打开</span><br><span class="line"></span><br><span class="line">锚点：</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#锚点名&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;锚点名&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">了解（id=&quot;锚点名&quot;）</span><br></pre></td></tr></table></figure>
+<p>3.图片img</p>
+<p>src资源地址</p>
+<p>绝对路径：</p>
+<p>网络绝对：<a target="_blank" rel="noopener" href="https://www.baidu.com/img/bd_logo1.png">https://www.baidu.com/img/bd_logo1.png</a></p>
+<p>磁盘绝对：C:/wamp64/www/1701/day02-html/code/ly.jpg</p>
+<p>(也可以使用/)</p>
+<p>站点绝对：</p>
+<p><a target="_blank" rel="noopener" href="https://www.baidu.com/bd_logo1.png">https://www.baidu.com/bd_logo1.png</a></p>
+<p>bd_logo.png == <a target="_blank" rel="noopener" href="https://www.baidu.com/bd_logo1.png">https://www.baidu.com/bd_logo1.png</a></p>
+<p>== <a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a></p>
+<p>相对路径：</p>
+<p>以当前html文件为一个基准 寻找图片所在的位置 （路径）</p>
+<p>./ 在同一级目录（通常可以省略）</p>
+<p>../ 表示上一级目录(上两级 ../../ 层级多用绝对路径)</p>
+<p>alt:当图片加载失败的时候显示的内容</p>
+<p>title：鼠标悬停时候显示的内容</p>
+<p>width height</p>
+<p>【注】当只设置一个宽或者一个高的时候 图片会等比例缩放<br>如果给定了宽和高就会失帧 会变形</p>
+<p>热点地图(了解 ，掌握最好) usemap</p>
+<p>4.音频 视频</p>
+<p>audio:</p>
+<p>src：</p>
+<p>controls:控制条</p>
+<p>loop: 循环播放</p>
+<p>autoplay:自动播放</p>
+<p>video:</p>
+<p>width height</p>
+<p>src、controls、loop、autoplay</p>
+<p>5.表格</p>
+<p>table:</p>
+<p>bgcolor:表格的背景颜色</p>
+<p>border：边框</p>
+<p>bordercolor:边框颜色</p>
+<p>align：表格的显示 对其方式</p>
+<p>cellspacing:单元格间距</p>
+<p>cellpadding：单元格中的内容跟边框的距离</p>
+<p>width，height</p>
+<p>tr:width,height,</p>
+<p>align:水平距离</p>
+<p>valign：垂直方向 top bottom middle</p>
+<p>th--td:width,height,align,valign,</p>
+<p>rowspan:</p>
+<p>colspan:</p>
+<p>caption:</p>
+<p>valign: top middle bottom</p>
+<p>day03-表单</p>
+<p>表格</p>
+<p>tel</p>
+<p>colspan:合并列，需要将同一行的那个td给干掉</p>
+<p>rowspan:合并行，需要将下一行的那个td给干掉</p>
+<p>url参数作用:</p>
+<p>a标签扩展：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;tel:132603519038&quot;</span>&gt;</span>dadianhua<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:wanglijuan@1000phone.com&quot;</span>&gt;</span>发送邮件<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>1：iframe<br>(width\height\src\name\frameborder\scrolling)</p>
+<p>frameborder :0/1</p>
+<p>scrolling:no/yes/auto</p>
+<p>2: frameset(cols\rows\frameborder\border\bordercolor\noresize)</p>
+<p>frame(src\name\scrolling)</p>
+<p>3:form表单</p>
+<p>用途：获取有意义的信息，用户键入信息（注册，登陆，留言等等）</p>
+<p>属性:(action/method/enctype(multipart/form-data)/target)</p>
+<p>基本用途：</p>
+<p>form:</p>
+<p>action:提交的地址</p>
+<p>method:提交的方式</p>
+<p>默认：get(在url中显示?参数) post</p>
+<p>【注】:拉取信息是时候一般使用get</p>
+<p>post:用户提交数据的时候使用</p>
+<p>enctype=&quot;multipart/form-data&quot;<br>现在记住这个，是上传文件的时候必须使用一个属性</p>
+<p>target：打开提交页面的方式</p>
+<p>(1)input</p>
+<p>属性:(</p>
+<p>type：类型</p>
+<p>size:宽</p>
+<p>value：输入框的默认值（一般的时候不写，因为就是让用户键入信息）</p>
+<p>maxlength：允许键入的最大长度</p>
+<p>readonly：只读</p>
+<p>disabled：禁用状态</p>
+<blockquote>
+<p>:一般时候是用在只能看不能二次修改的值的时候（注册公司名）</p>
+</blockquote>
+<p>placeholder：提示信息 placeholder=&quot;默认提示的信息&quot;</p>
+<p>name:非常重要 要提交的内容的键)</p>
+<p>type(</p>
+<p>text:文本信息</p>
+<p>password：密码</p>
+<p>radio：单选框</p>
+<blockquote>
+<p>必须name值 name要一样</p>
+</blockquote>
+<p>必须value 一般使用习惯：1男 2女 0未知或者保密</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">radio(&lt;label for&#x3D;&quot;id名&quot;&gt;详细见代码&lt;&#x2F;label&gt; checked)</span><br><span class="line"></span><br><span class="line">checkbox(checked)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>说明:必须有name属性 属性值必须： eg:like</p>
+</blockquote>
+<p>value</p>
+<p>submit</p>
+<p>hidden：区分，不让用户看见的值用</p>
+<p>file:上传文件时候使用</p>
+<p>)</p>
+<p>跳过这个坑：name属性一定要给</p>
+<p>value</p>
+<p>input（必须放在form中）</p>
+<p>button：最多时候配合js使用</p>
+<p>reset:重置按钮 （清空表单input中用户键入的内容）</p>
+<p>&lt;button&gt;提交按钮&lt;/button&gt;</p>
+<p>(2)select(multiple size name)</p>
+<p>下拉菜单</p>
+<blockquote>
+<p>：name</p>
+</blockquote>
+<p>option((value selected))</p>
+<blockquote>
+<p>：value</p>
+</blockquote>
+<p>(3)textarea(cols rows)</p>
+<p>双边标记：&lt;textarea&gt;默认中间不要有空格或者回车&lt;/textarea&gt;</p>
+<p><strong>提交的都是意义的数据 不包括<code>&lt;p\&gt;&lt;/p&gt;</code></strong></p>
+<p>4:头元素</p>
+<p>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;1.css&quot; /&gt;</p>
+<p>链接外部的css样式</p>
+<p>&lt;meta charset=&quot;utf-8&quot; /&gt;</p>
+<p>SEO:搜索引擎优化</p>
+<p>&lt;meta name=&quot;keywords&quot; content= &quot;&quot; /&gt;</p>
+<p>堆积网站关键字，用来提高网站的排名</p>
+<p>&lt;meta name= &quot;description&quot; content= &quot;&quot; /&gt;</p>
+<p>关于本网站的描述信息</p>
+<p>&lt;meta http-equiv=&quot;refresh&quot; content= &quot;3;url=<a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com</a> &quot;<br>/&gt;</p>
+<p>在几秒以后跳转</p>
+<p>5:无意义的标签</p>
+<p>div :&lt;div&gt;&lt;/div&gt;</p>
+<p>span:</p>
+<p>footer：</p>
+<p>header</p>
+<p>section</p>
+<p>都是双标签</p>
+<p>day04-CSS初认识</p>
+<p>1.CSS</p>
+<p>层叠样式表，Cascading Style Sheet</p>
+<p>网页中HTML CSS JavaScript的分工</p>
+<p>html:负责网页中的内容展示 由标签组成</p>
+<p>css：负责网页的排版 将内容友好的展示出来</p>
+<p>js: 负责网页的特效，一些动画效果 比如说轮播图</p>
+<p>2.使用css的好处</p>
+<p>可以重复层叠样式 达到我们最终想要展示效果</p>
+<p>单独分离出来便于管理跟重复调用</p>
+<p>可以提高访问速度 节省服务器的流量开支</p>
+<p>3.css的三种链接方式</p>
+<p>1.行内样式</p>
+<p>格式： style=&quot;属性名1:属性值1;属性名2:属性值2;&quot;</p>
+<p>2.内联样式</p>
+<p>格式: 在head头中增加</p>
+<p>&lt;style type=&quot;text/css&quot;&gt;</p>
+<p>选择器{</p>
+<p>属性:属性值;</p>
+<p>}</p>
+<p>&lt;/style&gt;</p>
+<p>3.外部样式</p>
+<p>格式：</p>
+<p>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css文件的路径&quot; /&gt;</p>
+<p>里面的格式，跟内联样式一样</p>
+<p>选择器{</p>
+<p>属性:属性值;</p>
+<p>}</p>
+<p>4.css语法格式和注释</p>
+<p>选择器{</p>
+<p>属性:属性值;</p>
+<p>}</p>
+<p>注释： /* CSS的注释 */</p>
+<p>5.选择器</p>
+<p>自定义名规则：数字 字母 下划线 不能以数字开始</p>
+<p>标签选择器：所有的标签都可以做标签选择器 如果使用了标签选择器<br>当前网页中用这个标签的元素都增加了样式</p>
+<p>class选择器：</p>
+<p>在标签内增加class属性 属性值自定义 在CSS样式中使用如下</p>
+<p>.class属性名{样式}</p>
+<p>一个元素可以有多个class名 中间用空格隔开</p>
+<p>id选择器：</p>
+<p>在标签内增加id属性 属性值自定义 在CSS中使用如下</p>
+<p>#id名{样式}</p>
+<p>{注}通常一个网页中id名是唯一</p>
+<p>组合选择器:</p>
+<p>标签选择器,class，id选择器.… 形式 ：选择器与选择器之间用逗号隔开</p>
+<p>将多个元素增加共同的样式</p>
+<p>eg: p,.meixi,#daishu{</p>
+<p>font-size:35px;</p>
+<p>}</p>
+<p>层级选择器：使用具有层级关系 可以从父类找到子类找到孙子类 增加样式</p>
+<p>选择器用空格隔开</p>
+<p>伪类选择器:(link,hover,active,visited, focus, first-child,last-child)</p>
+<p>一般用于给 某些选择器增加特殊效果比如 a链接</p>
+<p>超链接状态顺序：</p>
+<p>a:link{} 正常状态下（默认状态）</p>
+<p>a:visited{} 访问之后的样式</p>
+<p>a:hover{} 鼠标悬停的时候的样式</p>
+<p>a:active{}鼠标点击时候的样式</p>
+<p>注意，a:hover 必须位于 a:link 和 a:visited 之后，a:active 必须位于<br>a:hover 之后</p>
+<p>可靠的顺序是：l(link)ov(visited)e h(hover)a(active)te,<br>即用喜欢和讨厌两个词来概括</p>
+<p>focus:使用一般配合input input:focus{样式}</p>
+<p>first-child:必须子元素中第一个是要增加样式的元素</p>
+<p>last-child:必须子元素中最后一个是要增加的样式的元素</p>
+<p>(IEl不支持的时候 可以声明doctype(大写))</p>
+<p>属性选择器:</p>
+<p>形式： input[type=&quot;password&quot;]{样式}</p>
+<p>a[title]{样式}</p>
+<p>* 通配符:给页面上所有的元素增加样式</p>
+<p>[选择器优先级]</p>
+<p>*&lt;标签选择器&lt;class&lt;id</p>
+<p>6.尺寸设置</p>
+<p>只有块标签才有宽和高 div p section</p>
+<p>width height min-height max-height min-width max-width</p>
+<p>单位：</p>
+<p>%:使用的是父级 的百分比</p>
+<p>px:像素 一个点就是一个像素</p>
+<p>em:设置的是当前元素的父级的字体尺寸</p>
+<p>rem： html中的尺寸 倍数</p>
+<p>最长使用的字体尺寸: 12px 14px 16px</p>
+<p>7.常用属性</p>
+<p>字体：</p>
+<p>font-style：normal 默认状态 italic斜体</p>
+<p>font-weight：normal默认状态 bold 加粗</p>
+<p>font-size： 字体的大小 谷歌 默认是16px; 最小支持12px;</p>
+<p>font-family:楷体 微软雅黑</p>
+<p>font: style weight size family</p>
+<p>文本:</p>
+<p>text-indent:文本的缩进 最好用em 一般都是2em</p>
+<p>text-align：文本的水平对齐方式 left right center</p>
+<p>white-space:nowrap; (了解) 强行在一行显示内容</p>
+<p>text-overflow:clip超出部分直接截断 ellipsis：超出部分显示’...’</p>
+<p>配合overflow:hidden使用</p>
+<p>text-decoration(</p>
+<p>overline:上划线</p>
+<p>line-through：中划线</p>
+<p>underline:下划线 none)</p>
+<p>text-shadow: 水平偏移的值 垂直偏移值 模糊程度 颜色</p>
+<p>line-height：行高 当块标签的高和行高设置值一样会垂直居中</p>
+<p>vertical-align：</p>
+<p>day05-css</p>
+<p>1.vertical-align</p>
+<p>2.背景</p>
+<p>background-color： 背景颜色</p>
+<p>background-image: url(图片地址)</p>
+<p>background-repeat(</p>
+<p>repeat：默认平铺</p>
+<p>no-repeat:不平铺</p>
+<p>repeat-x：横向平铺</p>
+<p>repeat-y:纵向平铺</p>
+<p>repeat-y:纵向平铺</p>
+<p>)</p>
+<p>background-attachment(</p>
+<p>fixed：（了解）相对窗口固定，当显示该div的时候，背景图才显示出来</p>
+<p>local：背景图会随着内容的滚动而滚动</p>
+<p>scroll：默认属性，背景图不会随着内容的滚动而滚动</p>
+<p>)</p>
+<p>background-position：一定要有一个背景图<br>background-image属性（left、center、right、top、bottom、xy值）</p>
+<p>简写形式：background:url(erha.jpg) no-repeat pink;</p>
+<p>3.列表</p>
+<p>list-style：none</p>
+<p>list-style-image:url()</p>
+<p>list-style-position：inside列表项目标记放置在文本以内/outside</p>
+<p>list-style-type</p>
+<p>4.布局</p>
+<p>float：浮动 left right none</p>
+<p>clear: 用于清除浮动 both</p>
+<p>display:把块元素变成行元素 也可以把行元素变成块元素(</p>
+<p>none</p>
+<p>inline-block:切换为行内块</p>
+<p>block：切换为块</p>
+<p>inline：切换为行内元素</p>
+<p>none：让标签消失，位置也不再</p>
+<p>)</p>
+<p>visibility：(visible、hidden:隐藏元素，但是位置依然存在)</p>
+<p>overflow（</p>
+<p>visible:默认不做处理</p>
+<p>hidden:超出部分隐藏、</p>
+<p>scroll:超出部分出现滚动条</p>
+<p>auto:自动判断 如果有内容超出处彰显滚动条，如果没有就不显示滚动条</p>
+<p>）</p>
+<p>position（</p>
+<p>relative：相对自身文档流中的位置进行定位</p>
+<p>absolute：相对定位 会脱离文档流 当想从父级定位<br>在父级中使用position:relative</p>
+<p>static:默认属性</p>
+<p>fixed:相对于当前窗口的</p>
+<p>）</p>
+<p>z-index：设置元素的层叠顺序<br>值越大越在上边，这个属性的测试需要都为absolute或者fixed的才有效</p>
+<p>如下属性只有当定位是relative、absolute、fixed时有效</p>
+<p>top</p>
+<p>right</p>
+<p>bottom</p>
+<p>left</p>
+<p>5.边框</p>
+<p>border</p>
+<p>border-width</p>
+<p>border-style(</p>
+<p>dotted:点线</p>
+<p>solid:实线</p>
+<p>dashed:虚线</p>
+<p>double:双线</p>
+<p>border-color：边框颜色</p>
+<p>border-radius:</p>
+<p>给一个值：全部变</p>
+<p>给两个值：对角</p>
+<p>三个值: 左上 右上左下 右下</p>
+<p>box-shadow:边框的阴影效果</p>
+<p>6.盒子模型</p>
+<p>7.内外边距</p>
+<p>padding:内边距</p>
+<p>padding-top</p>
+<p>padding-right</p>
+<p>padding-bottom</p>
+<p>padding-left</p>
+<p>margin:外边距</p>
+<p>margin: 0 auto;</p>
+<p>margin-top</p>
+<p>margin-right</p>
+<p>margin-left</p>
+<p>margin-bottom</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/php/">php</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/php/">php</a></div><hr></div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/12/">上一页</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/page/14/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/12/">12</a></li><li><a class="pagination-link is-current" href="/page/13/">13</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/theme/avatar2.jpg" alt="nil"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">nil</p><p class="is-size-6 is-block">nil is null , null is nil</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>天朝</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">125</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/hzjoyous" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/hzjoyous"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/hzjmessage@outlook.com"><i class="fa fa-envelope"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
                                 $.getJSON("https://v1.hitokoto.cn/", function (data) {
                                 if(data){
                                     $('#hitokoto').html("");
                                     $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
                                     "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
                                 }});}
-                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li><li><a class="level is-mobile" href="https://hzjoyous.gitee.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">hzjoyous.gitee.io</span></span><span class="level-right"><span class="level-item tag">hzjoyous.gitee.io</span></span></a></li><li><a class="level is-mobile" href="https://blog.csdn.net/qq_15539917" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LX</span></span><span class="level-right"><span class="level-item tag">blog.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://clarence888.github.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">小二的CodingLife</span></span><span class="level-right"><span class="level-item tag">clarence888.github.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/01/28/blog/diary/diary-2021/"><img src="https://cdn.jsdelivr.net/gh/hzjoyous/pic-respository/image/20210128/1611838117888.jfif" alt="nil"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-01-28T04:06:35.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/blog/diary/diary-2021/">nil</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:21:20.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/tool/how_to_use_svn/">how to use svn</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:20:57.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/tool/how_to_use_git/">how to use git</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:05:45.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/tool/how_to_use_linux/">how to use linux</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:05:19.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/tool/how_to_use_win/">how to use win</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/HowToUse/"><span class="level-start"><span class="level-item">HowToUse</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/blog/"><span class="level-start"><span class="level-item">blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/c/"><span class="level-start"><span class="level-item">c</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/code/"><span class="level-start"><span class="level-item">code</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/knowledge/"><span class="level-start"><span class="level-item">knowledge</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/other/"><span class="level-start"><span class="level-item">other</span></span><span class="level-end"><span class="level-item tag">30</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/php/"><span class="level-start"><span class="level-item">php</span></span><span class="level-end"><span class="level-item tag">62</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/tool/"><span class="level-start"><span class="level-item">tool</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/uwp/"><span class="level-start"><span class="level-item">uwp</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/web/"><span class="level-start"><span class="level-item">web</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">八月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/php/"><span class="tag">php</span><span class="tag is-grey-lightest">66</span></a></div><div class="control"><a class="tags has-addons" href="/tags/other/"><span class="tag">other</span><span class="tag is-grey-lightest">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/js/"><span class="tag">js</span><span class="tag is-grey-lightest">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/React/"><span class="tag">React</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tool/"><span class="tag">tool</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c#</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uwp/"><span class="tag">uwp</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/react/"><span class="tag">react</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/win/"><span class="tag">win</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network-protocol/"><span class="tag">Network protocol</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vargrant/"><span class="tag">Vargrant</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bash/"><span class="tag">bash</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bison/"><span class="tag">bison</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/http/"><span class="tag">http</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/theme/logo.png" alt="吱~" height="28"></a><p class="size-small"><span>&copy; 2021 hzjoyous</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li><li><a class="level is-mobile" href="https://hzjoyous.gitee.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">hzjoyous.gitee.io</span></span><span class="level-right"><span class="level-item tag">hzjoyous.gitee.io</span></span></a></li><li><a class="level is-mobile" href="https://blog.csdn.net/qq_15539917" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LX</span></span><span class="level-right"><span class="level-item tag">blog.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://clarence888.github.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">小二的CodingLife</span></span><span class="level-right"><span class="level-item tag">clarence888.github.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/01/28/blog/amazing-diary-2021/"><img src="https://cdn.jsdelivr.net/gh/hzjoyous/pic-respository/image/20210128/1611838117888.jfif" alt="nil"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-01-28T04:06:35.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/blog/amazing-diary-2021/">nil</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:21:20.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/amazing_tool/how_to_use_svn/">how to use svn</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:20:57.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/amazing_tool/how_to_use_git/">how to use git</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:05:45.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/amazing_tool/how_to_use_linux/">how to use linux</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T03:05:19.000Z">2021-01-28</time></p><p class="title"><a href="/2021/01/28/amazing_tool/how_to_use_win/">how to use win</a></p><p class="categories"><a href="/categories/HowToUse/">HowToUse</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/HowToUse/"><span class="level-start"><span class="level-item">HowToUse</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/blog/"><span class="level-start"><span class="level-item">blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/c/"><span class="level-start"><span class="level-item">c</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/knowledge/"><span class="level-start"><span class="level-item">knowledge</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/other/"><span class="level-start"><span class="level-item">other</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/php/"><span class="level-start"><span class="level-item">php</span></span><span class="level-end"><span class="level-item tag">62</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/tool/"><span class="level-start"><span class="level-item">tool</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/uwp/"><span class="level-start"><span class="level-item">uwp</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/web/"><span class="level-start"><span class="level-item">web</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">八月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/php/"><span class="tag">php</span><span class="tag is-grey-lightest">65</span></a></div><div class="control"><a class="tags has-addons" href="/tags/other/"><span class="tag">other</span><span class="tag is-grey-lightest">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/js/"><span class="tag">js</span><span class="tag is-grey-lightest">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/React/"><span class="tag">React</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tool/"><span class="tag">tool</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c#</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uwp/"><span class="tag">uwp</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/win/"><span class="tag">win</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DayDayUp/"><span class="tag">DayDayUp</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network-protocol/"><span class="tag">Network protocol</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vargrant/"><span class="tag">Vargrant</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bash/"><span class="tag">bash</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bison/"><span class="tag">bison</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/http/"><span class="tag">http</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/theme/logo.png" alt="吱~" height="28"></a><p class="size-small"><span>&copy; 2021 hzjoyous</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
             var n = new Date(time);
             now.setTime(now.getTime() + 250),
                 days = (now - n) / 1e3 / 60 / 60 / 24,
