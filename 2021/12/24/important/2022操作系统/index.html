@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>操作系统 - 吱~</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="吱~"><meta name="msapplication-TileImage" content="/images/theme/icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="吱~"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="引论 1 引论   二 进程管理 2 进程管理 2.1.4程序的三态 2.1.5 2.3.1.4 同步机制应遵循的规则 2.3.2 信号量机制 2.3.3 信号量的应用 2.6.4 线程的实现     三 处理机调度与死锁 3.3 调 度 算 法 3.2.1 先来先服务和短作业(进程)优先调度算法 3.3.2 高优先权优先调度算法 3.5.2 产生死锁的必要条件 3.5.3 处理死锁的基本方法"><meta property="og:type" content="blog"><meta property="og:title" content="吱"><meta property="og:url" content="https://hzjoyous.github.io/2021/12/24/important/2022%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><meta property="og:site_name" content="吱"><meta property="og:description" content="引论 1 引论   二 进程管理 2 进程管理 2.1.4程序的三态 2.1.5 2.3.1.4 同步机制应遵循的规则 2.3.2 信号量机制 2.3.3 信号量的应用 2.6.4 线程的实现     三 处理机调度与死锁 3.3 调 度 算 法 3.2.1 先来先服务和短作业(进程)优先调度算法 3.3.2 高优先权优先调度算法 3.5.2 产生死锁的必要条件 3.5.3 处理死锁的基本方法"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hzjoyous.github.io/images/theme/icon.png"><meta property="article:published_time" content="2021-12-24T02:58:17.000Z"><meta property="article:modified_time" content="2021-11-23T11:55:02.532Z"><meta property="article:author" content="nil"><meta property="article:tag" content="other"><meta property="article:tag" content="blog"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/theme/icon.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://hzjoyous.github.io/2021/12/24/important/2022%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"},"headline":"吱~","image":["https://hzjoyous.github.io/img/og_image.png"],"datePublished":"2021-12-24T02:58:17.000Z","dateModified":"2021-11-23T11:55:02.532Z","author":{"@type":"Person","name":"hzjoyous"},"description":"引论 1 引论   二 进程管理 2 进程管理 2.1.4程序的三态 2.1.5 2.3.1.4 同步机制应遵循的规则 2.3.2 信号量机制 2.3.3 信号量的应用 2.6.4 线程的实现     三 处理机调度与死锁 3.3 调 度 算 法 3.2.1 先来先服务和短作业(进程)优先调度算法 3.3.2 高优先权优先调度算法 3.5.2 产生死锁的必要条件 3.5.3 处理死锁的基本方法"}</script><link rel="canonical" href="https://hzjoyous.github.io/2021/12/24/important/2022%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><link rel="icon" href="/images/theme/icon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/theme/logo.png" alt="吱~" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-12-24  <a class="commentCountImg" href="/2021/12/24/important/2022%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/#comment-container"><span class="display-none-class">607c3d93740972290d06500533948b65</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="607c3d93740972290d06500533948b65">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.6 k</span></div></div><h1 class="title is-3 is-size-4-mobile">操作系统</h1><div class="content"><ul>
+<li><a href="#%E5%BC%95%E8%AE%BA">引论</a><ul>
+<li><a href="#1-%E5%BC%95%E8%AE%BA">1 引论</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">二 进程管理</a><ul>
+<li><a href="#2-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">2 进程管理</a></li>
+<li><a href="#214%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%89%E6%80%81">2.1.4程序的三态</a><ul>
+<li><a href="#215">2.1.5</a></li>
+<li><a href="#2314-%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6%E5%BA%94%E9%81%B5%E5%BE%AA%E7%9A%84%E8%A7%84%E5%88%99">2.3.1.4 同步机制应遵循的规则</a></li>
+<li><a href="#232-%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6">2.3.2 信号量机制</a></li>
+<li><a href="#233-%E4%BF%A1%E5%8F%B7%E9%87%8F%E7%9A%84%E5%BA%94%E7%94%A8">2.3.3 信号量的应用</a></li>
+<li><a href="#264-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0">2.6.4 线程的实现</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81">三 处理机调度与死锁</a><ul>
+<li><a href="#33-%E8%B0%83-%E5%BA%A6-%E7%AE%97-%E6%B3%95">3.3 调 度 算 法</a><ul>
+<li><a href="#321-%E5%85%88%E6%9D%A5%E5%85%88%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%9F%AD%E4%BD%9C%E4%B8%9A%E8%BF%9B%E7%A8%8B%E4%BC%98%E5%85%88%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95">3.2.1 先来先服务和短作业(进程)优先调度算法</a></li>
+<li><a href="#332-%E9%AB%98%E4%BC%98%E5%85%88%E6%9D%83%E4%BC%98%E5%85%88%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95">3.3.2 高优先权优先调度算法</a></li>
+<li><a href="#352-%E4%BA%A7%E7%94%9F%E6%AD%BB%E9%94%81%E7%9A%84%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6">3.5.2 产生死锁的必要条件</a></li>
+<li><a href="#353-%E5%A4%84%E7%90%86%E6%AD%BB%E9%94%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95">3.5.3 处理死锁的基本方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%AD%98-%E5%82%A8-%E5%99%A8-%E7%AE%A1-%E7%90%86">第四章 存 储 器 管 理</a><ul>
+<li><a href="#">。。。</a><ul>
+<li><a href="#433-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D">4.3.3 动态分区分配</a></li>
+</ul>
+</li>
+<li><a href="#44-%E5%9F%BA%E6%9C%AC%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">4.4 基本分页存储管理方式</a><ul>
+<li><a href="#441-%E9%A1%B5%E9%9D%A2%E4%B8%8E%E9%A1%B5%E8%A1%A8">4.4.1 页面与页表</a></li>
+<li><a href="#442-%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84">4.4.2 地址变换机构</a></li>
+</ul>
+</li>
+<li><a href="#45-%E5%9F%BA%E6%9C%AC%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">4.5 基本分段存储管理方式</a><ul>
+<li><a href="#452-%E5%88%86%E6%AE%B5%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86">4.5.2 分段系统的基本原理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+<h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><h2 id="1-引论"><a href="#1-引论" class="headerlink" title="1 引论"></a>1 引论</h2><hr>
+<h1 id="二-进程管理"><a href="#二-进程管理" class="headerlink" title="二 进程管理"></a>二 进程管理</h1><h2 id="2-进程管理"><a href="#2-进程管理" class="headerlink" title="2 进程管理"></a>2 进程管理</h2><h2 id="2-1-4程序的三态"><a href="#2-1-4程序的三态" class="headerlink" title="2.1.4程序的三态"></a>2.1.4程序的三态</h2><ul>
+<li>就绪态</li>
+<li>执行状态</li>
+<li>阻塞状态</li>
+</ul>
+<h3 id="2-1-5"><a href="#2-1-5" class="headerlink" title="2.1.5"></a>2.1.5</h3><blockquote>
+<p>PCB (PROCESS CONTROL BLOCK) </p>
+</blockquote>
+<h3 id="2-3-1-4-同步机制应遵循的规则"><a href="#2-3-1-4-同步机制应遵循的规则" class="headerlink" title="2.3.1.4 同步机制应遵循的规则"></a>2.3.1.4 同步机制应遵循的规则</h3><ul>
+<li>空闲让进。当无进程处于临界区时，表明临界资源处于空闲状态，应允许一个请求进入临界区的进程立即进入自己的临界区，以有效地利用临界资源</li>
+<li>忙则等待。当已有进程进入临界区时，表明临界资源正在被访问，因而其它试图进入临界区的进程必须等待，以保证对临界资源的互斥访问。</li>
+<li>有限等待。对要求访问临界资源的进程，应保证在有限时间内能进入自己的临界区，以免陷入“死等”状态</li>
+<li>让权等待。当进程不能进入自己的临界区时，应立即释放处理机，以免进程陷入“忙等”状态。</li>
+</ul>
+<blockquote>
+<p>让权等待可以对比循环查询，和队列触发这两者比较。前者永远在不停的检测是否可以使用，后者则是通过事件，当任务执行完毕后自动调用阻塞的任务。</p>
+</blockquote>
+<h3 id="2-3-2-信号量机制"><a href="#2-3-2-信号量机制" class="headerlink" title="2.3.2 信号量机制"></a>2.3.2 信号量机制</h3><ul>
+<li>P 通过</li>
+<li>V 释放</li>
+<li>wait()</li>
+<li>signl()</li>
+</ul>
+<h3 id="2-3-3-信号量的应用"><a href="#2-3-3-信号量的应用" class="headerlink" title="2.3.3 信号量的应用"></a>2.3.3 信号量的应用</h3><ul>
+<li>1．利用信号量实现进程互</li>
+<li>2．利用信号量实现前趋关系</li>
+</ul>
+<h3 id="2-6-4-线程的实现"><a href="#2-6-4-线程的实现" class="headerlink" title="2.6.4 线程的实现"></a>2.6.4 线程的实现</h3><p>用户级线程与内核控制线程的连接</p>
+<ul>
+<li>1v1</li>
+<li>nv1</li>
+<li>nvn</li>
+</ul>
+<h1 id="三-处理机调度与死锁"><a href="#三-处理机调度与死锁" class="headerlink" title="三 处理机调度与死锁"></a>三 处理机调度与死锁</h1><h2 id="3-3-调-度-算-法"><a href="#3-3-调-度-算-法" class="headerlink" title="3.3 调 度 算 法"></a>3.3 调 度 算 法</h2><h3 id="3-2-1-先来先服务和短作业-进程-优先调度算法"><a href="#3-2-1-先来先服务和短作业-进程-优先调度算法" class="headerlink" title="3.2.1 先来先服务和短作业(进程)优先调度算法"></a>3.2.1 先来先服务和短作业(进程)优先调度算法</h3><ul>
+<li>先来先服务</li>
+<li>短作业优先 <ul>
+<li>饥饿</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-2-高优先权优先调度算法"><a href="#3-3-2-高优先权优先调度算法" class="headerlink" title="3.3.2 高优先权优先调度算法"></a>3.3.2 高优先权优先调度算法</h3><h3 id="3-5-2-产生死锁的必要条件"><a href="#3-5-2-产生死锁的必要条件" class="headerlink" title="3.5.2 产生死锁的必要条件"></a>3.5.2 产生死锁的必要条件</h3><ul>
+<li>互斥条件</li>
+<li>请求和保持条件</li>
+<li>不剥夺条件</li>
+<li>环路等待条件<h3 id="3-5-3-处理死锁的基本方法"><a href="#3-5-3-处理死锁的基本方法" class="headerlink" title="3.5.3 处理死锁的基本方法"></a>3.5.3 处理死锁的基本方法</h3></li>
+<li>预防死锁</li>
+<li>避免死锁</li>
+<li>检测死锁</li>
+<li>解除死锁</li>
+</ul>
+<h1 id="第四章-存-储-器-管-理"><a href="#第四章-存-储-器-管-理" class="headerlink" title="第四章 存 储 器 管 理"></a>第四章 存 储 器 管 理</h1><h2 id="。。。"><a href="#。。。" class="headerlink" title="。。。"></a>。。。</h2><h3 id="4-3-3-动态分区分配"><a href="#4-3-3-动态分区分配" class="headerlink" title="4.3.3 动态分区分配"></a>4.3.3 动态分区分配</h3><p> 分区分配中的数据结构</p>
+<ul>
+<li>空闲分区表</li>
+<li>空闲分区链</li>
+</ul>
+<p> 分区分配算法</p>
+<ul>
+<li>首次适应算法(first fit) <ul>
+<li>求空闲分区链以地址递增的次序链接，分配内存时，从链首开始顺序查找，直至找到一个大小能满足要求的空闲分区为止。</li>
+</ul>
+</li>
+<li>循环首次适应算法(next fit)<ul>
+<li>不再是每次都从链首开始查找，而是从上次找到的空闲分区的下一个空闲分区开始查找，直至找到一个能满足要求的空闲分区。</li>
+</ul>
+</li>
+<li>最佳适应算法(best fit)<ul>
+<li>把能满足要求、又是最小的空闲分区分配给作业</li>
+</ul>
+</li>
+<li>最坏适应算法(worst fit) <ul>
+<li>最坏适应分配算法要扫描整个空闲分区表或链表，总是挑选一个最大的空闲区分割给作业使用</li>
+</ul>
+</li>
+<li>快速适应算法(quick fit)</li>
+</ul>
+<blockquote>
+<p>碎片 内/外碎片  整体无法使用的的块儿（外部），和分配块儿后，块儿内无法使用的部分（内部）。</p>
+</blockquote>
+<h2 id="4-4-基本分页存储管理方式"><a href="#4-4-基本分页存储管理方式" class="headerlink" title="4.4 基本分页存储管理方式"></a>4.4 基本分页存储管理方式</h2><h3 id="4-4-1-页面与页表"><a href="#4-4-1-页面与页表" class="headerlink" title="4.4.1 页面与页表"></a>4.4.1 页面与页表</h3><blockquote>
+<p>逻辑分块成为页或者页面，对应内存分的(物理)块或页框(frame)，两者大小相同<br>由于进程的最后一页经常装不满一块而形成了不可利用的碎片，称之为“页内碎片”。</p>
+</blockquote>
+<ul>
+<li>分页存储管理是将一个进程的逻辑地址空间分成若干个大小相等的片，称为页面或页，并为各页加以编号，从 0 开始，如第 0 页、第 1 页等。相应地，也把内存空间分成与页面相同大小的若干个存储块，称为(物理)块或页框(frame)，也同样为它们加以编号，如 0#块、1#块等等。<blockquote>
+<p>页面若太小，一方面虽然可使内存碎片减小，从而减少了内存碎片的总空间，有利于提高内存利用率，但另一方面也会使每个进程占用较多的页面，从而导致进程的页表过长，占用大量内存<br>如果选择的页面较大，虽然可以减少页表的长度，提高页面换进换出的速度，但却又会使页内碎片增大</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>地址结构:<br>｜页号 P ｜位移量 W ｜<br>31～12，11～0    </p>
+</blockquote>
+<blockquote>
+<p>页号 P 和页内地址 d<br>P=int(A/L)<br>d=[A] MOD L  </p>
+</blockquote>
+<p>页表:  </p>
+<blockquote>
+<p>逻辑地址到物理地址的映射表<br>页号｜块号</p>
+</blockquote>
+<h3 id="4-4-2-地址变换机构"><a href="#4-4-2-地址变换机构" class="headerlink" title="4.4.2 地址变换机构"></a>4.4.2 地址变换机构</h3><blockquote>
+<p>页表位于内存<br>联想寄存器-快表-TLB</p>
+</blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> reread</li>
+</ul>
+<p><strong>两级页表</strong>  144 页</p>
+<h2 id="4-5-基本分段存储管理方式"><a href="#4-5-基本分段存储管理方式" class="headerlink" title="4.5 基本分段存储管理方式"></a>4.5 基本分段存储管理方式</h2><h3 id="4-5-2-分段系统的基本原理"><a href="#4-5-2-分段系统的基本原理" class="headerlink" title="4.5.2 分段系统的基本原理"></a>4.5.2 分段系统的基本原理</h3><p>段号｜段内地址</p>
+<p>段表</p>
+<p>LOAD 1，[A] |〈D〉;<br>STORE 1，[B] |〈C〉;</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>操作系统</p><p><a href="https://hzjoyous.github.io/2021/12/24/important/2022操作系统/">https://hzjoyous.github.io/2021/12/24/important/2022操作系统/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://hzjoyous.github.io"><p>hzjoyous</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-12-24</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-11-23</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2022/05/10/diary_blog/2022_05_101652162905832/" target="_blank">1652162905832</a><br></span><span>  2.<a class="is-size-6" href="/2022/03/19/diary_blog/2022_03_19_go1.18/" target="_blank">go 1.18</a><br></span><span>  3.<a class="is-size-6" href="/2021/12/31/blog/amazing-diary-2021/" target="_blank">我的2021</a><br></span><span>  4.<a class="is-size-6" href="/2021/12/25/important/2022Foreign_language_diary/" target="_blank">Foreign language diary</a><br></span><span>  5.<a class="is-size-6" href="/2021/12/25/diary_blog/2021_11_15math/" target="_blank">math</a><br></span><span>  6.<a class="is-size-6" href="/2021/12/24/important/2022%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">数据结构</a><br></span><span>  7.<a class="is-size-6" href="/2021/12/24/important/2022%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" target="_blank">计算机组成原理</a><br></span><span>  8.<a class="is-size-6" href="/2021/12/24/important/2022%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" target="_blank">计算机网络</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/12/25/diary_blog/2021_11_15math/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">math</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/12/24/important/2022%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-item">数据结构</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: '607c3d93740972290d06500533948b65',
+            repo: 'blog_comment',
+            owner: 'hzjoyous',
+            clientID: '0f9c9cf415e0cff92319',
+            clientSecret: 'dbb2be3127b4be2117db6d1e761d7d89d90896a2',
+            admin: ["hzjoyous"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#引论"><span>引论</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#1-引论"><span>1 引论</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#二-进程管理"><span>二 进程管理</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#2-进程管理"><span>2 进程管理</span></a></li><li><a class="is-flex is-mobile" href="#2-1-4程序的三态"><span>2.1.4程序的三态</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#2-1-5"><span>2.1.5</span></a></li><li><a class="is-flex is-mobile" href="#2-3-1-4-同步机制应遵循的规则"><span>2.3.1.4 同步机制应遵循的规则</span></a></li><li><a class="is-flex is-mobile" href="#2-3-2-信号量机制"><span>2.3.2 信号量机制</span></a></li><li><a class="is-flex is-mobile" href="#2-3-3-信号量的应用"><span>2.3.3 信号量的应用</span></a></li><li><a class="is-flex is-mobile" href="#2-6-4-线程的实现"><span>2.6.4 线程的实现</span></a></li></ul></li></ul></li><li><a class="is-flex is-mobile" href="#三-处理机调度与死锁"><span>三 处理机调度与死锁</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#3-3-调-度-算-法"><span>3.3 调 度 算 法</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#3-2-1-先来先服务和短作业-进程-优先调度算法"><span>3.2.1 先来先服务和短作业(进程)优先调度算法</span></a></li><li><a class="is-flex is-mobile" href="#3-3-2-高优先权优先调度算法"><span>3.3.2 高优先权优先调度算法</span></a></li><li><a class="is-flex is-mobile" href="#3-5-2-产生死锁的必要条件"><span>3.5.2 产生死锁的必要条件</span></a></li><li><a class="is-flex is-mobile" href="#3-5-3-处理死锁的基本方法"><span>3.5.3 处理死锁的基本方法</span></a></li></ul></li></ul></li><li><a class="is-flex is-mobile" href="#第四章-存-储-器-管-理"><span>第四章 存 储 器 管 理</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#。。。"><span>。。。</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#4-3-3-动态分区分配"><span>4.3.3 动态分区分配</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#4-4-基本分页存储管理方式"><span>4.4 基本分页存储管理方式</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#4-4-1-页面与页表"><span>4.4.1 页面与页表</span></a></li><li><a class="is-flex is-mobile" href="#4-4-2-地址变换机构"><span>4.4.2 地址变换机构</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#4-5-基本分段存储管理方式"><span>4.5 基本分段存储管理方式</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#4-5-2-分段系统的基本原理"><span>4.5.2 分段系统的基本原理</span></a></li></ul></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li><li><a class="level is-mobile" href="https://hzjoyous.gitee.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">hzjoyous.gitee.io</span></span><span class="level-right"><span class="level-item tag">hzjoyous.gitee.io</span></span></a></li><li><a class="level is-mobile" href="https://blog.csdn.net/qq_15539917" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LX</span></span><span class="level-right"><span class="level-item tag">blog.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://clarence888.github.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">小二的CodingLife</span></span><span class="level-right"><span class="level-item tag">clarence888.github.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-10T06:08:29.000Z">2022-05-10</time></p><p class="title"><a href="/2022/05/10/diary_blog/2022_05_101652162905832/">1652162905832</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-19T04:21:24.000Z">2022-03-19</time></p><p class="title"><a href="/2022/03/19/diary_blog/2022_03_19_go1.18/">go 1.18</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/12/31/blog/amazing-diary-2021/"><img src="/images/2021/岁月的童话2.jpg" alt="我的2021"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-12-31T15:59:35.000Z">2021-12-31</time></p><p class="title"><a href="/2021/12/31/blog/amazing-diary-2021/">我的2021</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/12/25/important/2022Foreign_language_diary/"><img src="/images/2021/1357.pic.jpg" alt="Foreign language diary"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-12-25T02:58:17.000Z">2021-12-25</time></p><p class="title"><a href="/2021/12/25/important/2022Foreign_language_diary/">Foreign language diary</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-25T01:39:56.000Z">2021-12-25</time></p><p class="title"><a href="/2021/12/25/diary_blog/2021_11_15math/">math</a></p><p class="categories"><a href="/categories/other/">other</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/HowToUse/"><span class="level-start"><span class="level-item">HowToUse</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/c/"><span class="level-start"><span class="level-item">c</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/knowledge/"><span class="level-start"><span class="level-item">knowledge</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/other/"><span class="level-start"><span class="level-item">other</span></span><span class="level-end"><span class="level-item tag">38</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/php/"><span class="level-start"><span class="level-item">php</span></span><span class="level-end"><span class="level-item tag">63</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/tool/"><span class="level-start"><span class="level-item">tool</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/uwp/"><span class="level-start"><span class="level-item">uwp</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/web/"><span class="level-start"><span class="level-item">web</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/03/"><span class="level-start"><span class="level-item">三月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/php/"><span class="tag">php</span><span class="tag is-grey-lightest">69</span></a></div><div class="control"><a class="tags has-addons" href="/tags/other/"><span class="tag">other</span><span class="tag is-grey-lightest">35</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag is-grey-lightest">25</span></a></div><div class="control"><a class="tags has-addons" href="/tags/js/"><span class="tag">js</span><span class="tag is-grey-lightest">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/React/"><span class="tag">React</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tool/"><span class="tag">tool</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">c#</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uwp/"><span class="tag">uwp</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/win/"><span class="tag">win</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DayDayUp/"><span class="tag">DayDayUp</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network-protocol/"><span class="tag">Network protocol</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vargrant/"><span class="tag">Vargrant</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bash/"><span class="tag">bash</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bison/"><span class="tag">bison</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/book/"><span class="tag">book</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/theme/logo.png" alt="吱~" height="28"></a><p class="size-small"><span>&copy; 2022 hzjoyous</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2017/06/11 00:00:00')", 250,"");</script><br></span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="557690471" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('0f9c9cf415e0cff92319','dbb2be3127b4be2117db6d1e761d7d89d90896a2','hzjoyous','blog_comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('0f9c9cf415e0cff92319','dbb2be3127b4be2117db6d1e761d7d89d90896a2','hzjoyous','blog_comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
