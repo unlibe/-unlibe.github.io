@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">146</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">149</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">146</span>
+          <span class="site-state-item-count">149</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -147,7 +147,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -179,6 +179,386 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/06/02/coding/C_002_01%E8%83%8C%E5%8C%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="hzjoyous">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/06/02/coding/C_002_01%E8%83%8C%E5%8C%85/" class="post-title-link" itemprop="url">c/c++[002]:01背包</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-06-02 23:19:09" itemprop="dateCreated datePublished" datetime="2017-06-02T23:19:09+08:00">2017-06-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>(背包问题?)[https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/3092.html] <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//std::ios::sync_with_stdio(false);</span></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span> sum ;</span><br><span class="line">    <span class="type">int</span> w[<span class="number">2</span>][<span class="number">20000</span>];</span><br><span class="line">    <span class="type">int</span> sV[<span class="number">20000</span>];</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; sum)</span><br><span class="line">    &#123;</span><br><span class="line">        i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;w[<span class="number">0</span>][i] &gt;&gt; w[<span class="number">1</span>][i];</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(sV,<span class="number">0</span>,<span class="keyword">sizeof</span>(sV));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;= n ; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>( <span class="type">int</span> jj = sum ; jj &gt;= w[<span class="number">0</span>][j]; jj -- )</span><br><span class="line">            &#123;</span><br><span class="line">                sV[jj] = max(</span><br><span class="line">                         sV[jj],</span><br><span class="line">                         sV[jj-w[<span class="number">0</span>][j]]+w[<span class="number">1</span>][j]</span><br><span class="line">                         );</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//            for(int z = 0; z&lt;=sum ;z++)&#123;</span></span><br><span class="line">  <span class="comment">//              cout&lt;&lt;sV[z]&lt;&lt;&quot;\t&quot;;</span></span><br><span class="line">    <span class="comment">//        &#125;</span></span><br><span class="line">      <span class="comment">//      cout&lt;&lt;endl;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; sV[sum]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/05/25/coding/C_001_start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="hzjoyous">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/05/25/coding/C_001_start/" class="post-title-link" itemprop="url">c/c++[001]:start</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-05-25 23:18:09" itemprop="dateCreated datePublished" datetime="2017-05-25T23:18:09+08:00">2017-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="cin-cout-scanf-printf">cin cout scanf printf</h1>
+<p>scanf()是C语言中的一个输入函数。与printf函数一样，都被声明在头文件stdio.h里，因此在使用 scanf 函数时要加上<code>#include &lt;stdio.h&gt;</code>。（在有一些实现中，printf函数与scanf函数在使用时可以不使用预编译命令<code>#include &lt;stdio.h&gt;</code>。）它是格式输入函数，即按用户指定的格式从键盘上把数据输入到指定的变量之中。</p>
+<table>
+<thead>
+<tr class="header">
+<th>规定符</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>%d</td>
+<td>十进制有符号整数</td>
+</tr>
+<tr class="even">
+<td>%u</td>
+<td>十进制无符号整数</td>
+</tr>
+<tr class="odd">
+<td>%f</td>
+<td>浮点数</td>
+</tr>
+<tr class="even">
+<td>%s</td>
+<td>字符串</td>
+</tr>
+<tr class="odd">
+<td>%c</td>
+<td>单个字符</td>
+</tr>
+<tr class="even">
+<td>%p</td>
+<td>指针的值</td>
+</tr>
+<tr class="odd">
+<td>%e</td>
+<td>指数形式的浮点数</td>
+</tr>
+<tr class="even">
+<td>%x, %X</td>
+<td>无符号以十六进制表示的整数</td>
+</tr>
+<tr class="odd">
+<td>%o</td>
+<td>无符号以八进制表示的整数</td>
+</tr>
+<tr class="even">
+<td>%g</td>
+<td>把输出的值按照%e或者%f类型中输出长度较小的方式输出</td>
+</tr>
+<tr class="odd">
+<td>%p</td>
+<td>输出地址符</td>
+</tr>
+<tr class="even">
+<td>%lu</td>
+<td>32位无符号整数</td>
+</tr>
+<tr class="odd">
+<td>%llu</td>
+<td>64位无符号整数</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH21-ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="hzjoyous">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH21-ajax/" class="post-title-link" itemprop="url">PHP[OOP入门]PH21-ajax</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:02:21" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:21+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
+</blockquote>
+<blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day21-ajax(灰常重要)</p>
+<p>1、应用场景</p>
+<p>asynchronous javascript and xml === ajax</p>
+<p>注册用户的时候，要写用户名，写了用户名之后，只要你的光标离开这个input框，我就立马知道你这用户名是否被注册过（ajax） 让ajax去和服务器进行交互，交互完毕之后，收到服务器返回的结果，根据结果我再判断页面到底应该显示什么</p>
+<p>页面没有刷新</p>
+<p>在当前页面中通过ajax和服务器进行交互，达到局部刷新的效果</p>
+<p>2、ajax使用</p>
+<p>使用起来非常的简单，ajax就是js中的一个对象，通过调用这个对象的方法就完成了和服务器的交互</p>
+<p>创建对象</p>
+<p>谷歌、火狐、Opera、IE7以上</p>
+<p>var xhr = new XMLHttpRequest(); //主流浏览器中创建ajax对象的方式</p>
+<p>var xhr = new ActiveXObject("Microsoft.XMLHTTP"); //垃圾浏览器的方式</p>
+<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP");</p>
+<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP.3.0");</p>
+<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP.5.0");</p>
+<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP.6.0"); //IE维护的最高版本</p>
+<p>get方式</p>
+<p>xhr.open('get', '1.php?username=goudan&amp;password=123');</p>
+<p>xhr.send();</p>
+<p>post方式</p>
+<p>xhr.open('post', 'post.php');</p>
+<p>xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');</p>
+<p>xhr.send('username=goudan&amp;password=123');</p>
+<p>onreadystatechange ：当ajax状态改变的时候触发这个事件</p>
+<p>readyState（01234） : ajax的状态</p>
+<p>0：初始化</p>
+<p>1：执行了open方法</p>
+<p>2：执行了send方法</p>
+<p>3：得到了部分响应数据</p>
+<p>4：得到了全部的响应数据</p>
+<p>这里面我们关心的就是4，到4的时候数据就过来了</p>
+<p>status:http的状态码 200</p>
+<p>responseText：现在都是使用这个</p>
+<p>responseXML：这个现在已经不用了</p>
+<p>将JSON字符串转化为js对象</p>
+<p>//第一种方式</p>
+<p>var obj = JSON.parse(xhr.responseText);</p>
+<p>//第二种方式</p>
+<p>var obj = eval('(' + xhr.responseText + ')');</p>
+<p>将js对象转化为JSON格式的字符串</p>
+<p>var str = JSON.stringify(obj);</p>
+<p>3、ajax函数封装</p>
+<p>encodeURIComponent</p>
+<p>4、同步和异步</p>
+<p>同步：前端在等待请求结果，结果来了之后代码再往下进行</p>
+<p>异步：前端不等待请求结果，结果来了直接执行提前写好的回调函数即可</p>
+<p>【注】事件绑定的代码我们都要写到open方法的上面。</p>
+<p>5、跨域</p>
+<p>localhost 127.0.0.1 不是同一个域</p>
+<p>localhost www.wokao.com</p>
+<ol type="1">
+<li></li>
+</ol>
+<p>在php文件中中写如下代码</p>
+<p>header('Access-Control-Allow-Origin:*');</p>
+<p>(2)jsonp json with padding</p>
+<p>6、用户注册</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1275,493 +1655,6 @@
 <p>vhost_alias_module</p>
 <p>rewrite_module</p>
 <p>Include conf/extra/httpd-vhosts.conf</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH13-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E3%80%81composer%E3%80%81%E5%AE%B9%E5%99%A8%E3%80%81%E5%8F%8D%E5%B0%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="hzjoyous">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH13-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E3%80%81composer%E3%80%81%E5%AE%B9%E5%99%A8%E3%80%81%E5%8F%8D%E5%B0%84/" class="post-title-link" itemprop="url">PHP[OOP入门]PH13-异常处理、composer、容器、反射</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:13" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:13+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day13-异常处理、composer、容器、反射</p>
-<p>1、异常处理</p>
-<p>做两手准备（planA planB）</p>
-<p>生活中</p>
-<p>代码中</p>
-<p>正常的逻辑，代码会按照你写的顺序正常的往下执行，在执行的过程中，往往会有一些异常的情况，碰到异常的情况，我们应该如何应对呢，这就是异常处理</p>
-<p>在php中：try catch Exception(异常类，所有异常处理类的基类)，在代码中如果有异常了，我们要手动抛出异常</p>
-<p>try:尝试着去执行一些有异常情况的代码，如果出现异常，手动抛出</p>
-<p>throw:抛出异常</p>
-<p>catch:捕获异常，进行下一步处理</p>
-<p>【注】try-catch是一种结构，一个try至少对应一个catch</p>
-<p>【注】在try和catch之间不能有任何的代码</p>
-<p>try {</p>
-<p>} catch () {</p>
-<p>}</p>
-<p>执行流程：</p>
-<p>程序首先执行try中的代码，如果碰到了throw，那么try里面的throw下面的代码将不再执行，直接被catch捕获到这个异常，在catch中再执行你想执行的流程</p>
-<p>Exception：官方的异常处理类，是所有异常类的基类</p>
-<p>构造方法：错误信息，错误代码</p>
-<p>getMessage</p>
-<p>getCode</p>
-<p>自定义异常处理类:一定要继承自官方异常处理类</p>
-<p>final:</p>
-<p>类：代表此类不能被继承</p>
-<p>方法：代表这个方法不能被重写</p>
-<p>多个捕获</p>
-<p>【注】如果是多个捕获，那么自定义的异常处理捕获要放到官方捕获的上面</p>
-<p>嵌套</p>
-<p>见代码</p>
-<p>自定义异常处理函数</p>
-<p>set_exception_handler('exceptionHandle');</p>
-<p>注册一个函数用来处理异常信息</p>
-<p>2、composer</p>
-<p>打开openssl扩展</p>
-<p>如果安装成功，在cmd下输入composer，敲回车，显示出来即安装成功</p>
-<p>基本dos指令</p>
-<p>cd 拖过来你的那个项目文件夹</p>
-<p>dir 显示当前文件夹下面所有的文件</p>
-<p>composer.json文件</p>
-<p>编写该文件,这个文件就是你的composer的配置文件，你想安装的一些包的信息都要写到这个文件中，而且按照固定的格式写（json格式）</p>
-<p>{</p>
-<p>"employees": [</p>
-<p>{ "firstName":"Bill" , "lastName":"Gates" },</p>
-<p>{ "firstName":"George" , "lastName":"Bush" },</p>
-<p>{ "firstName":"Thomas" , "lastName":"Carter" }</p>
-<p>]</p>
-<p>}</p>
-<p>json格式：两种数据类型 对象{} 数组[] 键使用双引号引起来，键值对中间使用逗号隔开</p>
-<p>修改为国内镜像网</p>
-<p>github.com</p>
-<p>packagist.org</p>
-<p>https://pkg.phpcomposer.com/ 国内镜像</p>
-<p>只要你安装了composer，默认是从国外镜像下载，你得修改成国内镜像，否则后果自负</p>
-<p>执行如下指令，修改镜像源</p>
-<p>composer config -g repo.packagist composer https://packagist.phpcomposer.com</p>
-<p>require加载路由包</p>
-<p>"require": {</p>
-<p>"noahbuscher/macaw": "dev-master"</p>
-<p>}</p>
-<p>运行composer update指令进行下载</p>
-<p>版本号</p>
-<p>1.0.* 表示任何从 1.0 开始的开发分支，它将会匹配 1.0.0、1.0.2 或者 1.0.20</p>
-<p>1.0.2 对应确定的版本号</p>
-<p>&gt;=1.0</p>
-<p>&gt;=1.0,&lt;2.0</p>
-<p>&gt;=1.0,&lt;1.1|&gt;=1.2</p>
-<p>~1.2 相当于 &gt;=1.2,&lt;2.0</p>
-<p>~1.2.3 相当于 &gt;=1.2.3,&lt;1.3</p>
-<p>dev-master github上面的主版本号</p>
-<p>参数</p>
-<p>项目基本描述</p>
-<p>"name": "laravel/laravel",</p>
-<p>"description": "The Laravel Framework.",</p>
-<p>"keywords": ["framework", "laravel"],</p>
-<p>"license": "MIT",</p>
-<p>"type": "project",</p>
-<p>autoload(重点)</p>
-<p>通过composer安装的包，composer都已经为我们实现了自动加载，使用的时候，直接使用即可</p>
-<p>【注】使用第三方包之前，要首先包含</p>
-<p>include 'vendor/autoload.php';</p>
-<p>如果是自己写的类，想用通过自动加载加载过来，需要使用下面两种方法中的任意一种</p>
-<p>psr-4 ：遵从psr-4的规范进行加载</p>
-<p>classmap：文件夹映射，将该文件夹下面的所有文件包含进来</p>
-<p>【注】修改完配置文件中的autoload参数之后，要首先执行 composer dump-autoload</p>
-<p>composer常用指令</p>
-<p>通过composer list来展示所有的指令</p>
-<p>require 安装包我们可以通过配置文件来进行加载，也可以通过指令模式进行加载</p>
-<p>composer require noahbuscher/macaw:dev-master</p>
-<p>3、依赖注入（DI）、反转控制（IOC）、容器</p>
-<p>容器优点：</p>
-<p>1、降低耦合度</p>
-<p>2、实现惰性加载</p>
-<p>3、便于管理</p>
-<p>4、反射</p>
-<p>ReflectionClass 反射类对象</p>
-<p>ReflectionMethod 反射方法对象</p>
-<p>ReflectionParameters 反射参数对象</p>
-<p>5、虚拟主机</p>
-<p>httpd.conf</p>
-<p>vhost_alias_module</p>
-<p>rewrite_module</p>
-<p>Include conf/extra/httpd-vhosts.conf</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH09-MVC%E6%A1%86%E6%9E%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="hzjoyous">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH09-MVC%E6%A1%86%E6%9E%B6/" class="post-title-link" itemprop="url">PHP[OOP入门]PH09-MVC框架</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:09" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:09+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day09-MVC框架</p>
-<p>1、mvc概念</p>
-<p>model view controller</p>
-<p>2、psr规范</p>
-<p>psr1：基础编程规范</p>
-<p>psr2：编码风格规范</p>
-<p>psr3：日志接口规范</p>
-<p>psr4：自动加载规范</p>
-<p>3、单一入口（简单路由）</p>
-<p>index.php?m=index&amp;a=index</p>
-<p>pathinfo index.php/index/index</p>
-<p>spl_autoload_register</p>
-<p>__autoload($className)</p>
-<p>4、框架目录架构</p>
-<p>app</p>
-<p>model</p>
-<p>UserModel.php</p>
-<p>view</p>
-<p>user</p>
-<p>login.html</p>
-<p>register.html</p>
-<p>index</p>
-<p>index.html</p>
-<p>about.html</p>
-<p>controller</p>
-<p>Controller.php</p>
-<p>UserController.php</p>
-<p>IndexController.php</p>
-<p>config</p>
-<p>config.php</p>
-<p>vendor</p>
-<p>lib</p>
-<p>Model.php</p>
-<p>Page.php</p>
-<p>Tpl.php</p>
-<p>public</p>
-<p>css</p>
-<p>js</p>
-<p>fonts</p>
-<p>editor</p>
-<p>cache</p>
-<p>缓存</p>
-<p>5、命名空间映射</p>
-<p>将命名空间和目录结构对应起来叫做命名空间映射</p>
-<p>今天的代码命名空间的映射是一一对应的，大家可以自己改进代码，将一个命名空间对应多个目录？</p>
-<p>'model' =&gt; 'app/model/'</p>
-<p>'model\test' =&gt; 'app/model/lala'</p>
-<p>'controller' =&gt; 'app/controller/'</p>
-<p>'vendor' =&gt; 'vendor/lib'</p>
-<p>6、MarkDown介绍</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH08-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="hzjoyous">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH08-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">PHP[OOP入门]PH08-设计模式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:08" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:08+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day08-设计模式</p>
-<p>设计模式概述</p>
-<p>设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。</p>
-<p>模式的经典定义：每个模式都描述了一个在我们的环境中不断出现的问题，然后描述了该问题的解决方案的核心，通过这种方式，我们可以无数次地重用那些已有的解决方案，无需再重复相同的工作。即模式是在特定环境中解决问题的一种方案</p>
-<p>现在有两派，有的人建议使用设计模式，有的人不建议使用设计模式！</p>
-<p>解决代码的耦合度</p>
-<p>耦合度越低越好</p>
-<p>高内聚低耦合（对内要高内聚，对外要低耦合）</p>
-<p>设计模式不分语言。php是世界上最优美的语言</p>
-<p>1、单例（单一实例）实例化</p>
-<p>这个类只能创建一个对象。</p>
-<p>php的应用主要在于数据库应用,一个应用中会存在大量的数据库操作，使用单例模式,可以避免大量的 new 操作消耗的资源</p>
-<p>步骤</p>
-<p>1、构造函数需要标记为private</p>
-<p>2、保存类实例的静态成员变量</p>
-<p>3、获取实例的公共的静态方法</p>
-<p>2、简单工厂、标准工厂</p>
-<p>接口中定义一些方法</p>
-<p>实现接口的类实现这些方法</p>
-<p>工厂类：用以实例化对象</p>
-<p>优点：为系统结构提供了灵活的动态扩展机制。方便维护</p>
-<p>3、工厂方法</p>
-<p>工厂方法模式核心是工厂类不再负责所有对象的创建，而是将具体创建的工作交给子类去做，成为一个抽象工厂角色，它仅负责给出具体工厂类必须实现的接口，而不接触哪一个产品类应当被实例化这种细节</p>
-<p>4、观察者</p>
-<p>涉及到两个类：</p>
-<p>一个是被观察者</p>
-<p>1、添加观察者</p>
-<p>2、删除观察者</p>
-<p>3、发送通知</p>
-<p>一个是观察者</p>
-<p>1、做出反应即可</p>
-<p>在php中：用户注册（收到邮件，收到短信，或者收到其他信息）</p>
-<p>它是一种事件系统，意味着这一模式允许某个类观察另一个类的状态，当被观察的类状态发生改变的时候，观察类可以收到通知并且做出相应的动作;观察者模式提供了避免组件之间紧密耦合的另一种方法</p>
-<p>官方接口</p>
-<p>SplSubject</p>
-<p>attach 添加观察者</p>
-<p>detach 删除观察者</p>
-<p>notify 通知</p>
-<p>SplOberser</p>
-<p>update 做出响应</p>
-<p>5、适配器</p>
-<p>生活中就有很多适配器 电源适配器 就是里面的变压器 220v</p>
-<p>可将一个类的接口转换成客户希望的另外一个接口，使得原本不兼容的接口能够一起工作。通俗的理解就是将不同接口适配成统一的接口</p>
-<p>6、策略模式</p>
-<p>（1）多个类只区别在表现行为不同，可以使用Strategy模式，在运行时动态选择具体要执行的行为。</p>
-<p>（2）需要在不同情况下使用不同的策略(算法)，或者策略还可能在未来用其它方式来实现。</p>
-<p>（3）对客户隐藏具体策略(算法)的实现细节，彼此完全独立。</p>
-<p>（4）客户端必须知道所有的策略类，并自行决定使用哪一个策略类，策略模式只适用于客户端知道所有的算法或行为的情况。</p>
-<p>（5）策略模式造成很多的策略类，每个具体策略类都会产生一个新类。</p>
-<p>优点：</p>
-<p>1、策略模式提供了管理相关的算法族的办法</p>
-<p>2、算法封闭在独立的Strategy类中使得你可以独立于其Context改变它</p>
-<p>3、使用策略模式可以避免使用多重条件转移语句</p>
-<p>7、门面模式</p>
-<p>优点</p>
-<p>1、它对客户屏蔽了子系统组件，因而减少了客户处理的对象的数目并使得子系统使用起来更加方便</p>
-<p>2、实现了子系统与客户之间的松耦合关系</p>
-<p>3、如果应用需要，它并不限制它们使用子系统类。因此可以在系统易用性与能用性之间加以选择</p>
-<p>适用场景</p>
-<p>1、为一些复杂的子系统提供一组接口</p>
-<p>2、提高子系统的独立性</p>
-<p>3、在层次化结构中，可以使用门面模式定义系统的每一层的接口</p>
-<p>8、DI（Dependency Injection）依赖注入 （Ioc反转控制）</p>
-<p>9、MVC</p>
-<p>10、容器</p>
 
       
     </div>
