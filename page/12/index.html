@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">149</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">150</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">149</span>
+          <span class="site-state-item-count">150</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,91 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/06/02/coding/C_003_%E9%93%BE%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="hzjoyous">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/06/02/coding/C_003_%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">c/c++:单向链表顺序输出</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-06-02 23:20:09" itemprop="dateCreated datePublished" datetime="2017-06-02T23:20:09+08:00">2017-06-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/2116.html">数据结构实验之链表一：顺序建立链表</a> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">head</span>, *<span class="title">tail</span>, *<span class="title">p</span>;</span></span><br><span class="line">    head = new node;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    tail = head;</span><br><span class="line">    <span class="type">int</span> N ;</span><br><span class="line">    <span class="type">int</span> tmpN;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;N;</span><br><span class="line">    &#123;</span><br><span class="line">        tmpN = N;</span><br><span class="line">        <span class="keyword">while</span>(tmpN--)</span><br><span class="line">        &#123;</span><br><span class="line">            p = new node;</span><br><span class="line">            p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; p-&gt;data ;</span><br><span class="line">            tail-&gt;next = p;</span><br><span class="line">            tail = p;</span><br><span class="line">        &#125;</span><br><span class="line">        p = head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(p-&gt;next!=<span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;p-&gt;data&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;p-&gt;data&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1499,162 +1584,6 @@
 <p>getDate getDay getMonth</p>
 <p>getHours getMinutes getSeconds</p>
 <p>setMonth</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH14-PDO/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="hzjoyous">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH14-PDO/" class="post-title-link" itemprop="url">PHP[OOP入门]PH14-PDO</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:14" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:14+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day14-PDO</p>
-<p>1、概述</p>
-<p>pdo就是用来连接数据库的 mysqli是用来连接数据库的</p>
-<p>使用pdo可以连接其他的数据库，连接方法不变</p>
-<p>pdo可以用来连接所有的数据库，但是前提你要安装对应的驱动</p>
-<p>pdo的扩展库 mysql和pdo的驱动</p>
-<p>mysql oracle sqlserver</p>
-<p>2、使用（手册）</p>
-<p>3个类 PDO PDOStatement PDOException</p>
-<p>连接</p>
-<p>try {</p>
-<p>$dsn = 'mysql:host=localhost;dbname=fen;charset=utf8';</p>
-<p>//如果连接失败。pdo内部会自动的抛出异常</p>
-<p>$pdo = new PDO($dsn, 'root', '1234567');</p>
-<p>echo '连接数据库成功&lt;br /&gt;';</p>
-<p>} catch (PDOException $e) {</p>
-<p>echo $e-&gt;getMessage();</p>
-<p>}</p>
-<p>获取和设置信息</p>
-<p>setAttribute</p>
-<p>在下面讲解pdo的时候设置看看</p>
-<p>getAttribute</p>
-<p>可以获取一些信息，都是pdo为我们提供的常量</p>
-<p>PDO::ATTR_AUTOCOMMIT</p>
-<p>PDO::ATTR_CLIENT_VERSION</p>
-<p>PDO::ATTR_SERVER_INFO</p>
-<p>PDO::ATTR_DRIVER_NAME</p>
-<p>错误模式</p>
-<p>默认模式：pdo有两个方法供我们使用 errorCode errorInfo</p>
-<p>警告模式：$pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);</p>
-<p>异常模式：$pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_);</p>
-<p>我们需要将sql语句的执行放到try中来执行</p>
-<p>PDO执行sql语句</p>
-<p>query=&gt;查询=》要结果集的</p>
-<p>返回的是PDOStatement对象，可以通过遍历对象查看所有结果，该结果关联和索引都有</p>
-<p>exec=&gt;增删改=》不要结果集的，要受影响的行数</p>
-<p>事务处理</p>
-<p>什么叫做事务？</p>
-<p>wo 0+500</p>
-<p>li 1000-500</p>
-<p>这两条语句必须都执行成功才能完成交易，如果有一条语句失败，那么交易就失败，所有的状态都要恢复（回滚）。这种就叫做一个事务</p>
-<p>myisam:不支持</p>
-<p>innodb:支持事务</p>
-<p>小利给爱斌转500块钱</p>
-<p>PDO::beginTransaction --- 启动一个事务</p>
-<p>PDO::commit --- 提交一个事务</p>
-<p>PDO::rollBack --- 回滚一个事务</p>
-<p>预处理类 预处理语句</p>
-<p>优点：效率、安全（sql注入）</p>
-<p>PDOStatement</p>
-<p>prepare 预处理sql语句</p>
-<p>execute 执行sql语句</p>
-<p>增删改</p>
-<p>查（结果集）</p>
-<p>PDO::FETCH_BOTH</p>
-<p>PDO::FETCH_ASSOC</p>
-<p>PDO::FETCH_NUM</p>
-<p>PDO::FETCH_OBJ</p>
-<p>setFetchMode 设置默认的提取模式</p>
-<p>绑定列(了解)</p>
-<p>3、虚拟主机</p>
-<p>1、点击配置</p>
-<p>2、在 httpd.conf 中，将下列打开</p>
-<p>vhost_alias_module</p>
-<p>rewrite_module</p>
-<p>Include conf/extra/httpd-vhosts.conf</p>
 
       
     </div>

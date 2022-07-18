@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">149</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">150</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">149</span>
+          <span class="site-state-item-count">150</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,115 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2020/01/09/amazing_tool/h2u_uwp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="hzjoyous">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/01/09/amazing_tool/h2u_uwp/" class="post-title-link" itemprop="url">如何使用uwp制作一个视频播放器(How to use uwp to make a video player)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-01-09 07:16:46" itemprop="dateCreated datePublished" datetime="2020-01-09T07:16:46+08:00">2020-01-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HowToUse/" itemprop="url" rel="index"><span itemprop="name">HowToUse</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <!-- TOC -->
+<ul>
+<li><a href="#uwp-001什么是通用-windows-平台-uwp-应用">UWP-001:什么是通用 Windows 平台 (UWP) 应用？</a></li>
+<li><a href="#uwp-002开发目的起步">UWP-002:开发目的+起步</a>
+<ul>
+<li><a href="#开发原因">开发原因</a></li>
+<li><a href="#起步">起步</a></li>
+</ul></li>
+<li><a href="#使用grid并在左上添加一段文字">使用grid，并在左上添加一段文字</a>
+<ul>
+<li><a href="#使用listview绑定数据渲染">使用listView绑定数据渲染</a></li>
+</ul></li>
+<li><a href="#uwp-003视频组件和创建自定义传输控件">UWP-003:视频组件和创建自定义传输控件</a></li>
+<li><a href="#uwp-004事件和sqlite的引用">UWP-004:事件和sqlite的引用</a></li>
+</ul>
+<!-- /TOC -->
+<h1 id="uwp-001什么是通用-windows-平台-uwp-应用">UWP-001:什么是通用 Windows 平台 (UWP) 应用？</h1>
+<p>UWP 应用的特点： - 安全：UWP 应用声明其访问哪些设备资源和数据 用户必须对该访问授权。 - 能够在运行 Windows 10 的所有设备上使用常见的 API。 - 可以使用设备的特定功能并让 UI 适应不同的设备屏幕尺寸、分辨率和 DPI。 - 通过运行 Windows 10 的所有设备（或只是你指定的设备）上的 Microsoft Store 提供。 Microsoft Store 提供了多种利你的应用赚钱的方式。 - 能够在不对计算机构成风险或引起“计算机腐烂”的情况下安装和卸载。 - 互动：使用动态磁贴、推送通知以及与 Windows 时间线和 Cortana 的“Pick Up Where I Left Off”交互的用户活动吸引用户。 - 可使用 C#、C++、Visual Basic 和 Javascript 编程。 对于 UI，使用 XAML、HTML 或 DirectX。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/09/amazing_tool/h2u_uwp/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -885,6 +994,91 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2019/03/19/coding/php/php_018_BitMap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="hzjoyous">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/03/19/coding/php/php_018_BitMap/" class="post-title-link" itemprop="url">PHP[018]:BitMap</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-03-19 23:20:09" itemprop="dateCreated datePublished" datetime="2019-03-19T23:20:09+08:00">2019-03-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>BitMap算法 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$redisHost     = &#x27;127.0.0.1&#x27;;</span><br><span class="line">$redisPassWord = &#x27;&#x27;;</span><br><span class="line">$redisPort     = 6379;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$redis = new \Redis();</span><br><span class="line">$redis-&gt;connect($redisHost, $redisPort);</span><br><span class="line">$redis-&gt;setOption(\Redis::OPT_READ_TIMEOUT, -1);</span><br><span class="line">$redisPassWord &amp;&amp; $redis-&gt;auth($redisPassWord);</span><br><span class="line">$cacheKey = &#x27;asdhasdhsjahdjahdjkahs&#x27;;</span><br><span class="line">$maxOffSet = 4294967296;</span><br><span class="line">$redis-&gt;setBit($cacheKey, 7, 0);</span><br><span class="line"></span><br><span class="line">// 高危。。。 如果值很小调用get 没有问题，如果值很大，则会出现没有反应的情况</span><br><span class="line">$result = $redis-&gt;get($cacheKey);</span><br><span class="line">$result = $redis-&gt;getbit($cacheKey, 13000);</span><br><span class="line"></span><br><span class="line">$start = microtime(true);</span><br><span class="line">sleep(1);</span><br><span class="line"></span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br><span class="line">$start = microtime(true);</span><br><span class="line">$result = $redis-&gt;bitCount($cacheKey);</span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2019/03/19/coding/php/php_019_RabbitMq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1003,91 +1197,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2019/03/19/coding/php/php_018_BitMap/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="hzjoyous">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/19/coding/php/php_018_BitMap/" class="post-title-link" itemprop="url">PHP[018]:BitMap</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-03-19 23:20:09" itemprop="dateCreated datePublished" datetime="2019-03-19T23:20:09+08:00">2019-03-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>BitMap算法 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$redisHost     = &#x27;127.0.0.1&#x27;;</span><br><span class="line">$redisPassWord = &#x27;&#x27;;</span><br><span class="line">$redisPort     = 6379;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$redis = new \Redis();</span><br><span class="line">$redis-&gt;connect($redisHost, $redisPort);</span><br><span class="line">$redis-&gt;setOption(\Redis::OPT_READ_TIMEOUT, -1);</span><br><span class="line">$redisPassWord &amp;&amp; $redis-&gt;auth($redisPassWord);</span><br><span class="line">$cacheKey = &#x27;asdhasdhsjahdjahdjkahs&#x27;;</span><br><span class="line">$maxOffSet = 4294967296;</span><br><span class="line">$redis-&gt;setBit($cacheKey, 7, 0);</span><br><span class="line"></span><br><span class="line">// 高危。。。 如果值很小调用get 没有问题，如果值很大，则会出现没有反应的情况</span><br><span class="line">$result = $redis-&gt;get($cacheKey);</span><br><span class="line">$result = $redis-&gt;getbit($cacheKey, 13000);</span><br><span class="line"></span><br><span class="line">$start = microtime(true);</span><br><span class="line">sleep(1);</span><br><span class="line"></span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br><span class="line">$start = microtime(true);</span><br><span class="line">$result = $redis-&gt;bitCount($cacheKey);</span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2019/03/18/amazing_tool/h2u_python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1153,91 +1262,6 @@
 <p>这个迁移方式不是很习惯</p>
 <h2 id="python闭包写法">python闭包写法</h2>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>()</span><br><span class="line">    <span class="keyword">return</span> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func1</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">func</span>():</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> func</span><br><span class="line"></span><br><span class="line">func2 = func1()</span><br><span class="line"><span class="built_in">print</span>(func2)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hzjoyous.github.io/2019/03/18/coding/php/php_017_EventLister/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="hzjoyous">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/18/coding/php/php_017_EventLister/" class="post-title-link" itemprop="url">PHP[017]:事件监听</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-03-18 23:20:09" itemprop="dateCreated datePublished" datetime="2019-03-18T23:20:09+08:00">2019-03-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Event</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="built_in">static</span> <span class="variable">$listens</span> = <span class="keyword">array</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">listen</span>(<span class="params"><span class="variable">$event</span>, <span class="variable">$callback</span>, <span class="variable">$once</span> = <span class="literal">false</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="title function_ invoke__">is_callable</span>(<span class="variable">$callback</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">self</span>::<span class="variable">$listens</span>[<span class="variable">$event</span>][] = <span class="keyword">array</span>(<span class="string">&#x27;callback&#x27;</span> =&gt; <span class="variable">$callback</span>, <span class="string">&#x27;once&#x27;</span> =&gt; <span class="variable">$once</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"><span class="variable">$event</span>, <span class="variable">$callback</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">self</span>::<span class="title function_ invoke__">listen</span>(<span class="variable">$event</span>, <span class="variable">$callback</span>, <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params"><span class="variable">$event</span>, <span class="variable">$index</span> = <span class="literal">null</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="title function_ invoke__">is_null</span>(<span class="variable">$index</span>))</span><br><span class="line">            <span class="keyword">unset</span>(<span class="built_in">self</span>::<span class="variable">$listens</span>[<span class="variable">$event</span>]);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">unset</span>(<span class="built_in">self</span>::<span class="variable">$listens</span>[<span class="variable">$event</span>][<span class="variable">$index</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">trigger</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="title function_ invoke__">func_num_args</span>()) <span class="keyword">return</span>;</span><br><span class="line">        <span class="variable">$args</span> = <span class="title function_ invoke__">func_get_args</span>();</span><br><span class="line">        <span class="variable">$event</span> = <span class="title function_ invoke__">array_shift</span>(<span class="variable">$args</span>);</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">isset</span>(<span class="built_in">self</span>::<span class="variable">$listens</span>[<span class="variable">$event</span>])) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">foreach</span> ((<span class="keyword">array</span>)<span class="built_in">self</span>::<span class="variable">$listens</span>[<span class="variable">$event</span>] <span class="keyword">as</span> <span class="variable">$index</span> =&gt; <span class="variable">$listen</span>) &#123;</span><br><span class="line">            <span class="variable">$callback</span> = <span class="variable">$listen</span>[<span class="string">&#x27;callback&#x27;</span>];</span><br><span class="line">            <span class="variable">$listen</span>[<span class="string">&#x27;once&#x27;</span>] &amp;&amp; <span class="built_in">self</span>::<span class="title function_ invoke__">remove</span>(<span class="variable">$event</span>, <span class="variable">$index</span>);</span><br><span class="line">            <span class="title function_ invoke__">call_user_func_array</span>(<span class="variable">$callback</span>, <span class="variable">$args</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 增加监听walk事件 </span></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;walk&#x27;</span>, function () &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;I am walking...n&quot;</span>;</span><br><span class="line">&#125;); </span><br><span class="line"><span class="comment">// 增加监听walk一次性事件 </span></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;walk&#x27;</span>, function () &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;I am listening...n&quot;</span>;</span><br><span class="line">&#125;, <span class="literal">true</span>); </span><br><span class="line"><span class="comment">// 触发walk事件 </span></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;walk&#x27;</span>); </span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">I am walking... </span></span><br><span class="line"><span class="comment">I am listening... </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;walk&#x27;</span>); </span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">I am walking... </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">one</span>(<span class="string">&#x27;say&#x27;</span>, function (<span class="variable">$name</span> = <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;I am <span class="subst">&#123;$name&#125;</span>n&quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;say&#x27;</span>, <span class="string">&#x27;deeka&#x27;</span>); <span class="comment">// 输出 I am deeka </span></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;say&#x27;</span>, <span class="string">&#x27;deeka&#x27;</span>); <span class="comment">// not run </span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Foo::bar() is calledn&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Foo::foo() is called, agrs:&quot;</span> . <span class="title function_ invoke__">json_encode</span>(<span class="title function_ invoke__">func_get_args</span>()) . <span class="string">&quot;n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$foo</span> = <span class="keyword">new</span> <span class="title class_">Foo</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;bar&#x27;</span>, <span class="keyword">array</span>(<span class="variable">$foo</span>, <span class="string">&#x27;bar&#x27;</span>));</span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;bar&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;test&#x27;</span>, <span class="keyword">array</span>(<span class="variable">$foo</span>, <span class="string">&#x27;test&#x27;</span>));</span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;test&#x27;</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Bar::foo() is calledn&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;bar1&#x27;</span>, <span class="keyword">array</span>(<span class="string">&#x27;Bar&#x27;</span>, <span class="string">&#x27;foo&#x27;</span>));</span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;bar1&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;bar2&#x27;</span>, <span class="string">&#x27;Bar::foo&#x27;</span>);</span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;bar2&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;bar() is calledn&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">listen</span>(<span class="string">&#x27;bar3&#x27;</span>, <span class="string">&#x27;bar&#x27;</span>);</span><br><span class="line"><span class="title class_">Event</span>::<span class="title function_ invoke__">trigger</span>(<span class="string">&#x27;bar3&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
       
     </div>
