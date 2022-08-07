@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">152</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">153</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">152</span>
+          <span class="site-state-item-count">153</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,132 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH17-%E5%AE%9A%E6%97%B6%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH17-%E5%AE%9A%E6%97%B6%E5%99%A8/" class="post-title-link" itemprop="url">PHP[OOP入门]PH17-定时器</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:02:17" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:17+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
+</blockquote>
+<blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day17-定时器</p>
+<p>&lt;html&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta charset='utf-8'&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>1、封闭空间实现滑动门</p>
+<p>2、获取非行内样式</p>
+<p>3、定时器</p>
+<p>分为两种</p>
+<p>周期性定时器：周期性的去执行一个方法</p>
+<p>定时器 = setInterval(方法, 时间); 时间以ms为单位</p>
+<p>clearInterval(定时器名);</p>
+<p>一次性定时器：执行一次</p>
+<p>定时器 = setTimeout(方法, 时间); 时间以ms为单位</p>
+<p>clearTimeout(定时器名);</p>
+<p>计数器</p>
+<p>一次性定时器使用</p>
+<p>闪动效果</p>
+<p>广告消失</p>
+<p>秒表</p>
+<p>00:00</p>
+<p>开始、暂停、重置</p>
+<p>倒计时</p>
+<p>日期对象</p>
+<p>飘动广告(自己实现)</p>
+<p>鼠标快速划过</p>
+<p>4、全选、全不选、反选</p>
+<p>5、处理className兼容</p>
+<p>IETester</p>
+<p>getElementsByName 必须是document对象</p>
+<p>getElementById 必须是document对象</p>
+<p>getElementsByTagName document和子对象都可以</p>
+<p>getElementsByClassName document和子对象都可以</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1670,190 +1796,6 @@
 <p>}</p>
 <p>return $size;</p>
 <p>}</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH04-%E9%AA%8C%E8%AF%81%E7%A0%81%E7%B1%BB%E5%92%8C%E5%88%86%E9%A1%B5%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH04-%E9%AA%8C%E8%AF%81%E7%A0%81%E7%B1%BB%E5%92%8C%E5%88%86%E9%A1%B5%E7%B1%BB/" class="post-title-link" itemprop="url">PHP[OOP入门]PH04-验证码类和分页类</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:04" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:04+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day04-验证码类和分页类</p>
-<p>遍历对象</p>
-<p>对象可以被当成数组来遍历，遍历的时候，键就是属性名，值就是属性值</p>
-<p>类外</p>
-<p>只能遍历public属性</p>
-<p>类内</p>
-<p>所有属性都能遍历出来</p>
-<p>匿名类</p>
-<p>$obj = new class {</p>
-<p>public $name;</p>
-<p>public $height;</p>
-<p>function say()</p>
-<p>{</p>
-<p>echo '100';</p>
-<p>}</p>
-<p>};</p>
-<p>1、命名空间结合自动加载实现mvc</p>
-<p>规则：</p>
-<p>文件夹名都是小写</p>
-<p>文件名和类名相同</p>
-<p>命名空间名都是小写</p>
-<p>文件夹名和命名空间名对应</p>
-<p>model namespace model; model\UserModel =&gt; model/UserModel.php</p>
-<p>UserModel.php</p>
-<p>GoodsModel.php</p>
-<p>view</p>
-<p>controller</p>
-<p>IndexController.php</p>
-<p>UserController.php</p>
-<p>vendor</p>
-<p>Tpl.php</p>
-<p>Model.php</p>
-<p>Code.php</p>
-<p>Image.php</p>
-<p>index.php</p>
-<p>2、常量和有关函数(自己测试一下)</p>
-<p>__NAMESPACE__ 当前命名空间名</p>
-<p>__CLASS__ 当前类名</p>
-<p>__METHOD__ 当前方法名</p>
-<p>instanceof 判断一个对象是否属于当前类</p>
-<p>class_alias 给类起别名</p>
-<p>class_exists 判断类是否存在</p>
-<p>get_class_methods 得到类所有的方法</p>
-<p>get_class_vars 得到类所有的属性</p>
-<p>get_class 根据对象得到当前类名</p>
-<p>interface_exists 判断接口是否存在</p>
-<p>trait_exists 判断trait是否存在</p>
-<p>method_exists 判断方法是否存在</p>
-<p>property_exists 判断属性是否存在</p>
-<p>3、验证码类</p>
-<p>imagecreatetruecolor</p>
-<p>imagechar</p>
-<p>imagesetpixel</p>
-<p>imagearc</p>
-<p>imagecolorallocate</p>
-<p>imagefill</p>
-<p>imagepng</p>
-<p>类如何写：</p>
-<p>创建一个对象，调用对象的一个方法，立马显示出来验证码</p>
-<p>$obj-&gt;outImage();</p>
-<p>如何设计这个类</p>
-<p>//将这些属性设置为成员属性，方便类里面所有的方法使用</p>
-<p>//宽 高 个数 类型（0--纯数字，1--纯字母，2--字母和数字混合） 验证码字符串 图像资源</p>
-<p>{</p>
-<p>public function outImage();</p>
-<p>protected function drawChar();</p>
-<p>}</p>
-<p>4、分页类</p>
-<p>上一页 下一页 首页 尾页</p>
-<p>核心：得到page 得到url</p>
-<p>http://www.baidu.com:80/index.php?username=goudan&amp;password=123&amp;page=3</p>
-<p>prev next first end</p>
-<p>$_SERVER</p>
-<p>REQUEST_URI 获取文件以及后面的请求字符串</p>
-<p>SERVER_PORT 获取端口号</p>
-<p>SERVER_NAME 获取主机名</p>
-<p>REQUEST_SCHEME 获取协议</p>
-<p>parse_url 解析url 重点关注里面的 path query这两个键</p>
-<p>parse_str 将请求字符串转化为关联数组</p>
-<p>http_build_query 将关联数组转化为请求字符串</p>
-<p>分页类：</p>
-<p>成员属性</p>
-<p>$url</p>
-<p>$totalCount</p>
-<p>$totalPage</p>
-<p>$number</p>
-<p>$page</p>
-<p>成员方法（public）</p>
-<p>first</p>
-<p>next</p>
-<p>prev</p>
-<p>end</p>
-<p>allPage</p>
-<p>limit</p>
 
       
     </div>

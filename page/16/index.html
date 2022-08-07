@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">152</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">153</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">152</span>
+          <span class="site-state-item-count">153</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,264 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P08-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%8C%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P08-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%8C%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">PHP[入门]P08-类型转换，运算符，表达式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:01:08" itemprop="dateCreated datePublished" datetime="2017-01-01T09:01:08+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day08类型转换，运算符，表达式</p>
+<p>资源：resource</p>
+<p>$con = fopen('ceshi.txt', 'r');</p>
+<p>【注】第一个参数(arg) 不要用中文</p>
+<p>$con = false;</p>
+<p>if ($con) {</p>
+<p>echo '真区间';</p>
+<p>} else {</p>
+<p>echo '假区间';</p>
+<p>}</p>
+<p>gettype() ：获取数据的类型</p>
+<p>empty()：判断的是这个变量是否为空 为空返回真true 不为空返回的是false</p>
+<p>empty和isset的区别（）</p>
+<p>empty() 判断这个变量是否为空 为空返回真 不为空返回的是false</p>
+<p>isset() 判断这个变量是否定义 如果定义返回真 如果没有定义返回假</p>
+<p>使用：一般在判断数组或者一个变量里面是否有值的时候用empty</p>
+<p>2.判断类型（）</p>
+<p>is_array() is_bool() is_float() is_integer()</p>
+<p>is_null() is_numeric() is_object() is_resource()</p>
+<p>is_scalar()检测是否是标量 is_string()</p>
+<p>返回值：是要判断的类型 就返回真 不是就返回假</p>
+<p>3.类型转换：（）</p>
+<p>强制类型转换</p>
+<p>1.转换函数</p>
+<p>intval() strval() floatval() boolval()</p>
+<p>只在使用的时候改变了变量的类型 并没有改变变量本事的类型</p>
+<p>2.在变量前边加上(int)(string)(float)(bool)转换方式</p>
+<p>只在使用的时候改变了变量的类型 并没有改变变量本事的类型</p>
+<p>3.settype()</p>
+<p>arg:</p>
+<p>var 要转换的变量。</p>
+<p>type 的可能值为：</p>
+<p>boolean integer float string</p>
+<p>设置变量的类型，会改变变量本身的类型</p>
+<p>[注]</p>
+<p>settype($num, 'null') 等价于 unset($num);</p>
+<p>[注]</p>
+<p>1.当字符串转为整型 或者浮点型时候 开头如果不是数字那么直接转为0</p>
+<p>2.空转为整型是整型的0</p>
+<p>3.空转为浮点型是浮点型的0</p>
+<p>4.空转为字符串是空字符串</p>
+<p>5.浮点型的1234.0 转为字符串是1234</p>
+<p>6.浮点型的1234.45 转为字符串是1234.45</p>
+<p>7.浮点型转为整型的时候小数点后边的全部干掉</p>
+<p>自动类型转换：</p>
+<p>用 . 拼接时候会转换成字符串</p>
+<p>在运算的时候会自动转换</p>
+<p>1.做加减乘除运算的时候 字符串会自动转为整型或浮点型</p>
+<p>2.bool值参与运算的时候 自动将true转为1 false转为0</p>
+<p>3.如果用点拼接字符串 然后在拼接bool值 布尔值true转为1 false转为0</p>
+<p>4.如果if小括号里面有运算表达式 最后都转为bool值</p>
+<p>[注]:转为bool值为假的情况</p>
+<p>1.整型的0是假 其余都是真</p>
+<p>2.浮点型的0.0是假 其余都是真</p>
+<p>3.空字符串是为假 就算一个空格他也是真</p>
+<p>4.字符串里有一个0 是假 其余为真</p>
+<p>5.null(空)是假</p>
+<p>6.未声明成功的资源也是假</p>
+<p>7.空数组也是为假</p>
+<p>4.常量 （）</p>
+<p>常量定义</p>
+<p>在程序的运行的运行过程中 其值不会被改变的</p>
+<p>不可以unset</p>
+<p>定义：</p>
+<p>define('常量名', '常量值');</p>
+<p>规范：</p>
+<p>1.常量名用单引号(双引号也行，但是从效率考虑用单引号)</p>
+<p>2.一般都常量名都使用大写(规定必须用大写)</p>
+<p>3.常量名也区分大小写</p>
+<p>4.常量名定义时候也是数字 字母下划线不能以数字开始 尽量不用数字</p>
+<p>5.常量的值只能用标量</p>
+<p>6.常量的作用域是全局</p>
+<p>7.常量调用时候不能写在字符串中，想使用可以用 . 拼接</p>
+<p>8.不可以重复定义</p>
+<p>常量判断:</p>
+<p>defined(常量名)</p>
+<p>是否定义了常量 定义了返回true否则返回false</p>
+<p>系统常量（）</p>
+<p>__LINE__ 当前所在行数</p>
+<p>__FILE__ 在前所在文件全路径</p>
+<p>__DIR__ 所在目录</p>
+<p>PHP_OS php运行的系统</p>
+<p>PHP_VERSION php的版本</p>
+<p>(了解先背下来）</p>
+<p>__FUNCTION__：当前函数名</p>
+<p>M_PI ：圆周率</p>
+<p>__CLASS__ ：当前类名</p>
+<p>__METHOD__：当前成员方法名</p>
+<p>__NAMESPACE__：当前命名空间</p>
+<p>5.可变变量</p>
+<p>$hello = 'lilei';</p>
+<p>$lilei = 'hanmeimei';</p>
+<p>echo $hello . '&lt;br /&gt;';//lilei</p>
+<p>echo $lilei . '&lt;br /&gt;';//hanmeimei</p>
+<p>echo $$hello; // hanmeimei</p>
+<p>// $$hello = $lilei;</p>
+<p>6.变量的引用</p>
+<p>//当我们没有使用&amp;引用变量时两个变量有各自的存储空间</p>
+<p>当使用了&amp; 以后 两个变量指向使用的是同一个存储空间</p>
+<p>修改一个的值 另一个也会修改</p>
+<p>$num = 20;</p>
+<p>$num1 = &amp;$num;</p>
+<p>$num1 = 30;</p>
+<p>echo $num . '&lt;br /&gt;';</p>
+<p>echo $num1 . '&lt;br /&gt;';</p>
+<p>7.运算符和表达式</p>
+<p>运算符:</p>
+<p>表达式:由变量 常量 运算符组成</p>
+<p>【注】表达式都有值</p>
+<p>算数运算符： + - * / %</p>
+<p>赋值运算符： = += -= *= /= %= .=</p>
+<p>+=</p>
+<p>.=</p>
+<p>自增自减：</p>
+<p>自增:++$num $num++ 都会让$num + 1</p>
+<p>自减：--$num $num-- 都会让$num -1</p>
+<p>区别：</p>
+<p>$num = 3;</p>
+<p>$num1 = ++$num;</p>
+<p>++$num 先加再用 先把1加给$num //4 $num1=4</p>
+<p>--$num 先减再用</p>
+<p>$num1 = $num++</p>
+<p>$num++ 先用再加 先把$num本身的值赋给$num1 之后自身+1</p>
+<p>$num-- 先用再减</p>
+<p>关系运算符：&gt; &lt; &gt;= &lt;= == != === !==</p>
+<p>== 模糊等于 只比较值 不比较数据类型</p>
+<p>!= 模糊不等于</p>
+<p>=== 全等于 就是值和类型都相同表达式才为真</p>
+<p>!== 不全等 有一个不管是值还是类型有一个一样 就为真</p>
+<p>逻辑运算符 &amp;&amp; and || or ! xor</p>
+<p>&amp;&amp; and</p>
+<p>逻辑与：并且</p>
+<p>当两个表达式同时为真 才执行真区间</p>
+<p>|| or</p>
+<p>逻辑或：或者</p>
+<p>当两个表达式只要有一个表达式为真 就执行真区间</p>
+<p>xor 逻辑异或</p>
+<p>相异时候为真 相同的时候为假</p>
+<p>短路原则：</p>
+<p>&amp;&amp; and</p>
+<p>当第一个表达式为假的时候 直接走假区间 不会判断第二个表达式是真还是假</p>
+<p>|| or</p>
+<p>当第一个表达式为真的时候，直接走真区间 不会判断第二个表达式为真还是假</p>
+<p>!:取反 true取反是false</p>
+<p>按位运算(了解)</p>
+<p>&amp; | ^ ~ &lt;&lt; &gt;&gt;</p>
+<p>8.优先级</p>
+<p>先乘除后加减 如果不行直接加上小括号</p>
+<p>9.三元运算符</p>
+<p>? :</p>
+<p>表达式 ? 真区间 : 假区间;</p>
+<p>其他运算符 @ =&gt; -&gt;</p>
+<p>``:执行系统的命令</p>
+<p>@:抑制错误输出(单行)</p>
+<p>=&gt;:数组中键值对的关联符</p>
+<p>-&gt;:对象成员的访问方式</p>
+<p>掌握系统函数</p>
+<p>floor():返回不大于 value 的最接近的整数，舍去小数部分取整。</p>
+<p>ceil(): 返回不小于 value 的下一个整数，value 如果有小数部分则进一位。</p>
+<p>round():四舍五入</p>
+<p>----------------</p>
+<p>PHP官网（中文）：http://www.php.net</p>
+<p>PHP学院：http://www.phpxy.com</p>
+<p>PSR规范</p>
+<p>--------------</p>
+<p>错误：</p>
+<p>parse 或者syntax 解析</p>
+<p>notice 通知</p>
+<p>warning 警告</p>
+<p>fatal 致命</p>
+<p>--------------</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

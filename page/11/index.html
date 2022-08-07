@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">152</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">153</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">152</span>
+          <span class="site-state-item-count">153</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,95 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_007_ReflectionClass/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/10/27/coding/php/php_007_ReflectionClass/" class="post-title-link" itemprop="url">PHP[007]:ReflectionClass</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-27 17:48:40" itemprop="dateCreated datePublished" datetime="2018-10-27T17:48:40+08:00">2018-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="调用类私用方法">调用类私用方法</h2>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">want</span>(<span class="params"><span class="variable">$see</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="variable">$see</span>.<span class="variable">$see</span>.<span class="variable">$see</span>.PHP_EOL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$reflector</span> = <span class="keyword">new</span> <span class="title class_">ReflectionClass</span>(<span class="title class_">Cat</span>::<span class="variable language_">class</span>);</span><br><span class="line"><span class="variable">$instance</span>  = <span class="variable">$reflector</span>-&gt;<span class="title function_ invoke__">newInstance</span>();</span><br><span class="line"><span class="variable">$method</span>    = <span class="variable">$reflector</span>-&gt;<span class="title function_ invoke__">getmethod</span>(<span class="string">&#x27;want&#x27;</span>);</span><br><span class="line"><span class="variable">$method</span>-&gt;<span class="title function_ invoke__">setAccessible</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="variable">$result</span> = <span class="variable">$method</span>-&gt;<span class="title function_ invoke__">invoke</span>(<span class="variable">$instance</span>, <span class="string">&#x27;eat food &#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="实例化不可实例的类">实例化不可实例的类</h2>
+<p>使用这个的原因是因为拆分老的业务代码中，有个一个 Aentity 依赖另一个 Bentity （在orm层中调用get_class），如果查询或者Bentity提供的创建方法会导致将其注册到 UnitOfWork 中，会导致最后的入库（虽然也有可能不入库），所以采用 ReflectionClass::newInstanceWithoutConstructor 实例化一个在 get_class 范围内等价的 entity ,并将其作为一个临时的参数对象代替 Bentity 维持代码的运作</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">println</span>(<span class="params">String <span class="variable">$str</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span>(<span class="variable">$str</span>.PHP_EOL);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$name</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$name</span> = <span class="string">&#x27;WangCai&#x27;</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;name = <span class="variable">$name</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params"><span class="variable">$name</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;name = <span class="variable">$name</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">$this</span>-&gt;name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$reflector</span> = <span class="keyword">new</span> <span class="title class_">ReflectionClass</span>(<span class="title class_">Dog</span>::<span class="variable language_">class</span>);</span><br><span class="line"><span class="variable">$dog</span> = <span class="variable">$reflector</span>-&gt;<span class="title function_ invoke__">newInstanceWithoutConstructor</span>();</span><br><span class="line"><span class="variable">$dog</span>-&gt;<span class="title function_ invoke__">setName</span>(<span class="string">&#x27;DeFu&#x27;</span>);</span><br><span class="line"><span class="variable">$class</span> = <span class="title function_ invoke__">get_class</span>(<span class="variable">$dog</span>);</span><br><span class="line"><span class="title function_ invoke__">println</span>(<span class="variable">$class</span>);</span><br><span class="line"><span class="title function_ invoke__">println</span>(<span class="variable">$dog</span>-&gt;<span class="title function_ invoke__">getName</span>());</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -359,92 +448,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_004_laravel/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/10/27/coding/php/php_004_laravel/" class="post-title-link" itemprop="url">PHP[004]:laravel 5.5</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2018-10-27 17:48:36" itemprop="dateCreated datePublished" datetime="2018-10-27T17:48:36+08:00">2018-10-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">运行 Laravel Mix</span><br><span class="line">Laravel Mix 一款前端任务自动化管理工具，使用了工作流的模式对制定好的任务依次执行。Mix 提供了简洁流畅的 API，让你能够为你的 Laravel 应用定义 Webpack 编译任务。Mix 支持许多常见的 CSS 与 JavaScript 预处理器，通过简单的调用，你可以轻松地管理前端资源。</span><br><span class="line"></span><br><span class="line">使用 Mix 很简单，首先你需要使用以下命令安装 npm 依赖即可。我们将使用 Yarn 来安装依赖，在这之前，因为国内的网络原因，我们还需为 Yarn 配置安装加速：</span><br><span class="line"></span><br><span class="line">$ yarn config set registry https://registry.npm.taobao.org</span><br><span class="line">使用 Yarn 安装依赖：</span><br><span class="line"></span><br><span class="line">$ yarn install</span><br><span class="line">安装成功后，运行以下命令即可：</span><br><span class="line"></span><br><span class="line">$ npm run watch-poll</span><br><span class="line">watch-poll 会在你的终端里持续运行，监控 resources 文件夹下的资源文件是否有发生改变。在 watch-poll 命令运行的情况下，一旦资源文件发生变化，Webpack 会自动重新编译。</span><br><span class="line"></span><br><span class="line">注意：在后面的课程中，我们需要保证 npm run watch-poll 一直处在执行状态中。</span><br></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span>. 线上部署须知</span><br><span class="line">在开发环境中，我们为了测试方便，直接在命令行里调用 artisan horizon 进行队列监控。然而在生产环境中，我们需要配置一个进程管理工具来监控 artisan horizon 命令的执行，以便在其意外退出时自动重启。当服务器部署新代码时，需要终止当前 Horizon 主进程，然后通过进程管理工具来重启，从而使用最新的代码。</span><br><span class="line"></span><br><span class="line">简而言之，生产环境下使用队列需要注意以下两个问题：</span><br><span class="line"></span><br><span class="line">使用 Supervisor 进程工具进行管理，配置和使用请参照 文档 进行配置；</span><br><span class="line">每一次部署代码时，需 artisan horizon:terminate 然后再 artisan horizon 重新加载代码。</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_003_symfony/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -516,6 +519,92 @@ symfony<a target="_blank" rel="noopener" href="https://symfony.com/doc/current/r
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">composer require symfony/orm-pack</span><br><span class="line">composer require symfony/maker-bundle --dev</span><br><span class="line">php bin/console doctrine:database:create</span><br><span class="line">php bin/console list doctrine</span><br><span class="line">php bin/console make:entity</span><br><span class="line">php bin/console make:migration</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">php bin/console doctrine:query:sql &#x27;SELECT * FROM product&#x27;</span><br><span class="line">composer require sensio/framework-extra-bundle # 自动查询</span><br><span class="line">composer require doctrine/doctrine-fixtures-bundle --dev  # 测试数据</span><br><span class="line">php bin/console doctrine:fixtures:load</span><br></pre></td></tr></table></figure>
 <p>next <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 全局唯一id</span><br><span class="line"># fixtures 文件的生成位置</span><br><span class="line">php bin/console make:fixtures</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_004_laravel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吱~">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 吱~">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/10/27/coding/php/php_004_laravel/" class="post-title-link" itemprop="url">PHP[004]:laravel 5.5</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-27 17:48:36" itemprop="dateCreated datePublished" datetime="2018-10-27T17:48:36+08:00">2018-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">运行 Laravel Mix</span><br><span class="line">Laravel Mix 一款前端任务自动化管理工具，使用了工作流的模式对制定好的任务依次执行。Mix 提供了简洁流畅的 API，让你能够为你的 Laravel 应用定义 Webpack 编译任务。Mix 支持许多常见的 CSS 与 JavaScript 预处理器，通过简单的调用，你可以轻松地管理前端资源。</span><br><span class="line"></span><br><span class="line">使用 Mix 很简单，首先你需要使用以下命令安装 npm 依赖即可。我们将使用 Yarn 来安装依赖，在这之前，因为国内的网络原因，我们还需为 Yarn 配置安装加速：</span><br><span class="line"></span><br><span class="line">$ yarn config set registry https://registry.npm.taobao.org</span><br><span class="line">使用 Yarn 安装依赖：</span><br><span class="line"></span><br><span class="line">$ yarn install</span><br><span class="line">安装成功后，运行以下命令即可：</span><br><span class="line"></span><br><span class="line">$ npm run watch-poll</span><br><span class="line">watch-poll 会在你的终端里持续运行，监控 resources 文件夹下的资源文件是否有发生改变。在 watch-poll 命令运行的情况下，一旦资源文件发生变化，Webpack 会自动重新编译。</span><br><span class="line"></span><br><span class="line">注意：在后面的课程中，我们需要保证 npm run watch-poll 一直处在执行状态中。</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span>. 线上部署须知</span><br><span class="line">在开发环境中，我们为了测试方便，直接在命令行里调用 artisan horizon 进行队列监控。然而在生产环境中，我们需要配置一个进程管理工具来监控 artisan horizon 命令的执行，以便在其意外退出时自动重启。当服务器部署新代码时，需要终止当前 Horizon 主进程，然后通过进程管理工具来重启，从而使用最新的代码。</span><br><span class="line"></span><br><span class="line">简而言之，生产环境下使用队列需要注意以下两个问题：</span><br><span class="line"></span><br><span class="line">使用 Supervisor 进程工具进行管理，配置和使用请参照 文档 进行配置；</span><br><span class="line">每一次部署代码时，需 artisan horizon:terminate 然后再 artisan horizon 重新加载代码。</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -981,92 +1070,6 @@ symfony<a target="_blank" rel="noopener" href="https://symfony.com/doc/current/r
     <div class="post-body" itemprop="articleBody">
           <p><a target="_blank" rel="noopener" href="https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/2120.html">数据结构实验之链表五：单链表的拆分</a></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span> *next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span> *head , *tail,*p;</span><br><span class="line"></span><br><span class="line">    head =<span class="keyword">new</span> node;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    tail = head;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">int</span> sum1,sum2;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;num;</span><br><span class="line">    <span class="keyword">while</span>(num--)</span><br><span class="line">    &#123;</span><br><span class="line">        p = <span class="keyword">new</span> node ;</span><br><span class="line">        cin&gt;&gt;p-&gt;data;</span><br><span class="line">        tail-&gt;next = p;</span><br><span class="line">        tail = tail-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span> *head1 , *head2 ,*tail1,*tail2;</span><br><span class="line"></span><br><span class="line">    head1 = <span class="keyword">new</span> node;</span><br><span class="line">    head1-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    tail1 = head1;</span><br><span class="line"></span><br><span class="line">    head2 = <span class="keyword">new</span> node;</span><br><span class="line">    head2-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    tail2 =head2;</span><br><span class="line"></span><br><span class="line">    p = head-&gt;next;</span><br><span class="line">    sum1 = <span class="number">0</span>;</span><br><span class="line">    sum2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(p-&gt;data%<span class="number">2</span> ==<span class="number">1</span>)&#123;</span><br><span class="line">            tail1-&gt;next = p;</span><br><span class="line">            tail1 = tail1-&gt;next;</span><br><span class="line">            sum1 +=<span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            tail2-&gt;next = p;</span><br><span class="line">            tail2 = tail2-&gt;next;</span><br><span class="line">            sum2 +=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    tail1-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    tail2-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    cout &lt;&lt; sum2 &lt;&lt; <span class="string">&#x27; &#x27;</span>&lt;&lt;sum1&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    p = head2-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        cout&lt;&lt;p-&gt;data;</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;next!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">            cout&lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    p = head1-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        cout&lt;&lt;p-&gt;data;</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;next!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">            cout&lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/06/02/coding/C_006_%E9%93%BE%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吱~">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 吱~">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/06/02/coding/C_006_%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">c/c++:有序链表的归并</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-06-02 23:23:09" itemprop="dateCreated datePublished" datetime="2017-06-02T23:23:09+08:00">2017-06-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/2119.html">数据结构实验之链表四：有序链表的归并</a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span> *next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> length1,length2;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span> *head1,*head2,*tail1,*tail2,*p1,*p2,*tmp;</span><br><span class="line"></span><br><span class="line">    head1 = <span class="keyword">new</span> node;</span><br><span class="line">    tail1 = head1;</span><br><span class="line">    head1-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    head2 = <span class="keyword">new</span> node ;</span><br><span class="line">    tail2 = head2;</span><br><span class="line">    head2-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    cin &gt;&gt;length1&gt;&gt;length2;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(length1 -- )</span><br><span class="line">    &#123;</span><br><span class="line">        p1 = <span class="keyword">new</span> node ;</span><br><span class="line">        cin&gt;&gt;p1-&gt;data;</span><br><span class="line">        tail1-&gt;next = p1;</span><br><span class="line">        tail1 = p1;</span><br><span class="line">    &#125;</span><br><span class="line">    p1-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(length2 -- )</span><br><span class="line">    &#123;</span><br><span class="line">        p2 = <span class="keyword">new</span> node ;</span><br><span class="line">        cin&gt;&gt;p2-&gt;data;</span><br><span class="line">        tail2-&gt;next = p2;</span><br><span class="line">        tail2 = p2;</span><br><span class="line">    &#125;</span><br><span class="line">    p2-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    p1 = head1;</span><br><span class="line">    p2 = head2;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span> *head,*tail;</span><br><span class="line"></span><br><span class="line">    head = <span class="keyword">new</span> node;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    tail = head;</span><br><span class="line"></span><br><span class="line">    p1 = head1-&gt;next;</span><br><span class="line">    p2 = head2-&gt;next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(p1&amp;&amp;p2)&#123;</span><br><span class="line">        <span class="keyword">if</span>(p1-&gt;data &lt; p2-&gt;data)&#123;</span><br><span class="line">            tail-&gt;next = p1;</span><br><span class="line">            p1 = p1-&gt;next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            tail-&gt;next = p2;</span><br><span class="line">            p2 = p2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        tail = tail-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(p1)&#123;</span><br><span class="line">        tail-&gt;next = p1;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        tail-&gt;next = p2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">delete</span>(head2);</span><br><span class="line">    <span class="built_in">delete</span>(head1);</span><br><span class="line"></span><br><span class="line">    p1 = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p1-&gt;next!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        cout&lt;&lt;p1-&gt;data&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        p1 = p1-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; p1-&gt;data&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
