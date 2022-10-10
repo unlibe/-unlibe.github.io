@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
   </ul>
 </nav>
 
@@ -136,13 +136,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -179,6 +179,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2022/10/10/diary_blog/2022_10_10go_uphandle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/10/diary_blog/2022_10_10go_uphandle/" class="post-title-link" itemprop="url">go 升级 gin/fiber 的控制器</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-10 18:24:28 / 修改时间：20:17:44" itemprop="dateCreated datePublished" datetime="2022-10-10T18:24:28+08:00">2022-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/other/" itemprop="url" rel="index"><span itemprop="name">other</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/other/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>之前用 go 的泛型，写了相关的 collection 操作函数。所以又了对 fiber gin 这类 http lib 升级的想法，使得控制器的编写更加方便。</p>
+<p>这里放一个最基础的例子，更多的编写放在了后方。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ginUpP  支持params 参数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ginUpP</span>[<span class="title">T</span> <span class="title">any</span>]<span class="params">(action <span class="keyword">func</span>(request T)</span></span> component.Response) <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">		<span class="keyword">var</span> params T</span><br><span class="line">		_ = c.ShouldBind(&amp;params)</span><br><span class="line">		err := validate.Struct(params)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			c.JSON(http.StatusBadRequest, component.DataMap&#123;</span><br><span class="line">				<span class="string">&quot;msg&quot;</span>: err.Error(),</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;</span><br><span class="line">		response := action(params)</span><br><span class="line">		c.JSON(response.Code, response.Data)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码可以使得类似这样的控制器代码很方便的撰写,将大量的重复代码剥离出控制器外。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> GetTwitterUserListParam <span class="keyword">struct</span> &#123;</span><br><span class="line">	Page     <span class="type">int</span>    <span class="string">`form:&quot;page&quot;`</span></span><br><span class="line">	PageSize <span class="type">int</span>    <span class="string">`form:&quot;pageSize&quot;`</span></span><br><span class="line">	Search   <span class="type">string</span> <span class="string">`form:&quot;search&quot;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetTwitterUserList</span><span class="params">(param GetTwitterUserListParam)</span></span> component.Response &#123;</span><br><span class="line">	pageData := FTwitterUser.Page(FTwitterUser.PageQuery&#123;</span><br><span class="line">		Page: param.Page, PageSize: param.PageSize, Search: param.Search,</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> component.SuccessResponse(component.DataMap&#123;</span><br><span class="line">		<span class="string">&quot;itemList&quot;</span>: arms.ArrayMap(<span class="function"><span class="keyword">func</span><span class="params">(item FTwitterUser.FTwitterUser)</span></span> TLink &#123;</span><br><span class="line">			<span class="keyword">return</span> TLink&#123;</span><br><span class="line">				ScreenName: item.ScreenName,</span><br><span class="line">				Name:       item.Name,</span><br><span class="line">				Desc:       item.Desc,</span><br><span class="line">				Url:        fmt.Sprintf(<span class="string">&quot;https://twitter.com/%v/with_replies&quot;</span>, item.ScreenName),</span><br><span class="line">				CreateTime: item.CreateTime.Format(<span class="string">&quot;2006-01-02 15:05:05&quot;</span>),</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;, pageData.Data),</span><br><span class="line">		<span class="string">&quot;size&quot;</span>:    pageData.PageSize,</span><br><span class="line">		<span class="string">&quot;total&quot;</span>:   pageData.Total,</span><br><span class="line">		<span class="string">&quot;current&quot;</span>: param.Page,</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>唯一的区别就是路由注册的代码可能会稍微长一点点 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apiGroup.GET(<span class="string">&quot;/GetTwitterUserList&quot;</span>, ginUpP(controllers.GetTwitterUserList))</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/10/diary_blog/2022_10_10go_uphandle/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1075,93 +1170,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/07/04/diary_blog/2022_07_04go_channel_tips/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2022/06/16/diary_blog/2022_06_16php_reload/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/06/16/diary_blog/2022_06_16php_reload/" class="post-title-link" itemprop="url">关于 windows 下 php_cli 进程 reload 实现</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-06-16 21:49:33 / 修改时间：21:57:34" itemprop="dateCreated datePublished" datetime="2022-06-16T21:49:33+08:00">2022-06-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/other/" itemprop="url" rel="index"><span itemprop="name">other</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这是去年12月，我写在 <code>workman</code> 论坛为 <code>webman</code> <code>windows</code> 下开发热重载的一个脚本，今天在自己博客记录一下。</p>
-<p>参考的官网下面的例子，思路和我一开始说的差不多，就是获取pid，然后cmd去kill掉它。proc_open 创建的资源可以直接从父进程中获取执行的pid，所以在不借助其他中间媒介的情况下使用kill命令去kill程序。因为是proc_open是非阻塞的，所以也不会阻挡监控 https://www.php.net/manual/zh/function.proc-terminate.php</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/06/16/diary_blog/2022_06_16php_reload/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

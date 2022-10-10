@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
   </ul>
 </nav>
 
@@ -136,13 +136,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -179,6 +179,107 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_001_%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/10/27/coding/php/php_001_%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">PHP[001]:INSTALL</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-27 17:48:33" itemprop="dateCreated datePublished" datetime="2018-10-27T17:48:33+08:00">2018-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>ubuntu</p>
+<p>ubuntu 中软件的卸载方法：</p>
+<p>1.apt方式安装：(相应的文件夹有相关的软件，先进入到软件的文件夹) 普通安装： sudo apt-get install 软件名 修复安装： sudo apt-get -f install 软件名 重新安装： sudo apt-get --rreinstall install 软件名 　(一般是 .deb　格式) 2.dpkg 方式： 1.普通安装：sudo dpkg -i package_name.deb ===================================== 如果软件的格式为 .rpm 格式包时，则 1.先安装　alien 和　fakeroot 这两个工具， sudo apt-get install alien fakeroot alien 把　.rpm 为　.deb 格式的文件 1. 将　.rpm 格式的文件转为 同文件名的　.deb fakeroot alien xx.rpm 这样就可以按上面的方法安装了</p>
+<p>1.apt 方式： a. 移除式卸载： apt-get remove 软件名 b. 清除式卸载： apt-get --purge remove 软件名 (同时清除配置) c. 清除式卸载： apt-get --purge 软件名 (同时清除配置)</p>
+<p>2.dpkg 方式： a. 移除式卸载：sudo dpkg dpkg_name b. 清除式卸载：sudo -P dpkg_name</p>
+<p>查看已经安装的软件名称：</p>
+<p>dpkg -l</p>
+<p>查找软件库中的软件 apt-cache search 正则表达式 或者 aptitude search 软件包（部分） 可以查看相关软件的名称　标志 i　表示已经安装</p>
+<p>apt-cache search php7 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/php73 \</span><br><span class="line">--exec-prefix=/usr/local/php73 \</span><br><span class="line">--bindir=/usr/local/php73/bin \</span><br><span class="line">--sbindir=/usr/local/php73/sbin \</span><br><span class="line">--includedir=/usr/local/php73/include \</span><br><span class="line">--libdir=/usr/local/php73/lib/php \</span><br><span class="line">--mandir=/usr/local/php73/php/man \</span><br><span class="line">--with-config-file-path=/usr/local/php73/etc \</span><br><span class="line">--with-openssl \</span><br><span class="line">--enable-mbstring \</span><br><span class="line">--enable-fpm</span><br><span class="line"></span><br><span class="line">sudo make &amp;&amp; sudo make install</span><br></pre></td></tr></table></figure></p>
+<h1 id="编译">编译</h1>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php7.1</span></span><br><span class="line">./configure --prefix=/usr/local/php71 --with-config-file-path=/usr/local/php71/etc --with-config-file-scan-dir=/usr/local/php71/conf.d --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir --with-freetype-dir=/usr/local/freetype --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --with-gettext --disable-fileinfo --enable-intl --with-xsl --enable-maintainer-zts </span><br><span class="line"> ./configure --with-php-config=/usr/local/php71/bin/php-config --with-readline</span><br><span class="line"></span><br><span class="line"><span class="comment"># php7废弃的扩展</span></span><br><span class="line"><span class="comment"># --with-mysql=mysqlnd</span></span><br><span class="line"></span><br><span class="line">sudo make &amp;&amp; sudo make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Warning! a PEAR user config file already exists from a previous PEAR installation at &#x27;/home/hanzhijie/.pearrc&#x27;. You may probably want to remove it.</span><br><span class="line">Wrote PEAR system config file at: /usr/local/php71/etc/pear.conf</span><br><span class="line">You may want to add: /usr/local/php71/lib/php to your php.ini include_path</span><br><span class="line">/mnt/c/Users/hzj/Desktop/boom/tmp/php-7.1.26/build/shtool install -c ext/phar/phar.phar /usr/local/php71/bin</span><br><span class="line">ln -s -f phar.phar /usr/local/php71/bin/phar</span><br><span class="line">Installing PDO headers:           /usr/local/php71/include/php/ext/pdo/</span><br></pre></td></tr></table></figure>
+<h2 id="php7.3">php7.3</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/local/php73 --with-config-file-path=/usr/local/php73/etc --with-config-file-scan-dir=/usr/local/php73/conf.d --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir --with-freetype-dir=/usr/local/freetype --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --enable-ftp --with-gd  --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --with-gettext --disable-fileinfo --enable-intl --with-xsl --with-kerberos --enable-sysvshm --enable-opcache --enable-libxml --with-bz2 --with-pear --with-pdo-sqlite --with-pcre-regex --with-libdir=lib64 --with-kerberos --enable-maintainer-zts  </span><br><span class="line">./configure --with-php-config=/usr/local/php73/bin/php-config --with-readline</span><br><span class="line"><span class="comment"># php7.2废弃的扩展</span></span><br><span class="line"><span class="comment"># --with-mcrypt --enable-gd-native-ttf </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Warning! a PEAR user config file already exists from a previous PEAR installation at <span class="string">&#x27;/home/hanzhijie/.pearrc&#x27;</span>. You may probably want to remove it.</span><br><span class="line">Wrote PEAR system config file at: /usr/local/php73/etc/pear.conf</span><br><span class="line">You may want to add: /usr/local/php73/lib/php to your php.ini include_path</span><br><span class="line">/mnt/c/Users/hzj/Desktop/boom/tmp/php-7.3.2/build/shtool install -c ext/phar/phar.phar /usr/local/php73/bin</span><br><span class="line"><span class="built_in">ln</span> -s -f phar.phar /usr/local/php73/bin/phar</span><br><span class="line">Installing PDO headers:           /usr/local/php73/include/php/ext/pdo/</span><br></pre></td></tr></table></figure>
+<h2 id="pthreads-安装">pthreads 安装</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">----------------------------------------------------------------------</span><br><span class="line">Libraries have been installed in:</span><br><span class="line">   /mnt/c/Users/hzj/Desktop/boom/tmp/pthreads-master/modules</span><br><span class="line"></span><br><span class="line">If you ever happen to want to link against installed libraries</span><br><span class="line">in a given directory, LIBDIR, you must either use libtool, and</span><br><span class="line">specify the full pathname of the library, or use the `-LLIBDIR&#x27;</span><br><span class="line">flag during linking and do at least one of the following:</span><br><span class="line">   - add LIBDIR to the `LD_LIBRARY_PATH&#x27; environment variable</span><br><span class="line">     during execution</span><br><span class="line">   - add LIBDIR to the `LD_RUN_PATH&#x27; environment variable</span><br><span class="line">     during linking</span><br><span class="line">   - use the `-Wl,--rpath -Wl,LIBDIR&#x27; linker flag</span><br><span class="line">   - have your system administrator add LIBDIR to `/etc/ld.so.conf&#x27;</span><br><span class="line"></span><br><span class="line">See any operating system documentation about shared libraries for</span><br><span class="line">more information, such as the ld(1) and ld.so(8) manual pages.</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">Build complete.</span><br><span class="line">Don&#x27;t forget to run &#x27;make test&#x27;.</span><br><span class="line"></span><br><span class="line">Installing shared extensions:     /usr/local/php73/lib/php/extensions/no-debug-zts-20180731/</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1061,119 +1162,6 @@
 <p>header('Access-Control-Allow-Origin:*');</p>
 <p>(2)jsonp json with padding</p>
 <p>6、用户注册</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH20-%E8%87%AA%E5%8A%A8%E6%92%AD%E6%94%BE%E9%80%89%E9%A1%B9%E5%8D%A1%E3%80%81%E6%87%92%E5%8A%A0%E8%BD%BD%E3%80%81%E7%80%91%E5%B8%83%E6%B5%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH20-%E8%87%AA%E5%8A%A8%E6%92%AD%E6%94%BE%E9%80%89%E9%A1%B9%E5%8D%A1%E3%80%81%E6%87%92%E5%8A%A0%E8%BD%BD%E3%80%81%E7%80%91%E5%B8%83%E6%B5%81/" class="post-title-link" itemprop="url">PHP[OOP入门]PH20-自动播放选项卡、懒加载、瀑布流</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:20" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:20+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day20-自动播放选项卡、懒加载、瀑布流</p>
-<p>location</p>
-<p>href,protocol,hostname,port,pathname,search</p>
-<p>location.href = 'http://www.baidu.com' 或者 location = 'http://www.baidu.com'</p>
-<p>iframe</p>
-<p>a b c d(location.href )</p>
-<p>parent.location.href 父级实现跳转</p>
-<p>top.location.href 最顶层的实现跳转</p>
-<p>reload(); //刷新</p>
-<p>parent.location.reload();</p>
-<p>top.location.reload();</p>
-<p>正则对象</p>
-<p>和php中的是一样的，只不过写法稍微有点不同</p>
-<p>1、js验证表单内容(获取焦点)</p>
-<p>document.fm.username.focus();</p>
-<p>2、select下拉框</p>
-<p>selectedIndex</p>
-<p>options</p>
-<p>充话费效果</p>
-<p>3、自动播放选项卡</p>
-<p>4、懒加载(延迟加载)</p>
-<p>5、瀑布流</p>
-<p>选择法、冒泡法、快速排序 （下去要查一下这些算法）</p>
 
       
     </div>
