@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
   </ul>
 </nav>
 
@@ -142,12 +142,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -601,91 +601,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2019/03/19/coding/php/php_018_BitMap/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/19/coding/php/php_018_BitMap/" class="post-title-link" itemprop="url">PHP[018]:BitMap</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-03-19 23:20:09" itemprop="dateCreated datePublished" datetime="2019-03-19T23:20:09+08:00">2019-03-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>BitMap算法 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$redisHost     = &#x27;127.0.0.1&#x27;;</span><br><span class="line">$redisPassWord = &#x27;&#x27;;</span><br><span class="line">$redisPort     = 6379;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$redis = new \Redis();</span><br><span class="line">$redis-&gt;connect($redisHost, $redisPort);</span><br><span class="line">$redis-&gt;setOption(\Redis::OPT_READ_TIMEOUT, -1);</span><br><span class="line">$redisPassWord &amp;&amp; $redis-&gt;auth($redisPassWord);</span><br><span class="line">$cacheKey = &#x27;asdhasdhsjahdjahdjkahs&#x27;;</span><br><span class="line">$maxOffSet = 4294967296;</span><br><span class="line">$redis-&gt;setBit($cacheKey, 7, 0);</span><br><span class="line"></span><br><span class="line">// 高危。。。 如果值很小调用get 没有问题，如果值很大，则会出现没有反应的情况</span><br><span class="line">$result = $redis-&gt;get($cacheKey);</span><br><span class="line">$result = $redis-&gt;getbit($cacheKey, 13000);</span><br><span class="line"></span><br><span class="line">$start = microtime(true);</span><br><span class="line">sleep(1);</span><br><span class="line"></span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br><span class="line">$start = microtime(true);</span><br><span class="line">$result = $redis-&gt;bitCount($cacheKey);</span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2019/03/19/coding/php/php_019_RabbitMq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -778,6 +693,91 @@
 <p>mq 的具体使用还是看场景，从业务严格的程度来说 direct 和 headers 都是比较不错的交换机类型，尽管<code>书本上说 headers 比 topic 慢</code>，但是 headers 的扩展性和可读性在某些业务场景下比 topic 要好很多。</p>
 <p>毕竟一天 8000 订单 ，按照一个订单的生命周期可以发送 create,pay,confirm,waitcheckin,checkin 这些事件，且每个单子都可以发出这些事件，一天不过 8000*5 = 40000。是一个比较可控的范围</p>
 <p>用 headers 表示一个订单的 bookfrom 和 lodgeUnitType 是比较容易的 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$headers</span> = [</span><br><span class="line">    <span class="string">&#x27;actionType&#x27;</span>=&gt;<span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bookFrom&#x27;</span>=&gt;<span class="string">&#x27;xxxxx&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;lodgeUnit&#x27;</span>=&gt;<span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure> 如果用 topic 表示的话，就变得丑陋很多 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$topoc</span> = <span class="string">&quot;actionType:<span class="subst">&#123;$actionType&#125;</span>;bookFrom:<span class="subst">&#123;$bookFrom&#125;</span>;lodgeUnitType:<span class="subst">&#123;$lodgeUnitType&#125;</span>&quot;</span>;</span><br></pre></td></tr></table></figure> 并且规则的书写也不如 headers 来的直接，明确。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2019/03/19/coding/php/php_018_BitMap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/03/19/coding/php/php_018_BitMap/" class="post-title-link" itemprop="url">PHP[018]:BitMap</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-03-19 23:20:09" itemprop="dateCreated datePublished" datetime="2019-03-19T23:20:09+08:00">2019-03-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>BitMap算法 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$redisHost     = &#x27;127.0.0.1&#x27;;</span><br><span class="line">$redisPassWord = &#x27;&#x27;;</span><br><span class="line">$redisPort     = 6379;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$redis = new \Redis();</span><br><span class="line">$redis-&gt;connect($redisHost, $redisPort);</span><br><span class="line">$redis-&gt;setOption(\Redis::OPT_READ_TIMEOUT, -1);</span><br><span class="line">$redisPassWord &amp;&amp; $redis-&gt;auth($redisPassWord);</span><br><span class="line">$cacheKey = &#x27;asdhasdhsjahdjahdjkahs&#x27;;</span><br><span class="line">$maxOffSet = 4294967296;</span><br><span class="line">$redis-&gt;setBit($cacheKey, 7, 0);</span><br><span class="line"></span><br><span class="line">// 高危。。。 如果值很小调用get 没有问题，如果值很大，则会出现没有反应的情况</span><br><span class="line">$result = $redis-&gt;get($cacheKey);</span><br><span class="line">$result = $redis-&gt;getbit($cacheKey, 13000);</span><br><span class="line"></span><br><span class="line">$start = microtime(true);</span><br><span class="line">sleep(1);</span><br><span class="line"></span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br><span class="line">$start = microtime(true);</span><br><span class="line">$result = $redis-&gt;bitCount($cacheKey);</span><br><span class="line">echo (microtime(true) - $start) . PHP_EOL;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
