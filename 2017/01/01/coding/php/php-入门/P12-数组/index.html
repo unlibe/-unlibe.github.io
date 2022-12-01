@@ -24,15 +24,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"thh9.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020&#x2F;05&#x2F;06年从有道笔记导出至此。  day12 数组 1.数组定义 数组：一组数据的集合 集合：值可以是任意类型 array 名词解释： 元素：数组中的一个数据 键值对：键值对就是一个元素 0 &#x3D;&gt; &#39;balue&#39; 键：为了找到值而存在 key [注]：不能重复 默认从零开始 值：是真正">
+    <meta name="description" content="这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020&#x2F;05&#x2F;06年从有道笔记导出至此。  day12 数组 1.数组定义 数组：一组数据的集合 集合：值可以是任意类型 array 名词解释： 元素：数组中的一个数据 键值对：键值对就是一个元素 0 &#x3D;&gt; &#39;balue&#39; 键：为了找到值而存在 key 注：不能重复 默认从零开始 值：是真正要使">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="PHP[入门]P12-数组">
 <meta property="og:url" content="https://thh9.github.io/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P12-%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="马路边边">
-<meta property="og:description" content="这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020&#x2F;05&#x2F;06年从有道笔记导出至此。  day12 数组 1.数组定义 数组：一组数据的集合 集合：值可以是任意类型 array 名词解释： 元素：数组中的一个数据 键值对：键值对就是一个元素 0 &#x3D;&gt; &#39;balue&#39; 键：为了找到值而存在 key [注]：不能重复 默认从零开始 值：是真正">
+<meta property="og:description" content="这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020&#x2F;05&#x2F;06年从有道笔记导出至此。  day12 数组 1.数组定义 数组：一组数据的集合 集合：值可以是任意类型 array 名词解释： 元素：数组中的一个数据 键值对：键值对就是一个元素 0 &#x3D;&gt; &#39;balue&#39; 键：为了找到值而存在 key 注：不能重复 默认从零开始 值：是真正要使">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-01-01T01:01:12.000Z">
-<meta property="article:modified_time" content="2021-11-23T11:55:02.472Z">
+<meta property="article:modified_time" content="2022-12-01T14:57:16.243Z">
 <meta property="article:author" content="thh">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+      <time title="修改时间：2022-12-01 22:57:16" itemprop="dateModified" datetime="2022-12-01T22:57:16+08:00">2022-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -261,7 +261,7 @@
 <p>名词解释：</p>
 <p>元素：数组中的一个数据</p>
 <p>键值对：键值对就是一个元素 0 =&gt; 'balue'</p>
-<p>键：为了找到值而存在 key [注]：不能重复 默认从零开始</p>
+<p>键：为了找到值而存在 key <strong>注</strong>：不能重复 默认从零开始</p>
 <p>值：是真正要使用的东西 value 可以是任意的类型</p>
 <p>定义：</p>
 <p>1.[]: 定义一个数组 （php5.4以后才支持这种定义方式）</p>
@@ -296,7 +296,7 @@
 <p>for (变量的初始化, 循环条件, 计数条件) {</p>
 <p>循环体;</p>
 <p>}</p>
-<p>[注]：只能用于索引数组 而且是下标连续的索引数组</p>
+<p><strong>注</strong>：只能用于索引数组 而且是下标连续的索引数组</p>
 <p>foreach</p>
 <p>语法</p>
 <p>foreach (遍历的数组 as [$key =&gt; ] $value) {</p>

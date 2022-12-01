@@ -504,7 +504,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+      <time title="修改时间：2022-12-01 22:57:16" itemprop="dateModified" datetime="2022-12-01T22:57:16+08:00">2022-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -567,7 +567,7 @@
 <p>session:</p>
 <p>session:值存在服务器中，将一个加密的串返回给浏览器，也放在浏览器的cookie中</p>
 <p>开启：session_start();</p>
-<p>[注]:在开启session前边不要有输出,把session_start()放在文件开始最前边</p>
+<p><strong>注</strong>:在开启session前边不要有输出,把session_start()放在文件开始最前边</p>
 <p>设置session：</p>
 <p>$_SESSION['名'];</p>
 <p>销毁：</p>
@@ -1179,7 +1179,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+      <time title="修改时间：2022-12-01 22:57:16" itemprop="dateModified" datetime="2022-12-01T22:57:16+08:00">2022-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1250,33 +1250,33 @@
 <p>5.DML(增，删，改)</p>
 <p>增：</p>
 <p>1.insert into tablename values(值1,值2,....);</p>
-<p>[注]:按照字段的顺序跟值一一对应 添加； 如果有默认值 不想给定值 可以用null</p>
+<p><strong>注</strong>:按照字段的顺序跟值一一对应 添加； 如果有默认值 不想给定值 可以用null</p>
 <p>2.insert [into] 表 values(值1,值2,值n); 可以将into省略（知道就好，尽量不用）</p>
 <p>3.insert into tablename(字段1,字段2,.....) values(值1,值2,.....);</p>
-<p>[注]：按照自己赋的字段 字段跟值一一对应;</p>
+<p><strong>注</strong>：按照自己赋的字段 字段跟值一一对应;</p>
 <p>4.insert into star(name, money, province, age, sex)</p>
 <p>values('黄晓明', 2000000, '山东', 39, 0),</p>
 <p>( 'angelababy', 3000000, '上海', 27, 1),</p>
 <p>( '陈赫', 150000, '福建', 31, 0);</p>
-<p>[注]： 字段名和值要一一对应，每条数据用小括号括起来，每条数据用逗号分隔开 最后的使用分号结束;</p>
+<p><strong>注</strong>： 字段名和值要一一对应，每条数据用小括号括起来，每条数据用逗号分隔开 最后的使用分号结束;</p>
 <p>插入数据时候可以不传值的情况</p>
 <p>1.自增的字段 （默认+1）</p>
 <p>2.有默认值的字段 default</p>
 <p>3.可以为空的字段</p>
 <p>删除：</p>
 <p>delete from tablename where 条件;</p>
-<p>[注]:要写where条件 不然后果自负</p>
+<p><strong>注</strong>:要写where条件 不然后果自负</p>
 <p>修改：</p>
 <p>update tablename set 字段1=值1, 字段2=值2 .. where 条件;</p>
-<p>[注]：要写where条件 不然就是修改全表数据了;</p>
+<p><strong>注</strong>：要写where条件 不然就是修改全表数据了;</p>
 <p>6.DQL(查)</p>
 <p>1.select * from tablename;</p>
-<p>[注]：是执行效率最低的一种方式,会每天数据全部读一遍;</p>
+<p><strong>注</strong>：是执行效率最低的一种方式,会每天数据全部读一遍;</p>
 <p>2.指定字段查询：</p>
 <p>select 字段名,字段名 from star;</p>
 <p>3.查询出不重复的记录</p>
 <p>select distinct age, sex from star;</p>
-<p>[注]:两个字段查询的是组合起来不重复的记录。</p>
+<p><strong>注</strong>:两个字段查询的是组合起来不重复的记录。</p>
 <p>一个字段 当前字段不重复的记录</p>
 <p>4.有条件的查询</p>
 <p>select 字段名,.... from star where age = 43;</p>
@@ -1286,11 +1286,11 @@
 <p>select * from star where age&gt;32 or sex=0;</p>
 <p>select * from star where age between A and B; //区间 在A和B之间 包含A B</p>
 <p>select * from star where age in(32,43);//在in值中的数据</p>
-<p>like : '%'代表模糊查询 [注]：效率很低 也是查询所有进行匹配</p>
+<p>like : '%'代表模糊查询 <strong>注</strong>：效率很低 也是查询所有进行匹配</p>
 <p>排序：</p>
 <p>order by 字段名 desc/asc desc:倒序 asc :默认的正序</p>
 <p>多字段排序：</p>
-<p>order by 字段名1 desc, 字段名2 desc [注]：多字段排序呢 先按照前边的字段进行排序，如果前边的都相等排序失败，就按照第二个字段进行排序</p>
+<p>order by 字段名1 desc, 字段名2 desc <strong>注</strong>：多字段排序呢 先按照前边的字段进行排序，如果前边的都相等排序失败，就按照第二个字段进行排序</p>
 <p>limit 限制查询结果集</p>
 <p>limit 2; 取符合条件的数据的前两条</p>
 <p>limit 0,3; 取符合条件的数据从0（第一条）开始取，取了三条数据以后结束</p>
@@ -1666,7 +1666,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+      <time title="修改时间：2022-12-01 22:57:16" itemprop="dateModified" datetime="2022-12-01T22:57:16+08:00">2022-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1697,7 +1697,7 @@
 <p>名词解释：</p>
 <p>元素：数组中的一个数据</p>
 <p>键值对：键值对就是一个元素 0 =&gt; 'balue'</p>
-<p>键：为了找到值而存在 key [注]：不能重复 默认从零开始</p>
+<p>键：为了找到值而存在 key <strong>注</strong>：不能重复 默认从零开始</p>
 <p>值：是真正要使用的东西 value 可以是任意的类型</p>
 <p>定义：</p>
 <p>1.[]: 定义一个数组 （php5.4以后才支持这种定义方式）</p>
@@ -1732,7 +1732,7 @@
 <p>for (变量的初始化, 循环条件, 计数条件) {</p>
 <p>循环体;</p>
 <p>}</p>
-<p>[注]：只能用于索引数组 而且是下标连续的索引数组</p>
+<p><strong>注</strong>：只能用于索引数组 而且是下标连续的索引数组</p>
 <p>foreach</p>
 <p>语法</p>
 <p>foreach (遍历的数组 as [$key =&gt; ] $value) {</p>
