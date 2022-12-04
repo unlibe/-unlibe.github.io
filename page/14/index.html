@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">158</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">156</span>
+          <span class="site-state-item-count">158</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,301 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH09-MVC%E6%A1%86%E6%9E%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH09-MVC%E6%A1%86%E6%9E%B6/" class="post-title-link" itemprop="url">PHP[OOP入门]PH09-MVC框架</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:02:09" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:09+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
+</blockquote>
+<blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day09-MVC框架</p>
+<p>1、mvc概念</p>
+<p>model view controller</p>
+<p>2、psr规范</p>
+<p>psr1：基础编程规范</p>
+<p>psr2：编码风格规范</p>
+<p>psr3：日志接口规范</p>
+<p>psr4：自动加载规范</p>
+<p>3、单一入口（简单路由）</p>
+<p>index.php?m=index&amp;a=index</p>
+<p>pathinfo index.php/index/index</p>
+<p>spl_autoload_register</p>
+<p>__autoload($className)</p>
+<p>4、框架目录架构</p>
+<p>app</p>
+<p>model</p>
+<p>UserModel.php</p>
+<p>view</p>
+<p>user</p>
+<p>login.html</p>
+<p>register.html</p>
+<p>index</p>
+<p>index.html</p>
+<p>about.html</p>
+<p>controller</p>
+<p>Controller.php</p>
+<p>UserController.php</p>
+<p>IndexController.php</p>
+<p>config</p>
+<p>config.php</p>
+<p>vendor</p>
+<p>lib</p>
+<p>Model.php</p>
+<p>Page.php</p>
+<p>Tpl.php</p>
+<p>public</p>
+<p>css</p>
+<p>js</p>
+<p>fonts</p>
+<p>editor</p>
+<p>cache</p>
+<p>缓存</p>
+<p>5、命名空间映射</p>
+<p>将命名空间和目录结构对应起来叫做命名空间映射</p>
+<p>今天的代码命名空间的映射是一一对应的，大家可以自己改进代码，将一个命名空间对应多个目录？</p>
+<p>'model' =&gt; 'app/model/'</p>
+<p>'model\test' =&gt; 'app/model/lala'</p>
+<p>'controller' =&gt; 'app/controller/'</p>
+<p>'vendor' =&gt; 'vendor/lib'</p>
+<p>6、MarkDown介绍</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH08-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH08-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">PHP[OOP入门]PH08-设计模式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:02:08" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:08+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
+</blockquote>
+<blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day08-设计模式</p>
+<p>设计模式概述</p>
+<p>设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。</p>
+<p>模式的经典定义：每个模式都描述了一个在我们的环境中不断出现的问题，然后描述了该问题的解决方案的核心，通过这种方式，我们可以无数次地重用那些已有的解决方案，无需再重复相同的工作。即模式是在特定环境中解决问题的一种方案</p>
+<p>现在有两派，有的人建议使用设计模式，有的人不建议使用设计模式！</p>
+<p>解决代码的耦合度</p>
+<p>耦合度越低越好</p>
+<p>高内聚低耦合（对内要高内聚，对外要低耦合）</p>
+<p>设计模式不分语言。php是世界上最优美的语言</p>
+<p>1、单例（单一实例）实例化</p>
+<p>这个类只能创建一个对象。</p>
+<p>php的应用主要在于数据库应用,一个应用中会存在大量的数据库操作，使用单例模式,可以避免大量的 new 操作消耗的资源</p>
+<p>步骤</p>
+<p>1、构造函数需要标记为private</p>
+<p>2、保存类实例的静态成员变量</p>
+<p>3、获取实例的公共的静态方法</p>
+<p>2、简单工厂、标准工厂</p>
+<p>接口中定义一些方法</p>
+<p>实现接口的类实现这些方法</p>
+<p>工厂类：用以实例化对象</p>
+<p>优点：为系统结构提供了灵活的动态扩展机制。方便维护</p>
+<p>3、工厂方法</p>
+<p>工厂方法模式核心是工厂类不再负责所有对象的创建，而是将具体创建的工作交给子类去做，成为一个抽象工厂角色，它仅负责给出具体工厂类必须实现的接口，而不接触哪一个产品类应当被实例化这种细节</p>
+<p>4、观察者</p>
+<p>涉及到两个类：</p>
+<p>一个是被观察者</p>
+<p>1、添加观察者</p>
+<p>2、删除观察者</p>
+<p>3、发送通知</p>
+<p>一个是观察者</p>
+<p>1、做出反应即可</p>
+<p>在php中：用户注册（收到邮件，收到短信，或者收到其他信息）</p>
+<p>它是一种事件系统，意味着这一模式允许某个类观察另一个类的状态，当被观察的类状态发生改变的时候，观察类可以收到通知并且做出相应的动作;观察者模式提供了避免组件之间紧密耦合的另一种方法</p>
+<p>官方接口</p>
+<p>SplSubject</p>
+<p>attach 添加观察者</p>
+<p>detach 删除观察者</p>
+<p>notify 通知</p>
+<p>SplOberser</p>
+<p>update 做出响应</p>
+<p>5、适配器</p>
+<p>生活中就有很多适配器 电源适配器 就是里面的变压器 220v</p>
+<p>可将一个类的接口转换成客户希望的另外一个接口，使得原本不兼容的接口能够一起工作。通俗的理解就是将不同接口适配成统一的接口</p>
+<p>6、策略模式</p>
+<p>（1）多个类只区别在表现行为不同，可以使用Strategy模式，在运行时动态选择具体要执行的行为。</p>
+<p>（2）需要在不同情况下使用不同的策略(算法)，或者策略还可能在未来用其它方式来实现。</p>
+<p>（3）对客户隐藏具体策略(算法)的实现细节，彼此完全独立。</p>
+<p>（4）客户端必须知道所有的策略类，并自行决定使用哪一个策略类，策略模式只适用于客户端知道所有的算法或行为的情况。</p>
+<p>（5）策略模式造成很多的策略类，每个具体策略类都会产生一个新类。</p>
+<p>优点：</p>
+<p>1、策略模式提供了管理相关的算法族的办法</p>
+<p>2、算法封闭在独立的Strategy类中使得你可以独立于其Context改变它</p>
+<p>3、使用策略模式可以避免使用多重条件转移语句</p>
+<p>7、门面模式</p>
+<p>优点</p>
+<p>1、它对客户屏蔽了子系统组件，因而减少了客户处理的对象的数目并使得子系统使用起来更加方便</p>
+<p>2、实现了子系统与客户之间的松耦合关系</p>
+<p>3、如果应用需要，它并不限制它们使用子系统类。因此可以在系统易用性与能用性之间加以选择</p>
+<p>适用场景</p>
+<p>1、为一些复杂的子系统提供一组接口</p>
+<p>2、提高子系统的独立性</p>
+<p>3、在层次化结构中，可以使用门面模式定义系统的每一层的接口</p>
+<p>8、DI（Dependency Injection）依赖注入 （Ioc反转控制）</p>
+<p>9、MVC</p>
+<p>10、容器</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1483,314 +1778,6 @@
 <p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#d:匹配 0-9一个</span><br><span class="line"></span><br><span class="line">#D:除了 0到9</span><br><span class="line"></span><br><span class="line">#w:匹配 0-9 a-z A-Z 下划线</span><br><span class="line"></span><br><span class="line">#W:非字 除了 0-9 a-z A-Z 下划线</span><br><span class="line"></span><br><span class="line">#s:空白字符 n r t</span><br><span class="line"></span><br><span class="line">#S:除了空白字符</span><br><span class="line"></span><br><span class="line">#b:匹配词边界</span><br><span class="line"></span><br><span class="line">#B:除了词边界</span><br><span class="line"></span><br><span class="line">#[]:原子列表,匹配其中一个 [0-9]</span><br><span class="line"></span><br><span class="line">#[^]:反元素</span><br><span class="line"></span><br><span class="line"># . 除了n以外的字符</span><br><span class="line"></span><br><span class="line">#元字符 修饰原子 ，不能单独存在</span><br><span class="line"></span><br><span class="line">#*：贪婪模式，返回最大的匹配值</span><br><span class="line"></span><br><span class="line">#+：至少匹配一次</span><br><span class="line"></span><br><span class="line">#？：最多多匹配一次(0,1)</span><br><span class="line"></span><br><span class="line">#&#123;&#125;： 控制原子次数&#123;n&#125;n次 &#123;m,n&#125;m到n包括m,n&#123;0,n&#125;最多n次</span><br><span class="line"></span><br><span class="line">#^:指定开头原子 等同A</span><br><span class="line"></span><br><span class="line">#$:指定结尾</span><br><span class="line"></span><br><span class="line">#|:或 最低级的</span><br><span class="line"></span><br><span class="line">#():优先级最高 子模式</span><br><span class="line"></span><br><span class="line">#模式修正符</span><br><span class="line"></span><br><span class="line">#修饰整个表达式的匹配，模式秀政府卸载定界符之后</span><br><span class="line"></span><br><span class="line">#eg: /balabala/i</span><br><span class="line"></span><br><span class="line">#i:不区分大小写</span><br><span class="line"></span><br><span class="line">#s:多行</span><br><span class="line"></span><br><span class="line">#A:从目标的字符串开头进行匹配</span><br><span class="line"></span><br><span class="line">#U:贪婪模式取反</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P23-%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P23-%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0/" class="post-title-link" itemprop="url">PHP[入门]P23-下载上传</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:01:23" itemprop="dateCreated datePublished" datetime="2017-01-01T09:01:23+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>1.</p>
-<p>fileatime: 在linux下边是正常的.win7以后因为影响性能所以关闭了这个配置</p>
-<p>copy() 不能复制目录（递归拷贝文件）</p>
-<p>rename() 不仅可以修改文件或者目录名 也可以移动</p>
-<p>mkdir() 默认只能创建一个目录 层级目录</p>
-<p>mkdir('1701/2/16', 0777, true);</p>
-<p>文件的属性：</p>
-<p>ftruncate('资源',size)：截断文件中的指定长度 返回是截断以后的</p>
-<p>scandir() 浏览当前目录</p>
-<p>filetype() 返回的是文件的类型 不是文件后缀</p>
-<hr />
-<p>权限</p>
-<p>0 111 111 111</p>
-<p>0 7 7 7</p>
-<p>- rwx rwx rwx</p>
-<p>所有者 所属组 其他</p>
-<p>chmod 改变文件的权限 chmod 777 文件名字 chmod -R 777 目录</p>
-<p>chgrp 改变文件的所属组</p>
-<p>chown: 改变文件所有者</p>
-<p>文件的上传下载</p>
-<p>使用场景：</p>
-<p>上传：头像，朋友圈，微博 证件 .....</p>
-<p>下载：安装包，图片 ...</p>
-<p>准备工作：</p>
-<p>七伤拳：</p>
-<p>1.准备form表单</p>
-<p>2.判断提交的值</p>
-<p>3.判断文件是否错误</p>
-<p>4.判断是否超出大小 form php 自定义</p>
-<p>5.判断是否是允许上传的文件类型 （mime）</p>
-<p>6.保存图片</p>
-<p>//7.保存数据库图片路径</p>
-<p>##配置文件：</p>
-<p>upload_tmp_dir ="E:/wamp64/tmp" 上传的文件缓存在的目录</p>
-<p>upload_max_filesize = 2M 允许上传文件的大小限制</p>
-<p>file_uploads = On 允许上传</p>
-<p>max_file_uploads = 20 允许同时上传的文件个数</p>
-<p>memory_limit = 128M 允许脚本运行最大的内存</p>
-<p>注意事项：</p>
-<p>1.表单必须以post方式提交 不能忘记enctype</p>
-<p>2.表单中传隐藏值：name=MAX_FILE_SIZE</p>
-<p>3.多文件上传: name是数组</p>
-<p>4.临时缓存的目录权限</p>
-<p>5.php.ini是否开启允许上传配置</p>
-<p>6.'##'配置文件中的一些配置项</p>
-<p>下载：</p>
-<p>1.告知文件类型</p>
-<p>2.告知附件</p>
-<p>3.文件的大小</p>
-<p>4.发送数据</p>
-<p>header('content-type:image/jpeg');</p>
-<p>header('content-disposition:attachment;filename="aa.jpg"');</p>
-<p>header('content-length:'. filesize('aa.jpg'));</p>
-<p>readfile('2.jpg');</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P22-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P22-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">PHP[入门]P22-文件操作</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:01:22" itemprop="dateCreated datePublished" datetime="2017-01-01T09:01:22+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>缩放:</p>
-<p>1.打开或者准备一张图片</p>
-<p>2.自己计算尺寸，(直接给一个倍数，形参);</p>
-<p>3.变成一张新的图片</p>
-<p>4.保存</p>
-<p>5.销毁</p>
-<p>-----------------</p>
-<p>day22 文件函数</p>
-<p>路径相关的函数</p>
-<p>pathinfo('文件的路径+名字') 文件的具体信息</p>
-<p>dirname(); 路径的名</p>
-<p>basename 获取的是文件的名字</p>
-<p>realpath() 返回绝对路径 从磁盘根部开始</p>
-<p>DIRECTORY_SEPARATOR: 返回的是目录分隔符（系统）</p>
-<p>【注】： windows / \都能识别 获取到时\</p>
-<p>linux 系统是/ 正斜线</p>
-<p>文件内容的相关函数</p>
-<p>整体：</p>
-<p>file_get_contents('文件的名'): 获取文件中的全部内容//不仅可以传一个文件名，还可以是一个url</p>
-<p>file_put_contents('文件','内容'); 可以将内容写入到文件中，成功返回字节数，失败返回false</p>
-<p>【注】：将原来的文件内容覆盖</p>
-<p>【了解】readfile 将文件的内容输出到缓冲区，真正返回的值是字节数</p>
-<p>内容：</p>
-<p>**fopen('文件', '打开的方式') 打开一个文件,</p>
-<p>打开方式：</p>
-<p>r: 只读的方式打开 文件不存在的时候会报警告错误</p>
-<p>r+：以读写的方式打开, 从头覆盖内容进行写入</p>
-<p>w: 以写入的方式打开 如果文件存在会将文件内容清零，打开的文件不存在则创建</p>
-<p>w+：可读可写： 文件不存在创建，存在内容清零</p>
-<p>a: 追加写入， 不能读文件不存在创建，指针指向文件末尾</p>
-<p>a+：读写方式打开 写的方式追加 文件不存在创建</p>
-<p>x: 创建文件以写入的方式打开，如果文件存在报警告错误</p>
-<p>x+: 创建文件并与读写的方式打开</p>
-<p>c: 以只写的方式打开，会从头覆盖内容写入，文件不存在则创建</p>
-<p>c+: 以读写方式打开，同上</p>
-<p>**fread('打开的资源', '读取的字节数');返回的是限制读取的字节</p>
-<p>**fwrite('操作的资源', '写入的字符')</p>
-<p>*rewind() ：将文件指针返回到文件流的开头位置</p>
-<p>fseek(): 设置指针的位置：</p>
-<p>参数：资源，移动的字节数，</p>
-<p>常量 SEEK_SET/开头SEEK_CUR/当前 SEEK_END/结尾</p>
-<p>ftell() 获取当前文件中指针的位置</p>
-<p>feof ()[end of file]判断指针在不在结尾</p>
-<p>//最后一个字节数或者出错时候返回true 其余返回false</p>
-<p>fgetc() 读取出来一个字节， 指针位置保留</p>
-<p>fgets() 读取一行 指针的位置保留</p>
-<p>*fgetss() 读取一行 去掉内容中的html标签</p>
-<p>fclose() 关闭这个文件</p>
-<p>文件锁：</p>
-<p>flock()</p>
-<p>常量参数：</p>
-<p>LOCK_SH：共享锁</p>
-<p>LOCK_EX: 独占锁</p>
-<p>LOCK_UN: 解锁</p>
-<p>文件判断相关 （状态）</p>
-<p>file_exists();判断文件是否存在 存在 true 不存在false</p>
-<p>is_file() :参数名是否是一个文件</p>
-<p>is_dir(): 参数是否是一个目录</p>
-<p>is_readable(): 判断文件是否可读</p>
-<p>is_writeable():判断文件是否可写</p>
-<p>is_executable(); 是否是一个可执行的文件 //window .exe</p>
-<p>filesize() :文件字节数</p>
-<p>filectime() : 创建时间</p>
-<p>filemtime(): 修改时间</p>
-<p>文件相关的函数</p>
-<p>touch(): 创建一个文件</p>
-<p>unlink(): 删除一个文件</p>
-<p>copy(): 1.要拷贝的文件 2.拷贝后新文件的名字（要拷贝的路径+mingzi）</p>
-<p>rename(): 重命名：文件 目录</p>
-<p>目录的操作</p>
-<p>mkdir(): 新建目录</p>
-<p>rmdir() : 删除目录 (删除空目录)</p>
-<p>rename()修改目录名</p>
-<p>copy() 拷贝目录</p>
-<p>opendir() :打开目录</p>
-<p>readdir()读取目录</p>
-<p>closedir()关闭目录</p>
-<p>文件的属性</p>
-<p>----------</p>
-<p>作业： 拷贝：大文件 ：一边读，一边写</p>
 
       
     </div>

@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">158</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">156</span>
+          <span class="site-state-item-count">158</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,297 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P13-%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%92%8C%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P13-%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%92%8C%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">PHP[入门]P13-时间相关函数和错误处理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:01:13" itemprop="dateCreated datePublished" datetime="2017-01-01T09:01:13+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day13-时间相关函数和错误处理</p>
+<p>时间的用途：</p>
+<p>1.时间函数</p>
+<p>Unix时间戳：</p>
+<p>1970年也叫计算机元年</p>
+<p>1970/1/1 0:0 开始距离现在的秒数 时间戳</p>
+<p>默认取到的时间戳是格林威治时间 0时区 我们现在在东八区 时差8小时</p>
+<p>time(); $_SERVER['REQUEST_TIME']</p>
+<p>date();</p>
+<p>解决时差问题：</p>
+<p>1：date('Y-m-d H:i:s', time()+ 3600 * 8);</p>
+<p>2：date_default_timezone_set('PRC');</p>
+<p>3：修改配置文件:date.timezone ="PRC" 默认是UTC</p>
+<p>2.时间日期相关函数</p>
+<p>mktime(); 参数： 时分秒月日年 返回unix时间戳 格式化使用date</p>
+<p>checkdate();当前要判断的日期是否存在 参数：月日年 返回值布尔</p>
+<p>getdate(); 参数是时间戳 如果不传默认当前时间戳 返回是数组</p>
+<p>strtotime(); 参数：是英文字符 返回值是时间戳 经典的面试题 打印昨天的时间</p>
+<p>date_parse();参数字符串 eg:2017-01-28 10:30:24 返回值是数组</p>
+<p>microtime();返回时一个有时间戳还有微妙数的字符串</p>
+<p>3.错误处理</p>
+<p>错误级别：notice注意 warning警告 error致命错误</p>
+<p>declare(strict_types = 1)</p>
+<p>trigger_error() 抛出用户自定义的错误信息 参数一个是 错误信息 预定义的系统常量</p>
+<p>处理错误方式：</p>
+<p>@：抑制单行错误 抑制notice warning 错误显示 对于error不起作用</p>
+<p>display_errors:修改配置文件 值为ON显示所有的错误（可以是值为1），为off不显示所有的错误（值可以0），当出现notice 和warning时候是不显示正常执行 当是error 时候 程序无法运行</p>
+<p>error_reporting :显示错误 默认值是E_ALL eg:不想显示notice错误时候 可以将值改为</p>
+<p>E_ALL &amp; ~E_NOTICE 我们的waining同理</p>
+<p>函数：</p>
+<p>error_reporting()：</p>
+<p>// 关闭所有PHP错误报告</p>
+<p>error_reporting(0);</p>
+<p>// 除了 E_NOTICE，报告其他所有错误</p>
+<p>// 这是在 php.ini 里的默认设置</p>
+<p>error_reporting(E_ALL ^ E_NOTICE);</p>
+<p>// 报告所有 PHP 错误 (参见 changelog)</p>
+<p>error_reporting(E_ALL);</p>
+<p>ini_set()：设置配置文件的值 ini_set('display_errors', '1');</p>
+<p>ini_get(): 获取配置文件的值ini_get('display_errors');</p>
+<p>set_error_handler('自定义的函数名'); 当出现错误时候出来error 会自动触发在这个set_error_handler函数 会调用传给函数的自定义函数</p>
+<p>error_get_last() //留作作业</p>
+<p>错误日志</p>
+<p>log_errors： 配置文件 是否打开写入错误日志</p>
+<p>error_log</p>
+<p>系统日志syslog error_log = syslog 默认不写入系统错误日志</p>
+<p>管理工具 - 时间查看器- windows日志- 应用程序</p>
+<hr />
+<p>die()</p>
+<p>exit()</p>
+<p>url相关函数补充</p>
+<p>parse_str</p>
+<p>parse_url</p>
+<p>urlencode</p>
+<p>urldecode</p>
+<p>base64_encode</p>
+<p>base64_decode</p>
+<p>json_encode</p>
+<p>json_decode</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P12-%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/01/01/coding/php/php-%E5%85%A5%E9%97%A8/P12-%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">PHP[入门]P12-数组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-01-01 09:01:12" itemprop="dateCreated datePublished" datetime="2017-01-01T09:01:12+08:00">2017-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-12-01 22:57:16" itemprop="dateModified" datetime="2022-12-01T22:57:16+08:00">2022-12-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
+</blockquote>
+<p>day12 数组</p>
+<p>1.数组定义</p>
+<p>数组：一组数据的集合 集合：值可以是任意类型 array</p>
+<p>名词解释：</p>
+<p>元素：数组中的一个数据</p>
+<p>键值对：键值对就是一个元素 0 =&gt; 'balue'</p>
+<p>键：为了找到值而存在 key <strong>注</strong>：不能重复 默认从零开始</p>
+<p>值：是真正要使用的东西 value 可以是任意的类型</p>
+<p>定义：</p>
+<p>1.[]: 定义一个数组 （php5.4以后才支持这种定义方式）</p>
+<p>eg: $arr = [2, 'ser', 3.4];</p>
+<p>2.array:</p>
+<p>$arr = array(true, 2.3 , 'str');</p>
+<p>3.直接赋值法：</p>
+<p>$arr[] = 'duhaitao';</p>
+<p>$arr['name'] = 'wangchun';</p>
+<p>$arr[2] = '王美丽';</p>
+<p>[zhu]:如果没有指定下标默认从0开始</p>
+<p>如果指定下标 那么你指定的下标</p>
+<p>如果数组中已经有了正整数的下标，而再赋值的时候默认从当前key中寻找到最大的非负整数中+1</p>
+<p>数组的四种操作：</p>
+<p>读/删除/追加元素/修改元素的值</p>
+<p>如果操作时候 key已经存在 再赋值 相当于修改 如果没有就是追加</p>
+<p>删除其中的某个元素 数组的元素键不变 不会随着删除而更改键</p>
+<p>删除其中的某个元素以后立即增加新的元素 也不会代替刚被删除的元素的key</p>
+<p>2.数组的分类</p>
+<p>下标区分： 下标只有整数跟字符串</p>
+<p>索引数组：键都是整型</p>
+<p>关联数组：数组的键中只要一个key是字符串</p>
+<p>声明关联数组时候 指定键 key =&gt; value 'key' =&gt; value</p>
+<p>在定义关联数组的时候 如果没有指定下标 （如果下标里面都是字符串的时候 默认 从0 开始，如果已经有整数小标 那么从中寻找到最大的非负整数进行+1）</p>
+<p>维度区分：</p>
+<p>一维数组: 确定数组中的值需要一个下标的是一维数组</p>
+<p>二维数组:确定数组中元素的值 需要两个下标的是二维数组</p>
+<p>多维数组:数组A中元素的值插入的是B数组 然后B数组中又插入C数组 这种叫多维数组</p>
+<p>从三维开始就叫多维</p>
+<p>4.数组的遍历</p>
+<p>for</p>
+<p>for (变量的初始化, 循环条件, 计数条件) {</p>
+<p>循环体;</p>
+<p>}</p>
+<p><strong>注</strong>：只能用于索引数组 而且是下标连续的索引数组</p>
+<p>foreach</p>
+<p>语法</p>
+<p>foreach (遍历的数组 as [$key =&gt; ] $value) {</p>
+<p>操作;</p>
+<p>}</p>
+<p>[zhu]: as 是不能缺少的</p>
+<p>[key =&gt; ]是可以省略</p>
+<p>每一次遍历 是将key赋值给指定的变量$key 将值赋值给 $value</p>
+<p>知道读完所有值会自动结束遍历</p>
+<p>list</p>
+<p>只能用于索引数组 默认要连续下标的</p>
+<p>如果不连续 读取要用，占位</p>
+<p>将false 赋值给list 打印以后是false</p>
+<p>each</p>
+<p>------------</p>
+<p>数组函数</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

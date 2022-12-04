@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">158</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">156</span>
+          <span class="site-state-item-count">158</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -179,6 +179,194 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_002_%E7%8E%AF%E5%A2%83%E6%80%AA%E8%B0%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/10/27/coding/php/php_002_%E7%8E%AF%E5%A2%83%E6%80%AA%E8%B0%88/" class="post-title-link" itemprop="url">PHP[002]:More PHP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-27 17:48:35" itemprop="dateCreated datePublished" datetime="2018-10-27T17:48:35+08:00">2018-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="more-php">more php</h1>
+<blockquote>
+<p>虽然 wsl 可以模拟 linux 环境，但是请不要用 wsl 作为一种开发环境进行使用，而是作为一个工具系统</p>
+</blockquote>
+<h3 id="一致的环境">一致的环境</h3>
+<ul>
+<li>linux 版本 &amp; 配置</li>
+<li>nginx 版本 &amp; 配置</li>
+<li>mysql 版本 &amp; 配置</li>
+<li>php 版本 &amp; 配置</li>
+<li>composer 版本（这个也很重要）</li>
+</ul>
+<p>一致的环境体现在三个方面，系统（linux/win)是否一直，依赖软件(nginx/mysql/other)是否一致，解析器（php）版本及该使用该解析器所做的软件（composer）版本是否一致。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">composer update</span><br><span class="line">composer install</span><br><span class="line">composer update --no-dev</span><br></pre></td></tr></table></figure>
+<p>Deployer 一个环境部署工具</p>
+<h1 id="about-use">about use</h1>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable">$needBacktrace</span> != <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="title function_ invoke__">ob_start</span>();</span><br><span class="line">    <span class="title function_ invoke__">debug_print_backtrace</span>(<span class="variable">$needBacktrace</span> === <span class="number">2</span> ? <span class="number">1</span> : <span class="number">0</span>);</span><br><span class="line">    <span class="variable">$trace</span> = <span class="title function_ invoke__">ob_get_contents</span>();</span><br><span class="line">    <span class="title function_ invoke__">ob_end_clean</span>();</span><br><span class="line">    <span class="variable">$msg</span> = <span class="variable">$msg</span> . <span class="string">&#x27;##  trace:&#x27;</span> . <span class="variable">$trace</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2018/10/27/coding/php/php_002_Standard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/icon.png">
+      <meta itemprop="name" content="thh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马路边边">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 马路边边">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/10/27/coding/php/php_002_Standard/" class="post-title-link" itemprop="url">PHP[002]:Standard</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-27 17:48:34" itemprop="dateCreated datePublished" datetime="2018-10-27T17:48:34+08:00">2018-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>psr</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -867,301 +1055,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>(背包问题?)[https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/3092.html] <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//std::ios::sync_with_stdio(false);</span></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span> sum ;</span><br><span class="line">    <span class="type">int</span> w[<span class="number">2</span>][<span class="number">20000</span>];</span><br><span class="line">    <span class="type">int</span> sV[<span class="number">20000</span>];</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; sum)</span><br><span class="line">    &#123;</span><br><span class="line">        i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;w[<span class="number">0</span>][i] &gt;&gt; w[<span class="number">1</span>][i];</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(sV,<span class="number">0</span>,<span class="keyword">sizeof</span>(sV));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;= n ; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>( <span class="type">int</span> jj = sum ; jj &gt;= w[<span class="number">0</span>][j]; jj -- )</span><br><span class="line">            &#123;</span><br><span class="line">                sV[jj] = max(</span><br><span class="line">                         sV[jj],</span><br><span class="line">                         sV[jj-w[<span class="number">0</span>][j]]+w[<span class="number">1</span>][j]</span><br><span class="line">                         );</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//            for(int z = 0; z&lt;=sum ;z++)&#123;</span></span><br><span class="line">  <span class="comment">//              cout&lt;&lt;sV[z]&lt;&lt;&quot;\t&quot;;</span></span><br><span class="line">    <span class="comment">//        &#125;</span></span><br><span class="line">      <span class="comment">//      cout&lt;&lt;endl;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt; sV[sum]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/05/25/coding/C_001_start/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/05/25/coding/C_001_start/" class="post-title-link" itemprop="url">c/c++[001]:start</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-05-25 23:18:09" itemprop="dateCreated datePublished" datetime="2017-05-25T23:18:09+08:00">2017-05-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="cin-cout-scanf-printf">cin cout scanf printf</h1>
-<p>scanf()是C语言中的一个输入函数。与printf函数一样，都被声明在头文件stdio.h里，因此在使用 scanf 函数时要加上<code>#include &lt;stdio.h&gt;</code>。（在有一些实现中，printf函数与scanf函数在使用时可以不使用预编译命令<code>#include &lt;stdio.h&gt;</code>。）它是格式输入函数，即按用户指定的格式从键盘上把数据输入到指定的变量之中。</p>
-<table>
-<thead>
-<tr class="header">
-<th>规定符</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>%d</td>
-<td>十进制有符号整数</td>
-</tr>
-<tr class="even">
-<td>%u</td>
-<td>十进制无符号整数</td>
-</tr>
-<tr class="odd">
-<td>%f</td>
-<td>浮点数</td>
-</tr>
-<tr class="even">
-<td>%s</td>
-<td>字符串</td>
-</tr>
-<tr class="odd">
-<td>%c</td>
-<td>单个字符</td>
-</tr>
-<tr class="even">
-<td>%p</td>
-<td>指针的值</td>
-</tr>
-<tr class="odd">
-<td>%e</td>
-<td>指数形式的浮点数</td>
-</tr>
-<tr class="even">
-<td>%x, %X</td>
-<td>无符号以十六进制表示的整数</td>
-</tr>
-<tr class="odd">
-<td>%o</td>
-<td>无符号以八进制表示的整数</td>
-</tr>
-<tr class="even">
-<td>%g</td>
-<td>把输出的值按照%e或者%f类型中输出长度较小的方式输出</td>
-</tr>
-<tr class="odd">
-<td>%p</td>
-<td>输出地址符</td>
-</tr>
-<tr class="even">
-<td>%lu</td>
-<td>32位无符号整数</td>
-</tr>
-<tr class="odd">
-<td>%llu</td>
-<td>64位无符号整数</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://thh9.github.io/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH21-ajax/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/theme/icon.png">
-      <meta itemprop="name" content="thh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马路边边">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 马路边边">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/01/01/coding/php/php-oop-%E5%85%A5%E9%97%A8/PH21-ajax/" class="post-title-link" itemprop="url">PHP[OOP入门]PH21-ajax</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-01-01 09:02:21" itemprop="dateCreated datePublished" datetime="2017-01-01T09:02:21+08:00">2017-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-11-23 19:55:02" itemprop="dateModified" datetime="2021-11-23T19:55:02+08:00">2021-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>该部分为 php 面向对象的入门部分，较为肤浅且参杂过分已经不是主流的知识。</p>
-</blockquote>
-<blockquote>
-<p>这是我早期的 php 学习笔记，php 的学习版本版本是 5.6、7，🐟2020/05/06年从有道笔记导出至此。</p>
-</blockquote>
-<p>day21-ajax(灰常重要)</p>
-<p>1、应用场景</p>
-<p>asynchronous javascript and xml === ajax</p>
-<p>注册用户的时候，要写用户名，写了用户名之后，只要你的光标离开这个input框，我就立马知道你这用户名是否被注册过（ajax） 让ajax去和服务器进行交互，交互完毕之后，收到服务器返回的结果，根据结果我再判断页面到底应该显示什么</p>
-<p>页面没有刷新</p>
-<p>在当前页面中通过ajax和服务器进行交互，达到局部刷新的效果</p>
-<p>2、ajax使用</p>
-<p>使用起来非常的简单，ajax就是js中的一个对象，通过调用这个对象的方法就完成了和服务器的交互</p>
-<p>创建对象</p>
-<p>谷歌、火狐、Opera、IE7以上</p>
-<p>var xhr = new XMLHttpRequest(); //主流浏览器中创建ajax对象的方式</p>
-<p>var xhr = new ActiveXObject("Microsoft.XMLHTTP"); //垃圾浏览器的方式</p>
-<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP");</p>
-<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP.3.0");</p>
-<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP.5.0");</p>
-<p>var xhr = new ActiveXObject("Msxml2.XMLHTTP.6.0"); //IE维护的最高版本</p>
-<p>get方式</p>
-<p>xhr.open('get', '1.php?username=goudan&amp;password=123');</p>
-<p>xhr.send();</p>
-<p>post方式</p>
-<p>xhr.open('post', 'post.php');</p>
-<p>xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');</p>
-<p>xhr.send('username=goudan&amp;password=123');</p>
-<p>onreadystatechange ：当ajax状态改变的时候触发这个事件</p>
-<p>readyState（01234） : ajax的状态</p>
-<p>0：初始化</p>
-<p>1：执行了open方法</p>
-<p>2：执行了send方法</p>
-<p>3：得到了部分响应数据</p>
-<p>4：得到了全部的响应数据</p>
-<p>这里面我们关心的就是4，到4的时候数据就过来了</p>
-<p>status:http的状态码 200</p>
-<p>responseText：现在都是使用这个</p>
-<p>responseXML：这个现在已经不用了</p>
-<p>将JSON字符串转化为js对象</p>
-<p>//第一种方式</p>
-<p>var obj = JSON.parse(xhr.responseText);</p>
-<p>//第二种方式</p>
-<p>var obj = eval('(' + xhr.responseText + ')');</p>
-<p>将js对象转化为JSON格式的字符串</p>
-<p>var str = JSON.stringify(obj);</p>
-<p>3、ajax函数封装</p>
-<p>encodeURIComponent</p>
-<p>4、同步和异步</p>
-<p>同步：前端在等待请求结果，结果来了之后代码再往下进行</p>
-<p>异步：前端不等待请求结果，结果来了直接执行提前写好的回调函数即可</p>
-<p>【注】事件绑定的代码我们都要写到open方法的上面。</p>
-<p>5、跨域</p>
-<p>localhost 127.0.0.1 不是同一个域</p>
-<p>localhost www.wokao.com</p>
-<ol type="1">
-<li></li>
-</ol>
-<p>在php文件中中写如下代码</p>
-<p>header('Access-Control-Allow-Origin:*');</p>
-<p>(2)jsonp json with padding</p>
-<p>6、用户注册</p>
 
       
     </div>
